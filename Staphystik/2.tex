@@ -1,0 +1,280 @@
+\section{Wahrscheinlichkeitstheorie}
+\begin{tabbing}
+Zwei Schulen: \= \underline{Frequentismus} (basierend auf relativen Häufigkeiten)\\
+\> \underline{Bayessche Theorie} (Wahrscheinlichkeit als Maß derErwartung)\\
+Theorien sind größtenteils äquivalent. Aufgrund verschiedener Rechentechniken können sie aber zu scheinbar\\ widersprüchlichen Schlussfolgerungen führen!
+\end{tabbing}
+
+\subsection{Frequentismus}
+\begin{tabbing}
+Betrachte $N$-malige Durchführung eines \underline{Zufallsexperimentes} (zum Beispiel Würfeln)\\
+mit \underline{Ergebnisraum} $\Omega$ (Würfeln: $\Omega = \curBra{1,2,3,4,5,6}$). Sei $n$ die Anzahl des Eintretens eines \underline{Ereignisses} $E$\\
+(Teilmenge von $\Omega$, zum Beispiel $E = \curBra{1,6}$ bedeutet einen Wurf mit Ergebnis $1$ oder $6$).\\
+\underline{Relative Häufigkeit}: $r = \frac{n}{N}$\\
+\underline{Wahrscheinlichkeit} von $E$: \fbox{$P(E) = \lim\limits_{N\to \infty} \frac{n}{N}$}\\
+Eigenschaften und Rechenregeln müssen durch weitere Annahmen festgelegt werden.\\
+\hspace{4em} \= 2) \= \kill
+$\rightarrow$\> \underline{Kolmogorov-Axiome}:\\
+\> 1) \>$P(E) \geq 0$ $\forall E$\\
+\> 2) \>$P(\Omega) = 1$ (Dem sicheren Ereignis wird $P = 1$ zugeordnet.)\\
+\> 3) \>Für disjunkte Ereignisse $E_1, E_2, \dots$ gilt:\\
+\>\> $P\norBra{\bigcup\limits_{j = 1}^{\infty}E_j} = \sum\limits_{j = 1}^{\infty} P\norBra{E_j}$ (Wahrscheinlichkeiten sich ausschließender Ereignisse addieren sich)\\
+\uwave{Folgen}:  \= $P\norBra{\emptyset} = 0$\\
+\> $P\norBra{E_1} \leq P\norBra{E_2}$ für $E_1 \subset E_2$\\
+\> $0\leq P\norBra{E} \leq 1$ $\forall E$\\
+\> $P\norBra{E_1 \cup E_2} = P\norBra{E_1} + P\norBra{E_2} - P\norBra{E_1 \cap E_2}$\\
+\underline{Definition}:  \= -- Zwei Ereignisse heißen \underline{unabhängig}, wenn $P\norBra{E_1 \cap E_2} = P\norBra{E_1}P\norBra{E_2}$\\
+\> -- $N_e$ Ereignisse heißen \underline{unabhängig}, wenn dies nicht nur paarweise, sondern für beliebige\\
+\> Kombinationen gilt:\\
+\> $\prob{\bigcap_{j\in J} E_j} = \prod\limits_{j\in J} \prob{E_j}$ für alle $J \in \mathcal{P}\norBra{\setProp{n\in \mathds{N}}{n \leq N_e}}$\\
+$E_1 \cup E_2$ bedeutet: \= $E_1$ oder $E_2$ tritt ein (nicht ausschließendes \glqq oder \grqq).\\
+$E_1 \cap E_2$ bedeutet: \> $E_1$ und $E_2$ treten ein.\\
+\underline{Negation}: \= $\overline{E}$ beziehungsweise $\not E$, $!E$ oder $\text{not} E$\\
+\> $\prob{\overline{E}} = 1 - \prob{E}$\\
+\> $\overline{\overline{E}} = E$\\
+\> $\overline{E_1} \cap \overline{E_2} = \overline{E_1 \cup E_2}$ (\underline{De Morgansches Gesetz})\\
+\underline{Definition}: \underline{Chance} eines Ereignisses $E$ ist \fbox{$R\norBra{E} = \frac{\prob{E}}{1 - \prob{E}}$}\\
+\underline{Bedingte Wahrscheinlichkeit}: \fbox{$\conProb{E_1}{E_2} \mDef \frac{\prob{E_1 \cup E_2}}{\prob{E_2}}$}\\
+\underline{Zufallsvariable}: Abbildung der Ereignisse auf (Beispiel) Zahlen $x_j$; $\Omega \to \mathds{R}$.\\
+\underline{Erwartungswert}: $\angBra{x} = \overline{x} = \sum\limits_j p_j x_j$\\
+\underline{Varianz und Standardabweichung}: $\Delta x^2 = \angBra{\norBra{x - \overline{x}}^2}$, $\Delta x = \sqrt{\Delta x^2}$\\
+\uwave{Beispiele}:\\
+$1\times$ Würfeln: \= $E_1 \stackrel{\wedge}{=} \text{Augenzahl} \geq 5$ \quad $E_1 = \curBra{5,6}$\\
+\> $E_2 \stackrel{\wedge}{=} \text{Augenzahl} = 6$ \quad $E_2 = \curBra{6}$\\
+\> $\prob{E_1} = \frac26 = \frac13$, $\prob{E_2} = \frac16$\\
+\> $E_1$ oder $E_2$: $\prob{E_1\cup E_2} = \frac13$\\
+\> $E_1$ und $E_2$: $\prob{E_1 \cap E_2} = \frac16 \neq \prob{E_1}{E_2}$ (abhängig)\\
+\> $\conProb{E_2}{E_1} = \frac{\frac16}{\frac13} =  \frac12$\\
+\> Chance, mindestens eine $5$ zu würfeln: $R = \frac{P}{1 - P} = \frac{\frac13}{\frac23} = \frac12$\\
+\> ($\frac12 = 1:2 =$ Eins zu Zwei)\\
+$2\times$ Würfeln: \= $E_1 \stackrel{\wedge}{=}$ 1. und 2. Wurf mit Augenzahl $6$\\
+\> $E_2 \eDef$ 1. oder 2. Wurf mit Augenzahl $6$\\
+\> $\prob{E_1} = \frac16\cdot\frac16 = \frac1{36}$ (Würfe sind unabhängig)\\
+\> $\prob{E_2} = \frac16 + \frac16 - \frac1{36} = \frac{11}{36}$
+\end{tabbing}
+
+\subsection{Bayessche Theorie}
+\begin{tabbing}
+Interpretiere Wahrscheinlichkeit als Maß für die \underline{Glaubwürdigkeit} oder \underline{Plausibilität} einer Aussage,\\ insbesondere wenn nur \underline{unvollständige Information} über einen Sachverhalt vorliegt.\\
+\underline{Motivation}:\= In der Realität sind Wahrscheinlichkeitsaussagen meist nicht mit wiederholten Experimenten\\\> verknüpft oder diese sind unpraktikabel. (\glqq Wie hoch ist die Wahrscheinlichkeit für Leben\\\> auf dem Saturn?\grqq, \glqq Wie wahrscheinlich ist Trumps Amtsenthebung?\grqq)\\
+\underline{Typische Anwendungen}: \= Modifikation von Wahrscheinlichkeiten bei Auftauchen neuer Information\\
+\underline{Notation}: \= Aussagen $A$, $B$, $C$, \dots \=(können bei Zufallsexperimenten mit \underline{Ereignissen} identifiziert werden)\\
+\> \glqq nicht $A$\grqq $= \overline{A}$\\
+\> \glqq $A$ und $B$\grqq $= AB$ \>(logisches Produkt, $\eDef A \cap B$)\\
+\> \glqq $A$ oder $B$\grqq $= A + B$ \>(logische Summe, $\eDef A\cup B$)\\
+\> de Morgan: $\overline{A + B} = \overline{A} \overline{B}$, $\overline{A} + \overline{B} = \overline{AB}$\\
+\underline{Ausgangspunkt}: $\conProb{A}{B} \mDef$ Wahrscheinlichkeit füt $A$ unter der Vorraussetzung $B$.\\
+\underline{Cox-Theorem}:\\
+Aus vernünftigen Postulaten (unter anderem: Existenz eines Zusammenhangs zwischen $\conProb{\overline{A}}{B}$ und\\ $\conProb{A}{B}$, sowie zwischen $\conProb{AB}{C}$ und $\conProb{A}{C}$, $\conProb{B}{AC}$; Wahrscheinlichkeiten $0$\\ beziehungsweise $1$ für Unmöglichkeit und Sicherheit) folgt:\\
+\hspace{4em} \= \kill
+1) \> $\conProb{A}{B} + \conProb{\overline{A}}{B} = 1$\\
+2) \> $\conProb{AB}{C} = \conProb{A}{C} \conProb{B}{AC}$\\
+3) \> $\conProb{A + B}{C} = \conProb{A}{C} + \conProb{B}{C} - \conProb{AB}{C}$\\
+(im Einklang mit Kolmogorov-Theorie bis auf Vereinigung abzählbar unendlich vieler Ereignisse)\\
+\underline{Satz von Bayes}\\
+$I =$Vorwissen, Grundannahmen\\
+$D=$NeueDaten\\
+$A=$Beliebige Aussage\\
+$\left. \begin{array}{r@ {\quad = \quad} l} \conProb{AD}{I} & \conProb{A}{I}\conProb{D}{AI}\\\conProb{AD}{I} & \conProb{D}{I}\conProb{A}{DI}\end{array}\right\}$ $\rightarrow$ \fbox{$\conProb{A}{DI} = \conProb{A}{I}\cdot\frac{\conProb{D}{AI}}{\conProb{D}{I}}$}\\
+\underline{Benennung}: \=$\conProb{A}{DI}$ A-posteriori-Wahrscheinlichkeit\\
+\> $\conProb{A}{I}$ A-priori-Wahrscheinlichkeit\\
+oder kompakter: $\conProb{A}{D} = \prob{A}\cdot\frac{\conProb{D}{A}}{\prob{D}}$.\\
+Satz von Bayes sagt aus, wie sich Wahrscheinlichkeiten bei Vorliegen neuer Informationen ändern.\\
+Extremfälle: \= a) $\prob{A} = 0$ $\rightarrow$ $\conProb{A}{D} = 0$\\
+\> b) $\prob{A} = 1$ $\rightarrow$ $\conProb{D}{A} = \prob{D}$ $\rightarrow$ $\conProb{A}{D} = 1$\\
+\> In diesen Fällen keine Auswirkung von $D$.\\
+\uwave{Beispiel}: \= $1$ von $1000$ Personen tragen Erreger einer Krankheit $\prob{K} = \frac{1}{1000}$.\\
+\> Ein Test ist bei $90\%$ der infizierten Getesteten positiv und außerdem bei $1\%$ der gesunden\\\> Getesteten positiv.\\
+\> $\conProb{T}{K} = 0.9$, $\conProb{T}{\overline{K}} = 0.01$\\
+\> Wahrscheinlichkeit für positiven Test:\\
+\> $\conProb{K}{T} = \prob{K}\cdot\frac{\conProb{T}{K}}{\prob{T}} = \frac{1}{1000}\cdot\frac{0.9}{0.9\cdot\frac{1}{1000} + 0.01\cdot\frac{999}{1000}} = \frac{0.9}{10.89} \approx 0.08$
+\end{tabbing}
+
+
+\subsection{Binomialverteilung}
+\begin{tabbing}
+\underline{Gesucht}: \= Wahrscheinlichkeiten $\prob{n}$, bei $N$ unabhängigen Versuchen genau $n$-mal \glqq erfolgreich\grqq zu sein,\\
+\> wenn $p$ die Wahrscheinlichkeit für Erfolg bei einem Versuch ist. ($0 \leq n \leq N$, $0 \leq p \leq 1$).\\
+\uwave{Beispiel}: \=Wahrscheinlichkeit, bei $10\times$ Würfeln $3\times$ eine $6$ zu werfen.\\
+\>Wahrscheinlichkeit für eine bestimmte Abfolge mit $n$ Erfolgen und\\
+\> $N-n$ Misserfolgen: $p^n \norBra{1-p}^{N-n}$ (unabhängige Ereignisse)\\
+Außerdem: ${N \over n} = \frac{N!}{n! (N-n)!}$ verschiedene Anordnungen der Ereignisse.\\
+\hspace{4em} \= \kill
+$\rightarrow$\> Addition dieser sich ausschließenden Wahrscheinlichkeiten.\\
+$\rightarrow$\> \fbox{$\prob{n} = B_{N,p}\norBra{n} = {N \over n} p^n \norBra{1-p}^{N-n}$} (\underline{Binomialverteilung})\\
+Überprüfung der Normierung: \=$\sum\limits_{n = 0}^N \prob{n} = \norBra{p +\norBra{1-p}}^N = 1^N = 1$,\\\> da $\norBra{x+y}^N = \sum\limits_{n = 0}^N {N \over n} x^N y^{N-n}$ (Binomialreihe).\\
+Relative Häufigkeit: $\frac{n}{N}$\\
+Erwartungswert: $\angBra{\frac{n}{N}}$\=$=\frac1N \sum\limits_{n=0}^N {N \over n} p^n \norBra{1-p}^{N-n}$\\
+\> $=\frac1N\edgBra{p \frac\partial{\partial p} \sum\limits_{n=0}^N {N\over n} p^n q^{N-n}}_{q = 1-p}$\\
+\> $= \frac1N \edgBra{p \frac\partial{\partial p} \norBra{p +q}^N}_{q = 1-p} = \edgBra{p \norBra{p+q}^{N-1}}_{q = 1-p} = p$\\
+Varianz: \= $\angBra{\norBra{\frac{n}{N}}^2}$\= \kill
+Varianz:\>$\norBra{\Delta\frac{n}{N}}^2$\>$=\angBra{\norBra{\frac{n}{N} -p}^2} = \angBra{\norBra{\frac{n}{N}}^2} - p^2$\\
+\>$\angBra{\norBra{\frac{n}{N}}^2}$\>$=\frac1{N^2} \sum\limits_{n=0}^N {N\over n} n^2 p^n \norBra{1-p}^{N-n}$\\
+\>\>$=\frac1{N^2}\edgBra{p\partial_p p\partial_p \sum\limits_{n=0}^N {N\over n} p^n q^{N-n}}_{q = 1-p}$\\
+\>\>$=\frac1{N^2} \edgBra{p\partial_p p\partial_p \norBra{p+q}^N}_{q=1-p}$\\
+\>\>$=\frac1N \edgBra{p \partial_p p \norBra{p+q}^{N-1}}_{q = 1-p}$\\
+\>\>$=\frac1N \edgBra{p\norBra{p+q}^{N-1} + p^2 \norBra{p+q}^{N-2}\norBra{N-1}}_{q=1-p}$\\
+\>\>$=\frac1N \edgBra{p + p^2\norBra{N-1}}$\\
+\>\>$=\frac{p\norBra{1-p}}{N} + p^2$\\
+\hspace{4em} \= \kill
+$\rightarrow$\> \fbox{$\norBra{\Delta \norBra{\frac{n}{N}}}^2 = \frac{p\norBra{1-p}}{N}$}\\
+$\rightarrow$\> Standardabweichung: \fbox{$\Delta \frac{n}{N} = \frac{\sqrt{p\norBra{1-p}}}{\sqrt{N}}$}\\
+Das heißt wenn die relative Häufigkeit als Schätzung der Wahrscheinlichkeit $p$ verwendet wird,\\ ist der Fehler $\sim \frac1{\sqrt{N}}$ (\glqq\underline{Gesetz der großen Zahl}\grqq).\\
+\underline{Grenzfälle der Binomialverteilung}:\\
+\hspace{4em} \= \hspace{20em} \= \kill
+\>$N\to\infty$, $p\to 0$, $\angBra{n} = p\cdot N =\text{konstant}$\>$\rightarrow$ Poissonverteilung\\
+\>$N\to\infty$, $p=\text{konstant}$, $\angBra{n} = p\cdot N\to \infty$\> $\rightarrow$ Normalverteilung (Gaußverteilung)\\
+\underline{Poissonverteilung}\\
+\uwave{Beispiele}:  -- \= fluktuierendes $1$-dimensionales Gas, Wahrscheinlichkeit, auf der Länge $L$ genau $n$ Atome\\\> zu finden, wenn $\angBra{n}$ bekannt.
+\end{tabbing}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \foreach \x in {0,1,...,10}
+      \draw (\x,0) circle (0.05);
+    \foreach \x in {1.5,8.5}
+      \draw (\x,1) to (\x,-1);
+    \foreach \x in {2.5,3.5,...,7.5}
+      \draw (\x,0.5) to (\x,-0.5);
+    \draw[<->] (1.5,-0.4) to (2.5,-0.4);
+    \node at (2,-0.6) {$\dd{x}$};
+    \node at (1.5,1.2) {$x=0$};
+    \node at (8.5,1.2) {$x=L$};
+    \node at (10,-0.4) {Atome};
+  \end{tikzpicture}\\
+  $\dd{x}\to 0$, $N = \frac{L}{\dd{x}}\to\infty$
+\end{figure}
+\begin{tabbing}
+\uwave{Beispiele}: \= \kill
+\> -- Wahrscheinlichkeit, pro Stunde $n$ Anrufe zu erhalten, wenn $\angBra{n}$ bekannt.\\
+Wir benötigen Näherung für $N!$ wenn $N\to\infty$:\\
+$\ln N! = \sum\limits_{n=1}^N \ln n \approx \int\limits_{x = \frac12}^{N+\frac12} \ln x \dd{x} = \edgBra{x\ln x - x}_{\frac12}^{N+\frac12} = \norBra{N+\frac12}\ln\norBra{N+\frac12} - N  + \frac12\ln 2$\\
+Genauer (ohne Beweis): \underline{Stirling-Formel} \fbox{$N!\approx \sqrt{2\pi n}N^N e^{-N}$}\\
+$\prob{n} = \frac{N!}{n!\norBra{N-n}!} p^n \norBra{1-p}^{N-n} = \frac{N!}{n!\norBra{N-n}!} \norBra{\frac{\angBra{n}}{N}}^n\norBra{1-\frac{\angBra{n}}{N}}^{N-n}$\\
+$\ln \prob{n}$\=$=\ln N! - \ln n! - \ln\norBra{N-n}! + n\ln\frac{\angBra{n}}{N} + \norBra{N-n}\ln\norBra{1-\frac{\angBra{n}}{N}}$\\
+\>$\approx N \ln N - N + \frac12 \ln N - \ln n! - \norBra{N-n} \ln\norBra{N-n} + \norBra{N-n} - \frac12 \underbrace{\ln\norBra{N-n}}_{\approx \ln N - \frac{n}{N}} + n\ln\angBra{n} - n \ln N + \norBra{N-n} \underbrace{\ln \norBra{1-\frac{\angBra{n}}{N}}}_{\approx -\frac{\angBra{n}}{N}}$\\
+\>$\approx N \ln \frac{N}{N-n} + \underbrace{n\ln\frac{N-n}{N}}_{\to 0} - \ln n! - n + \underbrace{\frac{n}{2N}}_{\to 0} + n \ln\angBra{n} - \angBra{n} + \underbrace{\frac{n}{N}\angBra{n}}_{\to 0}$\\
+\>$\approx \underbrace{-N\ln\norBra{1-\frac{n}{N}}}_{\approx n} -\ln n! -n +\ln\angBra{n}^n -\angBra{n}$\\
+\>$\approx -\ln n! + \ln\angBra{n}^n - \angBra{n}=\vcentcolon \ln P_{\angBra{n}}\norBra{n}$\\
+\hspace{4em} \= \kill
+$\rightarrow$\> \fbox{$P_{\angBra{n}}\norBra{n} = \frac{\angBra{n}^n e^{-\angBra{n}}}{n!}$}
+\end{tabbing}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[->] (-0.15,0) to (10.25,0);
+    \draw[->] (0,-0.15) to (0,5);
+    \node at (0,5.25) {$P_{2}\norBra{n}$};
+    \node at (10.5,0) {$n$};
+    \draw (-0.15,2.5) to (0.15,2.5);
+    \node at (-0.4,2.5) {$\frac{1}{4}$};
+    \foreach \x/\y in {0/0.135335, 1/0.270671, 2/0.270671, 3/0.180447, 4/0.0902235, 5/0.0360894, 6/0.0120298, 7/0.00343709, 8/0.000859272, 9/0.000190949, 10/0.0000381899} {
+      \draw[thick] (\x,0) to (\x,10*\y);
+      \fill (\x,10*\y) circle (0.1);
+      \draw (\x,-0.15) to (\x,0.15);
+      \node at (\x,-0.4) {$\pgfmathparse{int(\x)}\pgfmathresult$};
+    }
+  \end{tikzpicture}
+\end{figure}
+\begin{tabbing}
+Varianz der Poissonverteilung kann leicht als Grenzwert der Varianz der Binomialverteilung erhalten werden.\\
+\underline{Normalverteilung} (vergleiche Übung)\\
+Für $N\to\infty$, $p=\text{konstant}$, $\angBra{n} = N p \to \infty$, $\Delta N = \sqrt{p\norBra{1-p}N} \to \infty$ liegen immer mehr mögliche\\ Werte von $n$ innerhalb der Breite $\Delta n$\\
+\hspace{4em} \= \kill
+$\rightarrow$\> Übergang zu einer kontinuierlichen Verteilung\\
+Man findet \fbox{$\prob{n} \stackrel[N\to\infty]{}{\approx} \frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{\norBra{n-Np}^2}{2\sigma^2}}$} mit $\sigma^2 = \Delta n^2$
+\end{tabbing}
+
+
+\subsection{Zentraler Grenzwertsatz}
+\begin{tabbing}
+\uwave{Aussage}: Eine Größe, die eine Sume vieler unabhängiger Zufallsvariablen ist, befolgt eine Normalverteilung.\\
+Zufallsgröße $x = s_1 + s_2 +\dots + s_N$ mit Zufallsvariablen $s_j$.\\
+Wahrscheinlichkeitsverteilungen der $s_j$ seien Funktionen $w_j$, die normiert sind: $\int\limits_{-\infty}^{\infty} w_j\norBra{s} \dd{s} = 1$\\
+und endliche \underline{Momente} haben: $\overline{s}_j^n = \int\limits_{-\infty}^{\infty} s^n w_j\norBra{s}\dd{s} < \infty$, $n = 1,2,\dots$\\
+Wahrscheinlichkeit, bestimmte Werte $s_1,\dots,s_N$ zu finden, beträgt:\\ $w_1\norBra{s_1}w_2\norBra{s_2} \dots w_N\norBra{s_N} \dd{s_1}\dd{s_2}\dots\dd{s_n}$\\
+Wahrscheinlichkeit, einen bestimmten Wert $x$ zu finden, durch Integration über alle möglichen $s_j$,\\ die zu x führen:\\
+$\prob{x} =$\=$\int\limits_{-\infty}^{\infty}w_1\norBra{s_1}\dots\int\limits_{-\infty}^{\infty}w_N\norBra{s_N} \delta\norBra{x-\sum\limits_{j=1}^{N}s_j}\dd{s_N}\dots\dd{s_1}$\\
+\>$=\frac{1}{2\pi}\int\limits_{-\infty}^{\infty}e^{-i k x} \edgBra{\int\limits_{-\infty}^{\infty} w_1\norBra{s_1}e^{i k s_1}\dd{s_1} \dots \int\limits_{-\infty}^{\infty} w_N\norBra{s_N}e^{i k s_N} \dd{s_N}}\dd{k}$\\
+\>$=\frac{1}{2\pi} \int\limits_{-\infty}^{\infty}\prod\limits_{j=1}^N W_j\norBra{k} e^{- i k x}$\\
+mit den \underline{charakteristischen Funktionen} $W_j\norBra{k} = \int\limits_{-\infty}^{\infty} w_j\norBra{s}e^{i k s} \dd{s}$\\
+Entwickle $\ln\prod_{j=1}^N W_j\norBra{k}$\=$=\sum\limits_{j=1}^N\ln W_j\norBra{k}$\\
+\>$=\sum\limits_{j=1}^N \ln \norBra{1 + i k \overline{s}_j - \frac{k^2}{2}\overline{s}_j^2+\dots}$\\
+\>$=\sum\limits_{j=1}^N\edgBra{i k \overline{s}_j - \frac{k^2}{2} \overline{s}_j^2 - \frac12 \norBra{i k \overline{s_j}}^2+ \dots}$\\
+\>$=i k \sum\limits_{j=1}^N \overline{s}_j - \frac{k^2}{2}\sum\limits_{j=1}^N \norBra{\Delta s_j}^2 + \dots$\\
+\>$=i k \overline{x} - \frac{k^2}{2}\norBra{\Delta x}^2 + \dots$\\
+Hier wurde verwendet, dass sich bei unabhängigen Zufallsvariablen sowohl Erwartungswerte als auch\\
+Varianzen addieren:\\
+$\overline{x}=\int\limits_{-\infty}^{\infty}w_1\norBra{s_1}\ \dots \int\limits_{-\infty}^{\infty} w_N\norBra{s_N} \norBra{s_1 + \dots + s_N} \dd{s_N} \dd{s_1} = \overline{s}_1 + \dots + \overline{s}_N = \sum\limits_{j=1}^N\overline{s}_j$\\
+$\Delta x^2 =$\=$ \int\limits_{-\infty}^{\infty}w_1\norBra{s_1}\ \dots \int\limits_{-\infty}^{\infty} w_N\norBra{s_N} \edgBra{\sum\limits_{j=1}^N \norBra{s_j-\overline{s}_j}}^2 \dd{s_N} \dd{s_1}$\\
+\>$=\int\dd{s_1}w_1\dots\dd{s_N}w_N\edgBra{\sum\limits_{j=1}^N \norBra{s_j-\overline{s}_j}^2 + \sum\limits_{j\neq l}\norBra{s_j-\overline{s}_j}\norBra{s_l-\overline{s}_l}}$\\
+$=\sum\limits_{j=1}^N \norBra{\Delta s_j}^2$\\
+\hspace{4em} \= \kill
+$\rightarrow$\> $\prod\limits_{j=1}^N W_j\norBra{k} \approx e^{i k \overline{x} - \frac{k^2}{2}\norBra{\Delta x}^2}$\\
+(Höhere Terme in $k$ können für $N\to\infty$ vernachlässigt werden; in $\exp\norBra{-i k x + i k \overline{x} - \frac{k^2}{2} \Delta x^2 + c_3 k^3 + \dots}$\\
+gilt $x-\overline{x} \sim \sqrt{N}$, $\Delta x^2 \sim N$, $c_3\sim N$ und $k\cdot \sqrt{N} =\vcentcolon k'$ $\rightarrow$ $\exp\norBra{- i k' \alpha_1 + k'^2 \alpha_2 + k'^3 \frac{1}{\sqrt{N}}+\dots}$).\\
+\hspace{4em} \= \kill
+$\rightarrow$\> $\prob{x}\approx$\fbox{$\frac{1}{\sqrt{2\pi}\Delta x}e^{-\frac{\norBra{x - \overline{x}}^2}{2 \Delta x^2}}$} Normalverteilung
+\end{tabbing}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[->] (-0.15,0) to (10.25,0);
+    \draw[->] (0,-0.15) to (0,5);
+    \node at (0,5.25) {$\prob{x}$};
+    \node at (10.5,0) {$x$};
+    \draw (5,-0.15) to (5,0.15);
+    \node at (5,-0.4) {$\overline{x}$};
+    \draw[thick,domain=0:4] plot (\x,{5*exp(-(\x-5)^2/(2*4))});
+    \draw[thick,domain=4:6] plot (\x,{5*exp(-(\x-5)^2/(2*4))});
+    \draw[thick,domain=6:10] plot (\x,{5*exp(-(\x-5)^2/(2*4))});
+    \draw[dashed] (5,0) to (5,5);
+  \end{tikzpicture}
+\end{figure}
+\begin{tabbing}
+Diese Form ergibt sich unabhängig von den Verteilungen $w_j\norBra{s_j}$, solange die oben genannten Bedingungen\\ erfüllt sind.
+\end{tabbing}
+
+
+\subsection{Verteilungsfunktionen in der klassischen Mechanik}
+\begin{tabbing}
+System von $N$ Massepunkten mit Ortskoordinaten $q_1, \dots, q_{3N}$ und Impulsen $p_1,\dots, p_{3N}$\\
+Der mikroskopische Zustand (\underline{Mikrozustand}) ist durch einen Punkt ($q_1,\dots,q_{3N},p_1,\dots,p_{3N}$)\\ im \underline{Phasenraum} festgelegt.\\
+Für ein makroskopisch großes System sind nur einige makroskopische Größen, zum Beispiel Energie $E$,\\ Volumen $V$, Teilchenzahl $N$ bakannt, aber nicht der Makrozustand. (\underline{Makrozustand})\\
+\hspace{4em} \= \kill
+$\rightarrow$\>Wahrscheinlichkeitsverteilung $\rho\norBra{q_1,\dots,q_{3N},p_1,\dots,p_N}$\\ mit $\rho \geq 0$, $\int\rho\prod\limits_j \dd{q_j}\dd{p_j} < \infty$ $\rightarrow$ \underline{statistisches Ensemble}\\
+Teilchenbewegung folgt den Hamiltonschen Bewegungsgleichungen $\dot{q}_j = \frac{\partial H}{\partial p_j}$, $\dot{p}_j = -\frac{\partial H}{\partial q_j}$ mit\\
+Hamiltonfunktionen $H\norBra{\curBra{q_j,p_j},t}$.\\
+Anfangsvariablen $q_{j,0}$, $p_{j,0}$ entwickeln sich $q_j\norBra{t;\curBra{q_{j,0},p_{j,0}}}$, $p_j\norBra{t;\curBra{q_{j,0},p_{j,0}}}$.\\
+$\rightarrow$\>Anfangsverteilung $\rho_0$ entwickelt sich zu\\
+$\rho\norBra{\curBra{q_j,p_j},t} = \int\prod_j\rho_0\norBra{\curBra{q_{j,0},p_{j,0}}}\delta\norBra{q_1-q_1\norBra{t;\curBra{q_{j,0},p_{j,0}}}}\dots\delta\norBra{p_{3N}-p_{3N}\norBra{t;\curBra{q_{j,0},p_{j,0}}}}\dd{q_{j,0}}\dd{p_{j,0}}$\\
+$\rightarrow$\> $\frac{\partial \rho}{\partial t} = -\sum\limits_j\norBra{\frac{\partial \rho}{\partial q_j}\dot{q}_j + \frac{\partial \rho}{\partial p_j} \dot{p_j}} = -\sum\limits_j\norBra{\ppv{\rho}{q_j}\ppv{H}{p_j} - \ppv{\rho}{p_j}\ppv{H}{q_j}} = \curBra{H,\rho}$\\
+(da $\ppv{}{t}\delta\norBra{q_j-q_j\norBra{t;\curBra{q_{j,0},p_{j,0}}}} = - \ppv{}{q_j} \delta\norBra{q_j-q_j\norBra{t;\curBra{q_{j,0},p_{j,0}}}}\cdot\ppv{q_j}{t}$)\\
+$\rightarrow$\> \fbox{$\ppv{\rho}{t} = \curBra{H,\rho}$} \underline{Liouville-Gleichung}\\
+Weiterhin sieht man, dass $\ppv{\rho}{t} = -\vec{\nabla} \norBra{\vec{v}\rho}$ mit der Phasenraumgeschwindigkeit $\vec{v} = \norBra{\dot{q}_1,\dots,\dot{p}_{3N}}$ sowie\\ $\ppv{\rho}{t} = 0$ für einen mit der Strömung mitbewegten Beobachter.\\
+$\rightarrow$\> Verteilung wie eine \underline{inkompressible} Flüssigkeit (aber nicht mit konstanter Dichte).
+\end{tabbing}
+
+
+\subsection{Quantenstatistik}
+\begin{tabbing}
+Quantenmechanischer Mikrozustand \=$=$Vektor im Hilbertraum\\
+\>$=$\underline{reiner Zustand}\\
+Normierter Zustand $\ket{\phi}$, Observable $A$ $\rightarrow$ Erwartungswert $\brExpet{\Phi}{A}{\Phi}$\\
+Statistisches Ensemble: \= Zustände $\bra{\Phi_j}, \braket{\Phi_j}{\Phi_j} = 1$, mit Wahrscheinlichkeiten $p_j$, $\sum\limits_j p_j = 1$\\
+\>$=$\underline{gemischter Zustand}, \underline{statistisches Gemisch}\\
+\hspace{4em} \= \kill
+$\rightarrow$\> \underline{Ensemble-Mittelwert} (eigentlich \glqq Erwartungswert \grqq): $\angBra{A} = \sum\limits_j p_j \brExpet{\psi_j}{A}{\psi_j}$\\
+Es ist nützlich, den Dichteoperator (Dichtematrix) zu definieren: \fbox{$\rho = \sum\limits_j p_j \ket{\psi_j}\bra{\psi_j}$}\\
+$\rightarrow$\> $\angBra{A} = \sum\limits_{j,n} p_j \brExpet{\psi_j}{A}{n}\braket{n}{\psi_j} = \sum\limits_{j,n} \braket{n}{\psi_j}p_j \brExpet{\psi_j}{A}{n} = \sum\limits_n \brExpet{n}{\rho A}{n}$\\
+$\rightarrow$\> \fbox{$\angBra{A} = \spur\norBra{\rho A}$} (\underline{Spur} von $\rho A$)\\
+Es gilt $\rho = \rho^{\dagger}$ und $\rho$ positviv semidefinit ($\brExpet{\psi}{\rho}{\psi} \geq 0$ $\forall \ket{\psi}$)\\
+$\rightarrow$\> $\rho$ ist diagonalisierbar und hat reelle Eigenwerte $\geq 0$.\\
+$\rightarrow$\> $\rho = \sum\limits_m P_m\ket{m}\bra{m}$ mit $P_m \geq 0$, $\sum\limits_m P_m = 1$, $\braket{m}{m'} = \delta_{m,m'}$\\
+Es gilt $\spur \rho =1$ $\spur \rho^2 < 1$ falls $\rho$ kein reiner Zustand ist.\\
+Rechnen mit der Spur:\=$\spur\norBra{AB} = \spur\norBra{BA}$\\
+\> $\spur\edgBra{A,B} = 0$\\
+\> $\spur\norBra{ABC} = \spur\norBra{CAB}$\\
+Zeitentwicklung: \=$i \hbar \ppv{}{t} \rho = \sum\limits_j p_j \norBra{H\ket{\psi_j}\bra{\psi_j} - \ket{\psi_j}\bra{\psi_j}H}$\\
+$\rightarrow$\> \fbox{$i \hbar \ppv{}{t}\rho = \edgBra{H,\rho}$} \underline{von-Neumann-Gleichung}
+\end{tabbing}

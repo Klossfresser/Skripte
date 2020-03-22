@@ -1,0 +1,113 @@
+\section{Entropie}
+\begin{tabbing}
+\uline{Bedeutung}: Fehlende Information, Unkenntnis, \glqq Unordnung \grqq\\
+In der Physik: Unkenntnis über den genauen mikroskopischen Zustand.
+\end{tabbing}
+\subsection{Klassische Entropie}
+\begin{tabbing}
+System mit Zuständen $A_1,A_2,\dots$, die mit Wahrscheinlichkeiten $p_j$ besetzt sind. \glqq Klassisch\grqq bedeutet\\ hier, dass $A_1,A_2,\dots$ sich gegenseitig ausschließende Mikrozustände sind, die alle Observablen eindeutig\\ festlegen.
+Aus vernünftigen Annahmen, die ein Maß für Unkenntnis erfüllen sollte (Shannon 1984),\\ kann man einen Ausdruck für die Entropie herleiten, der zu dem in der Physik postulierten Ausdruck\\ (Gibbs, Boltzmann) äquvalent ist.\\
+\hspace{4em} \= \kill
+$\rightarrow$\> \fbox{$S=-k_B \sum\limits_j p_j \ln p_j$} \uline{Gibbs-Entropie} ($S\geq 0$, da $\ln p_j \leq 0$)\\
+$k_B =$Boltzmannkonstante $1.380649\cdot 10^{-23}\frac{\textbf{J}}{\textbf{K}}$ zur Identifikation mit der zuvor aus der Thermodynamik\\ bekannten Entropie, sonst beliebig.\\
+(\uline{Shannon-Entropie}: $H=-\sum\limits_j p_j \ln_2 p_j$, fehlende Informationen gemessen in Bits)\\
+\uwave{Beispiel}: \=Münzwurf, $p=\text{Wahrscheinlichkeit für Kopf}$, $p-1 = \text{Wahrscheinlichkeit für Zahl}$\\
+\>$\rightarrow$ $S=-k_B \edgBra{p\ln p+ \norBra{1-p}\ln\norBra{1-p}}$\\
+\>$\ddv{S}{p} = -k_B\edgBra{\ln p - \ln\norBra{1-p}}$\\
+Entropie maximal bei $p=\frac12$, das heißt bei Gleichverteilung
+\end{tabbing}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[->] (0,-0.15) to (0,5.25);
+    \draw[->] (-0.15,0) to (10.25,0);
+    \node[anchor=south] at (0,5.35) {$H = S\cdot \frac{1}{k_B \ln 2}$};
+    \node[anchor=west] at (10.35,0) {$p$};
+    \draw (-0.15,5) to (0.15,5);
+    \draw (5,-0.15) to (5,0.15);
+    \draw (10,-0.15) to (10,0.15);
+    \node at (-0.4,5) {$1$};
+    \node at (5,-0.4) {$\frac12$};
+    \node at (10,-0.4) {$1$};
+    \draw[dashed] (5,0) to (5,5);
+    \draw[dashed] (0,5) to (10,5);
+    \draw[thick,domain=0.001:5] plot (\x,{-5*(\x/10*ln(\x/10)+(1-\x/10)*ln(1-\x/10))/(ln(2))});
+    \draw[thick,domain=5:10] plot (\x,{-5*(\x/10*ln(\x/10)+(1-\x/10)*ln(1-\x/10))/(ln(2))});
+  \end{tikzpicture}
+\end{figure}
+\begin{tabbing}
+Betrachte den Fall, dass $N$ verschiedene Mikrozustände gleich wahrscheinlich besetzt sind:\\ $p_1=\dots =p_N = \frac{1}{N}$\\
+\hspace{4em} \= \kill
+$\rightarrow$\> \fbox{$S = -k_B \sum\limits_j \frac{1}{N} \ln\norBra{\frac{1}{N}}=k_B \ln\norBra{N}$} \uline{Boltzmann-Entropie}\\
+Wenn nur $1$ Zustand besetzt: $N=1$, $S=0$
+\end{tabbing}
+
+
+\subsection{Prinzip der maximalen Entropie}
+\begin{tabbing}
+\uline{Prinzip}: \= Zuordnung der Wahrscheinlichkeiten $p_j$ zu den Alternativen $A_j$ so, dass die Entropie (fehlende\\\> Information über das System) maximiert wird, aber unter Berücksichtigung der vorhandenen\\\> Information durch \uline{Nebenbedingungen} ($\rightarrow$ Verwendung von \uline{Lagrange-Multiplikatoren}).\\
+\uline{Einfachster Fall}: keine Information, außer, dass Verteilung normiert sein muss, $\sum\limits_j = 1$.\\
+\hspace{4em} \= \kill
+$\rightarrow$\> $S = -k_B \sum\limits_j p_j \ln\norBra{p_j}$ maximal unter Variationen $p_j \to p_j + \delta p_j$\\\>mit Nebenbedingung $\delta \norBra{1-\sum\limits_j p_j} = 0$.\\
+$\rightarrow$\> $\delta\edgBra{-\sum\limits_j p_j \ln\norBra{p_j} + \lambda\norBra{1-\sum\limits_j p_j}} = 0$ mit unabhängigen $\delta p_j$\\
+\>$\lambda$: Lagrange-Multiplikator\\
+$\rightarrow$\> $\norBra{\ln\norBra{p_j}+1+\lambda}\delta p_j = 0$ $\alpha \mDef 1 + \lambda$\\
+$\rightarrow$\> $\ln p_j + \alpha = 0$ $\forall j$\\
+$\rightarrow$\> $p_j = e^{-\alpha}$, das heißt alle Wahrscheinlichkeiten gleich\\
+Erfüllung der Nebenbedingung: $1=\sum\limits_j p_j = N e^{-\alpha}$\\
+$\rightarrow$\> \fbox{$p_j = \frac{1}{N}$}\\
+Bei Vorliegen weiterer Informationen ändern sich die $p_j$.
+\end{tabbing}
+
+
+\subsection{Quantenmechanische Entropie}
+\begin{tabbing}
+\uline{Definition}: \= \fbox{$S=-k_B \tr\norBra{\rho\ln\norBra{\rho}}$} ist die zur Dichtematrix $\rho$ gehörende Entropie\\\> (\uline{von-Neumann-Entropie})\\
+\uline{Anmerkung}: \= Funktionen von Operatoren\\
+\> Betrachte Operator $A$ mit vollständigem Orthonormalsystem von Eigenzuständen $\ket{n}$ und\\\> Eigenwerten $a_n$.\\
+\uline{Anmerkung}: \= $\rightarrow$ \= \kill
+\> $\rightarrow$ \fbox{$f\norBra{A}=\sum\limits_n f\norBra{a_n} \ket{n}\bra{n}$}\\
+\> oder alternativ, falls $f\norBra{\cdot}$ in Taylorreihe entwickelbar:\\
+\>\> \fbox{$f\norBra{A} = \sum\limits_{j=0}^\infty \frac{f^{\norBra{j}}\norBra{0}}{j!} A^j$}, zum Beispiel $e^A = \sum\limits_{j=0}^\infty \frac{A^j}{j!}$\\
+$\rho = \sum\limits_n P_n \ket{n}\bra{n}$ $\rightarrow$ $S=-k_B \sum\limits_n P_n \ln\norBra{P_n} \geq 0$, wenn $\braket{n}{m} = \delta_{mn}$.\\
+Falls $\rho$ aus $N$ orthonormalen Zuständen $\ket{n}$ mit gleichen Wahrscheinlichkeiten\\ $p=\frac{1}{N}$ besteht, dann: $\rho\ln\norBra{\rho} = \sum\limits_{n=1}^N p \ln\norBra{p} \ket{n}\bra{n}$\\
+\hspace{4em} \=$S$\= \kill
+$\rightarrow$\> $S$\>$= - k_B \tr\norBra{p\ln\norBra{p} \sum\limits_{n=1}^N \ket{n}\bra{n}}$\\
+\>\>$=-k_B p \ln\norBra{p} \sum\limits_m \sum\limits_{n=1}^N \verBra{\braket{m}{n}}^2$\\
+$\rightarrow$\> $S$\>$=-k_B\ln\norBra{\frac{1}{N}} =$\fbox{$k_B \ln\norBra{N}$}\\
+Reiner Zustand: $N=1$ $\rightarrow$ \fbox{$S=0$}\\
+Ist Prinzip der maximalen Entropie auch für von-Neumann-Entropie sinnvoll?\\
+Betrachte $\tr\edgBra{\rho\norBra{\ln\norBra{\rho}-\ln\norBra{\rho_1}}}$ mit zwei Dichtematrizen\\
+$\rho$, $\rho_1$. $\rho = \sum\limits_n P_n \ket{n}\bra{n}$, $\rho_1=\sum\limits_\nu P_{1,\nu} \ket{\nu}_1 \prescript{}{1}{\bra{\nu}}$\\
+\hspace{4em} \=$\tr\edgBra{\rho\norBra{\ln\norBra{\rho}-\ln\norBra{\rho_1}}}$\= \kill
+$\rightarrow$\> $\tr\edgBra{\rho\norBra{\ln\norBra{\rho}-\ln\norBra{\rho_1}}}$\>$=\sum\limits_n P_n \brExpet{n}{\norBra{\ln\norBra{\rho_1}-\ln\norBra{\rho}}}{n}$\\
+\>\>$=\sum\limits_n P_n \brExpet{n}{\ln \frac{\rho_1}{P_n}}{n}$\\
+\>\>$=\sum\limits_{n,\mu,\nu}P_n \braket{n}{\nu}_1 \prescript{}{1}{\brExpet{\nu}{\ln\frac{P_{1,\mu}}{P_n}}{\mu}_1}\prescript{}{1}{\braket{\mu}{n}}$\\
+\>\>$\leq\sum\limits_{n,\mu,\nu}P_n \braket{n}{\nu}_1 \prescript{}{1}{\brExpet{\nu}{\frac{P_{1,\mu}}{P_n}-1}{\mu}_1} \prescript{}{1}{\braket{\mu}{n}}$\\
+\>\>$=\sum\limits_n P_n \brExpet{n}{\norBra{\frac{\rho_1}{P_n}-1}}{n}$\\
+\>\>$=\sum\limits_n \brExpet{n}{\rho_1}{n} - \brExpet{n}{\rho}{n}$\\
+\>\>$=\tr\norBra{\rho_1} - \tr\norBra{\rho} = 0$\\
+Betrachte nun $\rho_1$ und $\rho$ mit Zuständen, die denselben $N$-dimensionalen Unterraum aufspannen, und\\ $\rho_1 = \sum\limits_{\nu=1}^N \frac{1}{N} \ket{\nu}_1\prescript{}{1}{\ket{\nu}}$ (Gleichbesetzung)\\
+\hspace{4em} \= \kill
+$\rightarrow$\> $S\edgBra{\rho} = -k_B \tr \norBra{\rho\ln\norBra{\rho}} \leq -k_B \tr\norBra{\rho\ln\norBra{\rho_1}} = - k_B \tr\norBra{\rho\ln\norBra{\frac{1}{N}}\sum\limits_{\nu=1}^N \ket{\nu}_1\prescript{}{1}{\bra{\nu}}}$\\
+$\rightarrow$\> $S\edgBra{\rho} \leq - k_B \sum\limits_{n=1}^N \bra{n}\rho\ln\norBra{\frac{1}{N}}\sum\limits_{\nu =1}^N\ket{\nu_1}\prescript{}{1}{\braket{\nu}{n}} = - k_B \ln\norBra{\frac{1}{N}}\sum\limits_{n=1}^N\brExpet{n}{\rho}{n}$\\
+$\rightarrow$\> $S\edgBra{\rho} \leq k_B \ln  = S\edgBra{\rho_1}$\\
+Gleichbesetzung liefert maximale Entropie $\rightarrow$ Maximalprinzip sinnvoll.
+\end{tabbing}
+
+
+\subsection{Additivität der Entropie}
+\begin{tabbing}
+Betrachte zwei nicht wechselwirkende unkorrelierte Systeme $a$, $b$.\\
+Gesamtentropie: $S_{ab}=k_B\sum\limits_{\nu_a,\nu_b}\prob{\nu_a,\nu_b}\ln\norBra{\prob{\nu_a,\nu_b}}$ mit Zuständen $\nu_a$, $\nu_b$.\\
+Unabhängige Systeme $\rightarrow$ $\prob{\nu_a,\nu_b} = \prob{\nu_a}\prob{\nu_b}$\\
+\hspace{4em} \= $S_{ab}$\= \kill
+$\rightarrow$\> $S_{ab}$\>$ = - k_B \sum\limits_{\nu_a,\nu_b} \prob{\nu_a}\prob{\nu_b}\norBra{\ln\norBra{\prob{\nu_a}}+\ln\norBra{\prob{\nu_b}}}$\\
+\>\> $=-k_B \sum\limits_{\nu_a} \prob{\nu_a}\ln\prob{\nu_a} - k_B \sum\limits_{\nu_b}\prob{\nu_b}\ln\prob{\nu_b}$\\
+$\rightarrow$\>\fbox{$S_{ab}=S_a+S_b$} $\rightarrow$ Entropie ist eine \uline{extensive Größe}.\\
+Quantenmechanisch: \= Produktzustände \= $\ket{\nu_a,\nu_b} = \ket{\nu_a} \otimes \ket{\nu_b} = \ket{\nu_a}\ket{\nu_b}$\\
+\>Gesamtzustand \> $S_{ab} = S_a \otimes S_b = \sum\limits_{\nu_a,\nu_b}\prob{\nu_a}\prob{\nu_b} \ket{\nu_a}\ket{\nu_b}\bra{\nu_a}\bra{\nu_b}$\\
+\hspace{4em} \= \kill
+$\rightarrow$\> $S_{ab} = - k_B \sum\limits_{\nu_a,\nu_b} \prob{\nu_a}\prob{\nu_b} \ln\norBra{\prob{\nu_a}\prob{\nu_b}} = S_a + S_b$ wie oben.\\
+Produktzustände beschreiben Gesamtzustände aus unkorrelierten Subsystemen.
+\end{tabbing}
