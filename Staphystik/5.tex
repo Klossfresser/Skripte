@@ -1,8 +1,434 @@
 \section{Thermodynamik}
 \subsection{Zustände}
+Im folgenden bedeutet \uline{Zustand} in der Regel: \uline{Gleichgewichts-Makrozustand},
+\begin{itemize}[align=left,labelwidth=\widthof{--},labelsep=1ex,labelindent=0pt,leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[--] zeitlich unveränderlich, wenn äußere Parameter nicht verändert werden,
+  \item[--] gekennzeichnet durch einige makroskopische Angaben (Energie, Volumen, \dots)
+\end{itemize}
+
+\begin{itemize}[align=left,labelwidth=\widthof{\uline{Zustandsvariable}:},labelsep=1ex,labelindent=0pt,leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[\uline{Zustandsgrößen}:] Größen, die in einem Zustand eindeutig festgelegt sind , zum Beispiel Energie, Entropie, Volumen, \dots; nicht: Arbeit, Wärme. Es gibt intensive/ extensive Zustandsgrößen.
+  \item[\uline{Zustandsvariable}:] Ein Satz von Zustandsgrößen, der ausreicht, um alle anderen Zustandsgrößen eindeutig festzulegen. \uwave{Beispiel}: Ideales Gas mit Variablen $E$, $V$, $N$; oder alternativ $T$, $V$, $N$; und so weiter.
+\end{itemize}
+
+\subsection{Arbeit und Wärme}
+Unterteile Zustandsgrößen in \uline{äußere Parameter} (\uline{Kontrollparameter}) (können vom Experimentator will\-kür\-lich von außen eingestellt werden, zum Beispiel Volumen, gegebenenfalls Teilchenzahl) und andere, \uline{innere Größen}, die auch von den inneren Eigenschaften abhängt. Oft genügt neben den äußeren Parametern eine weitere Variable (zum Beispiel Temperatur), um den Zustand festzulegen (\glqq einfaches System\grqq).\\
+Energie kann auf zwei Arten geändert werden:
+\begin{itemize}[align=left, labelwidth=\widthof{-- \uline{Wärme}:}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[-- \uline{Arbeit}:] Veränderung der Kontrollparameter
+  \item[-- \uline{Wärme}:] Energieübertragung ohne Änderung der Kontrollparameter
+\end{itemize}
+Arbeit: $\delta W = f\cdot \dd{X}$ $f$ intensiv, $X$ extensiv (für kontrollierte, reversible Arbeit)\\
+\uwave{Beispiele}:
+\begin{itemize}[align=left, labelwidth=\widthof{4)}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[1)]  Gas: Expansionsarbeit \begin{tikzpicture}[baseline=0.3cm]\fill[fill=white!90!black] (0,0) rectangle (5,1);\draw[thick] (7,0) to (0,0) to (0,1) to (7,1);\node at (2.5,0.5) {$V$};\draw[dashed] (5,0.05) rectangle (6,0.95);\draw[thick] (5,0.05)  to (5,0.95);\draw[decorate,decoration={brace,amplitude=3pt},yshift=2pt] (5,0) to (6,0);\node[anchor=south] at (5.5,0.1) {$\dd{X}$};\draw[->] (5,0.7) to (5.5,0.7);\end{tikzpicture}$\delta W = - F \dd{X} = -\frac{F}{A} A \dd{x} = - p \dd{V}$ mit Druck \fbox{$p=\frac{F}{A}$}, Kraft  des Systems auf Wand. $\delta W > 0$, wenn $\dd{V} > 0$
+  \item[2)] Gummiband: Dehnungsarbeit $\delta W = F\cdot\dd{l}$, $\dd{l}$: Längenänderung, $f>0$: Von außen angewandte Kraft Hier: $\delta W >0$, wenn $\dd{l}>0$
+  \item[3)] Magnetisches System: $\delta W = \vec{B}\cdot\dd{\norBra{\vec{M}V}}$ $\vec{B}$: magnetische Flussdichte, $\vec{M}V$: Magnetisierung (hier magnetisches Moment pro Volumen)
+  \item[4)] Chemische Arbeit: $\delta W = \mu \dd{N}$
+\end{itemize}
+\uline{1. Hauptsatz der Thermodynamik}:\\
+\fbox{\parbox{0.98\textwidth}{Es gibt in jedem System eine extensive Zustandsgröße \glqq innere Energie\grqq\ ($E$ oder $U$), die beim abgeschlossenen System erhalten bleibt und sich gemäß \fbox{$\dd{E} = \delta W + \delta{Q}$} verhält.}}\\
+(Kann als Energieerhaltungssatz beziehungsweise Definition von Wärme aufgefasst werden. Schreibweise \glqq$\dd{E}$\grqq\ deutet an, dass $E$ eine Zustandsgröße ist und daher $\dd{E}$ ein exaktes Differential ist.)\\
+\uline{Mikroskopische Interpretation}\\
+Energie $E = \angBra{E} = \sum\limits_j P_j E_j$
 \begin{tabbing}
-Im folgenden bedeutet \uline{Zustand} in der Regel: \uline{Gleichgewichts-Makrozustand},\\
--- zeitlich unveränderlich, wen äußere Parameter nicht verändert werden,\\
--- gekennzeichnet durch einige makroskopische Angaben (Energie, Volumen, \dots)\\
-\uline{Zustandsgrößen}: \= Größen, die in einem Zustand eindeutig festgelegt sind , zum Beispiel E
+\hspace{4em} \= \kill
+$\rightarrow$\> $\dd{E} = \sum\limits_j P_j \dd{E_j} + \sum\limits_j E_j \dd{P_j}$\\
+Arbeit: \> $\sum\limits_j P_j \dd{E_j}$\\
+Wärme: \> $\sum\limits_jE_j \dd{P_j}$
 \end{tabbing}
+$\sum\limits_j P_j \dd{E_j} = \sum\limits_j P_j \ppv{E_j}{V} \dd{V} = - p \dd{V}$ mit $-p \mDef \sum\limits_j P_j \ppv{E_j}{V}$\\
+(wenn $E_j$ nur von $V$ abhängig; gilt zum Beispiel nicht für Arbeit mit Reibungsverlusten, zum Beispiel Rühren)
+\begin{itemize}[align=left, labelwidth=6em, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth, listparindent=\leftmargin]
+\item[$\rightarrow$ Arbeit] $\eDef$ Änderung der Energieniveaus $E_j$
+\item[$\rightarrow$ Wärme] $\eDef$ Änderung der Besetzungswahrscheinlichkeiten $P_j$
+\end{itemize}
+Achtung: Die geänderten $P_j$, $E_j$ entsprechen hier nicht unbedingt einem Gleichgewichtszustand. Ein solcher muss sich erst einstellen.
+
+\subsection{Thermodynamische Prozesse}
+Prozess $=$ Änderung von Zustandsgrößen
+
+\begin{itemize}[align=left, labelwidth=\widthof{\uline{Quasistatischer} Prozess:}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth, listparindent=\leftmargin]
+\item[\uline{Quasistatischer} Prozess:] langsam genug, so dass System immer im Gleichgewicht ist; das heißt langsamer als die Relaxationszeit des Systems\\
+$\rightarrow$ Abfolge von Gleichgewichtszuständen
+\item[\uline{Reversibler} Prozess:] umkehrbar; genauer (Plancksche Definition): es ist möglich, den Prozess rück\-gängig zu machen und dazu auch alle benutzten Hilfsmittel in den Anfangszustand zu versetzen.
+\item[\uline{Adiabatischer} Prozess:] ohne Wärmeaustausch; thermisch isoliertes System
+\end{itemize}
+
+\uwave{Beispiele}:
+
+\tikzset{every node/.style = {draw = none, fill = none}}
+\setlength{\tabcolsep}{0.5cm}
+\renewcommand{\arraystretch}{2}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c}
+  \begin{tikzpicture}[baseline=0cm]
+    \def\sysLen{3};
+    \def\sysHei{1};
+    \def\pinRad{0.1};
+    \def\pinDis{0.2};
+    \def\pinExt{0.9};
+    \def\filCol{white!90!black};
+    \def\arrLen{2};
+    \def\picDis{0.5};
+    \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+    \draw[thick] (0,0) rectangle (\sysLen,\sysHei);
+    \draw[thick] (\sysLen/2,-\pinDis) circle (\pinRad) to (\sysLen/2,\sysHei);
+    \draw[->] (\sysLen+\picDis,\sysHei/2) to ++(\arrLen,0);
+    \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
+    \draw[thick] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
+    \draw[thick] (3*\sysLen/2+\arrLen+2*\picDis,-\pinDis-\pinExt) circle (\pinRad) to (3*\sysLen/2+\arrLen+2*\picDis,\sysHei-\pinExt);
+  \end{tikzpicture}
+  &
+  \setlength{\tabcolsep}{1pt}
+  \begin{tabular}{c}plötzliche Expansion\\ nicht quasistatisch\\ nicht reversibel\end{tabular}
+  \setlength{\tabcolsep}{1cm}
+  \\
+
+  \begin{tikzpicture}[baseline=0.3cm]
+    \def\sysLen{3};
+    \def\sysHei{1};
+    \def\pinRad{0.1};
+    \def\pinDis{0.2};
+    \def\pinLen{0.2};
+    \def\pisDis{0.05};
+    \def\pinExt{0.9};
+    \def\filCol{white!90!black};
+    \def\arrDis{0.2};
+    \def\smaArr{0.4};
+    \def\arrLen{2};
+    \def\picDis{0.5};
+    \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+    \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+    \draw[thick] (\sysLen/2,\pisDis) to ++(0,\sysHei-2*\pisDis);
+    \draw[thick] (\sysLen/2,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
+    \draw[<->] (\sysLen/2+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+    \draw[->] (\sysLen+\picDis,\sysHei/2) to node[above] {Arbeit} node[below] {Wärme} ++(\arrLen,0);
+    \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(3*\sysLen/4,\sysHei);
+    \draw[thick] (\sysLen+\arrLen+2*\picDis+\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+    \draw[thick] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4,\pisDis) to ++(0,\sysHei-2*\pisDis);
+    \draw[thick] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
+    \draw[<->] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+  \end{tikzpicture}
+  &
+  \setlength{\tabcolsep}{1pt}
+  \begin{tabular}{c}quasistatisch\\ und reversibel\\ (bei langsamer Bewegung)\end{tabular}
+  \setlength{\tabcolsep}{1cm}
+  \\
+
+
+  \begin{tikzpicture}[baseline=0.5cm]
+    \def\sysLen{3};
+    \def\sysHei{1};
+    \def\pinRad{0.1};
+    \def\pinDis{0.2};
+    \def\pinExt{0.9};
+    \def\filCol{white!90!black};
+    \def\arrLen{2};
+    \def\picDis{0.5};
+    \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+    \draw[thick] (0,0) rectangle ++(\sysLen,\sysHei);
+    \foreach \x in {0,...,6} \draw[thick] (\sysLen/2+\x*\sysLen/16,-\pinDis) circle (\pinRad) to (\sysLen/2+\x*\sysLen/16,\sysHei);
+
+    \draw[->] (\sysLen+\picDis,\sysHei/2) to ++(\arrLen,0);
+
+    \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(10*\sysLen/16,\sysHei);
+    \draw[thick] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
+    \foreach \x in {0,...,6} \draw[thick] (3*\sysLen/2+\arrLen+2*\picDis+\x*\sysLen/16,{-\pinDis-\pinExt*(1/(1-\pinExt*exp(-(\x+2)/3))-1)}) circle (\pinRad) to (3*\sysLen/2+\arrLen+2*\picDis+\x*\sysLen/16,{\sysHei-\pinExt*(1/(1-\pinExt*exp(-(\x+2)/3))-1)});
+  \end{tikzpicture}
+  &
+  \setlength{\tabcolsep}{1pt}
+  \begin{tabular}{c}quasistatisch, \\ nicht reversibel\end{tabular}
+  \setlength{\tabcolsep}{1cm}
+
+\end{tabular}
+\end{table}
+Adiabatischer Prozess: muss \glqq schnell genug\grqq\ ablaufen, um Wärmeaustausch zu verhindern.\\
+\uwave{Beispiele}:
+\setlength{\tabcolsep}{1cm}
+\renewcommand{\arraystretch}{4}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c}
+    \begin{tikzpicture}[baseline=0.3cm]
+      \def\sysLen{3};
+      \def\sysHei{1};
+      \def\pinRad{0.1};
+      \def\pinDis{0.2};
+      \def\pisDis{0.05};
+      \def\pinLen{0.9};
+      \def\filCol{white!90!black};
+      \def\arrLen{2};
+      \def\picDis{0.5};
+      \def\borDis{0.1};
+      \def\smaArr{0.4};
+      \def\arrDis{0.2};
+      \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+      \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+      \draw[thick] (\sysLen,-\borDis) to ++(-\sysLen-\borDis,0) to ++(0,\sysHei+2*\borDis) to ++(\sysLen+\borDis,0);
+      \draw[thick] (\sysLen/2,\pisDis) to ++(0,\sysHei-2*\pisDis);
+      \draw[thick] (\sysLen/2,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
+      \draw[<->] (\sysLen/2+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+    \end{tikzpicture}
+    & reversible, adiabatische Arbeit $\delta W \stackrel{<}{>} 0$\\
+    \begin{tikzpicture}[baseline=0.3cm]
+      \def\sysLen{3};
+      \def\sysHei{1};
+      \def\pinRad{0.1};
+      \def\pinDis{0.2};
+      \def\pisDis{0.05};
+      \def\pinLen{0.9};
+      \def\filCol{white!90!black};
+      \def\arrLen{2};
+      \def\picDis{0.5};
+      \def\borDis{0.1};
+      \def\smaArr{0.2};
+      \def\arrDis{0.2};
+      \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+      \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+      \draw[thick] (\sysLen,-\borDis) to ++(-\sysLen-\borDis,0) to ++(0,\sysHei+2*\borDis) to ++(\sysLen+\borDis,0);
+      \draw[thick] (\sysLen/2,0) to ++(0,\sysHei);
+      \draw[thick] (\sysLen/2-\pinLen,\sysHei/2+\pinRad) circle(\pinRad);
+      \draw[thick] (\sysLen/2-\pinLen,\sysHei/2-\pinRad) circle(\pinRad);
+      \draw[thick] (\sysLen/2-\pinLen,\sysHei/2) to ++(2*\pinLen,0);
+      \draw[->] (\sysLen/2+\pinLen-\smaArr,\sysHei/2) arc(-180:170:\smaArr);
+    \end{tikzpicture}
+    & Rührarbeit, adiabatisch und irreversibel $\delta W > 0$
+  \end{tabular}
+\end{table}
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1}
+Achtung: In anderen Gebieten, besonders Quantenmechanik, bedeutet \glqq adiabatisch\grqq\ einen langsamen, reversiblen Prozess, bei dem die Besetzungswahrscheinlichkeiten konstant bleiben.
+
+
+\subsection{Temperatur}
+Empirisch: Systeme in Kontakt (diathermische Wände) können Wärme austauschen.\\
+\uline{Thermisches Gleichgewicht}: kein Netto-Austausch von Wärme\\
+\uline{Nullter Hauptsatz}:\\
+\fbox{\parbox{0.98\textwidth}{Wenn Systeme $A$, $B$ im thermischen Gleichgewicht sind, sowie $B$, $C$ ebenso, dann sind auch $A$, $C$ im thermischen Gleichgewicht.}}
+\begin{itemize}[align=left, labelwidth=4em, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth, listparindent=\leftmargin]
+\item[$\rightarrow$] Ermöglicht die Definition der Temperatur durch Einteilen der physikalischen Systeme in Äqui\-valenz\-klas\-sen von Systemen im thermischen Gleichgewicht ($\eDef$ gleiche Temperatur).
+\item[$\rightarrow$]\uline{Empirische Temperatur}
+\item[$\rightarrow$]im Einklang mit der statistischen Definition $T^{-1}\mDef \ppv{S}{E}$.
+\end{itemize}
+
+
+\subsection{Differentiale}
+Betrachte Funktion $F: \mathds{R}^n \to \mathds{R}$\\
+\uline{Totales Differential}: \fbox{$\dd{f} = \sum\limits_j \ppv{f}{x_j} \dd{x_j}$} ($x=\norBra{x_1,\dots,x_n}\in \mathds{R}^n$)\\
+Anschaulich: Änderung von $f$ bei kleinen Änderungen $\dd{x_j}$.\\
+Saubere Definition: $\dd{f}$ ist eine lineare Abbildung $\mathds{R}^n \to \mathds{R}$, die im Limes $\dd{x}\to 0$ die Abbildung $f\norBra{x_0+\dd{x}}-f\norBra{X_0}$ approximiert. Hier sind $x_0$, $\dd{x}$ $\in \mathds{R}^n$.\\
+Kurvenintegral:\\
+$\left.\begin{array}{l r}\text{Differential}&\dd{f} \\ \text{Kurve}&C: \mathds{R} \to \mathds{R}^n; \tau \mapsto x\norBra{\tau}\end{array} \right\} \to \int\limits_C \dd{f} = \int\limits_{\tau_1}^{\tau_2} \sum\limits_j \ppv{f}{x_j}\dot{x}_j \dd{\tau}$\\
+mit $\dot{x}_j = \ddv{x_j}{\tau}$\\
+$\int\limits_C \dd{f} = f\norBra{x\norBra{\tau_2}}-f\norBra{x\norBra{\tau_1}}$ wegunabhängig\\
+\uline{Verallgemeinerung}: Ersetze $\ppv{f}{x_j}$ durch Funktionen $g_j: \mathds{R}^n \to \mathds{R}$, die nicht unbedingt partielle Ableitungen einer Funktion sind. $\rightarrow$ im Allgemeinen $\ppv{g_s}{x_k} \neq \ppv{g_k}{x_s}$.\\
+$\rightarrow$ Definiere \uline{Differentialform} (\glqq 1-Form\grqq\ , \glqq Pfaffsche Form\grqq\ ):\\
+\fbox{$\delta G \mDef \sum\limits_j g_j \dd{x_j}$} $\rightarrow$ Kurvenintegrale $\int\limits_C\delta G = \int\limits_{\tau_1}^{\tau_2} \sum\limits_j g_j \dot{x}_j \dd{\tau}$.\\
+\glqq$\delta G$\grqq\ ist nur Schreibweise und impliziert nicht die Existenz einer Funktion $G$. Wenn jedoch \fbox{$\ppv{g_j}{x_k} = \ppv{g_k}{x_j}$} $\forall j,k$, dann ist $\delta G$ ein \uline{exaktes Differential} und wir können schreiben$\delta G = \dd{G}$, $g_j = \ppv{G}{x_j}$. (Hier wurde angenommen, dass Definitionsbereich einfach geschlossen ist.) Dann heißt $G$ \uline{Potential} zu $\delta G$. Kurvenintegrale im Allgemeinen wegabhängig.\\
+\uwave{Beispiel}:\\
+$\delta G = y \dd{x} + \dd{y}$, $g_x = y$, $g_y = 1$, $\ppv{g_y}{x} = 0$, $\ppv{g_x}{y} = 1$
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[->] (-0.15,0) to (10.25,0);
+    \draw[->] (0,-0.15) to (0,5.25);
+    \node[anchor=south] at (0,5.35) {$y$};
+    \node[anchor=west] at (10.35,0) {$x$};
+    \draw[thick,domain=0:5] plot (\x,\x);
+    \node[anchor=south] at (2.5,2.6) {$C_1$};
+    \draw[thick,domain=0:5] plot (\x,{\x^2/5});
+    \node[anchor=west] at (2.5,1.1) {$C_2$};
+    \fill[thick] (5,5) circle (0.1);
+    \node[anchor=west] at (5.1,5) {$(1,1)$};
+  \end{tikzpicture}
+\end{figure}
+
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c c}
+    $C_1$:&$\tau\in [0,1]$&$x\norBra{\tau} =\tau$&$y\norBra{\tau}=\tau$&$\int\limits_{C_1}\delta G = \int\limits_0^1 \norBra{g_x \dot{x} + g_y \dot{y}}\dd{\tau} = \int\limits_0^1 \norBra{y\cdot 1+1}\dd{\tau} = \frac32$\\
+    $C_2$:&$\tau\in [0,1]$&$x\norBra{\tau} = \tau$&$y\norBra{\tau} = \tau^2$&$\int\limits_{C_2}\delta G = \int\limits_0^1 \norBra{y\cdot 1 + 2\tau}\dd{\tau} = \int\limits_0^1\norBra{\tau^2+2\tau}\dd{\tau} = \frac43$
+  \end{tabular}
+\end{table}
+
+\uline{Rechenregeln} ($a,b\in \mathds{R}$ konstant): $\dd{a} = 0$, $\dd{\norBra{a f + b g}} = a\dd{f} + b \dd{g}$, $\dd{\norBra{fg}} =g\dd{f} + f\dd{g}$\\
+$\lambda\norBra{x}$ (überall $\neq 0$) heißt integrierender Faktor von $\delta G$, wenn $\lambda \delta G$ ein exaktes Differential ist. Dann gilt $\ppv{}{x_j}\lambda g_k = \ppv{}{x_k}\lambda g_j$.\\
+Beispiel: $e^{x}\norBra{y \dd{x} + x\dd{x}} = \dd{e^x y}$\\
+In $3$ Dimensionen: $\delta G = \vec{g}\cdot\vec{\dd{x}}$,
+$\vec{g} = \norBra{\begin{array}{c} g_1\\g_2\\g_3\end{array}}$,
+$\vec{\dd{x}} = \norBra{\begin{array}{c}\dd{x_1}\\ \dd{x_2}\\ \dd{x_3}\end{array}}$\\
+Exakt, wenn $\vec{\nabla}\times \vec{g} = 0$.\\
+Integrierender Faktor existiert, wenn $\vec{\nabla}\times \lambda \vec{g} = \lambda\vec{\nabla}\times \vec{g} - \vec{g}\times\vec{\nabla}\lambda = 0$ mit $\lambda \neq 0$. $\rightarrow$ $\vec{g}\cdot\lambda\vec{\nabla}\times\vec{g} = 0$ $\rightarrow$ \fbox{$\vec{g}\cdot\vec{\nabla}\times\vec{g} = 0$} (Frobenius-Bedingung)
+
+
+\subsection{Entropie und 2. Hauptsatz}
+Empirisch gilt in adiabatisch eingeschlossenen Systemen: Es gibt \uline{reversible} und \uline{irreversible} Prozesse.\\
+$\rightarrow$ Fasse alle (Gleichgewichts-)Zustände, die durch reversible Prozesse ineinander Überführt werden können, zu einer Äquivalenzklasse zusammen und führe eine Zustandsgröße $S$ ein (empirische Entropie), die für alle Zustände der Äquivalenzklasse denselben Wert hat.\\
+Ordnungsschema: $S$ so gewählt, dass $S$ durch irreversible Prozesse erhöht wird (Konvention).\\
+Bei der Wegnahme von einschränkenden Bedingungen (\glqq Enthemmung\grqq) strebt das System dem Zustand höchster Entropie zu (im Einklang mit dem Prinzip der maximalen Entropie der Statistischen Physik).
+
+\setlength{\tabcolsep}{0.5cm}
+\renewcommand{\arraystretch}{3}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c}
+    \begin{tikzpicture}[baseline=0cm]
+      \def\sysLen{3};
+      \def\sysHei{1};
+      \def\pinRad{0.1};
+      \def\pinDis{0.2};
+      \def\pisDis{0.05};
+      \def\pinLen{2.3};
+      \def\filCol{white!90!black};
+      \def\blaKkk{black};
+      \def\arrLen{2};
+      \def\picDis{0.5};
+      \def\borDis{0.1};
+      \def\smaArr{0.4};
+      \def\arrDis{0.2};
+      \def\befFil{0.6};
+      \def\aftFil{0.3};
+      \def\picLen{5};
+
+      \fill[\filCol] (0,0) rectangle ++(\befFil*\sysLen,\sysHei);
+      \draw (0,0) rectangle ++(\sysLen,\sysHei);
+      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+      \fill[\blaKkk] (\befFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
+      \draw (\befFil*\sysLen+\borDis,\sysHei/2) to ++(\pinLen,0) circle (\pinRad);
+      \draw[<-] (\befFil*\sysLen+\borDis+\pinLen-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+      \draw[->] (\picLen+\picDis,\sysHei/2) to ++(\arrLen,0);
+
+      \fill[\filCol] (\picLen+2*\picDis+\arrLen,0) rectangle ++(\aftFil*\sysLen,\sysHei);
+      \draw (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
+      \draw (\picLen+2*\picDis+\arrLen-\borDis,-\borDis) rectangle ++(\sysLen+2*\borDis,\sysHei+2*\borDis);
+      \fill[\blaKkk] (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
+      \draw (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen+\borDis,\sysHei/2) to ++(\pinLen,0) circle (\pinRad);
+      \draw[white] (2*\picLen+2*\picDis+\arrLen,0) to ++(0,\sysHei);
+    \end{tikzpicture}
+    &
+    $S' = S$\\
+    \begin{tikzpicture}[baseline=0cm]
+      \def\sysLen{3};
+      \def\sysHei{1};
+      \def\pinRad{0.1};
+      \def\pinDis{0.2};
+      \def\pisDis{0.05};
+      \def\pinLen{2.3};
+      \def\filCol{white!90!black};
+      \def\blaKkk{black};
+      \def\arrLen{2};
+      \def\picDis{0.5};
+      \def\borDis{0.1};
+      \def\smaArr{0.4};
+      \def\arrDis{0.2};
+      \def\befFil{0.3};
+      \def\aftFil{0.4};
+      \def\picLen{5};
+
+      \fill[\filCol] (0,0) rectangle ++(\befFil*\sysLen,\sysHei);
+      \draw (0,0) rectangle ++(\sysLen,\sysHei);
+      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+      \fill[\blaKkk] (\befFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
+      \draw[->] (\befFil*\sysLen+\borDis,\arrDis) to ++(\smaArr,0);
+      \draw[->] (\picLen+\picDis,\sysHei/2) to ++(\arrLen,0);
+
+      \fill[\filCol] (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
+      \draw (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
+      \draw (\picLen+2*\picDis+\arrLen-\borDis,-\borDis) rectangle ++(\sysLen+2*\borDis,\sysHei+2*\borDis);
+      \fill[\blaKkk] (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen,\borDis) rectangle ++(\borDis,\sysHei-\borDis);
+      \draw[white] (2*\picLen+2*\picDis+\arrLen,0) to ++(0,\sysHei);
+    \end{tikzpicture}
+    &
+    $S' > S$\\
+    \begin{tikzpicture}[baseline=0cm]
+      \def\sysLen{3};
+      \def\sysHei{1};
+      \def\pinRad{0.1};
+      \def\pinDis{0.2};
+      \def\pisDis{0.05};
+      \def\pinLen{2.3};
+      \def\filCol{white!90!black};
+      \def\blaKkk{black};
+      \def\arrLen{2};
+      \def\picDis{0.5};
+      \def\borDis{0.1};
+      \def\smaArr{0.4};
+      \def\arrDis{0.2};
+      \def\befFil{0.3};
+      \def\aftFil{0.4};
+      \def\picLen{5};
+      \def\innSep{0.3};
+      \def\innLen{0.6};
+      \def\leiLen{0.45};
+      \def\leiAng{20};
+      \def\cloAng{2};
+
+      \draw (0,0) rectangle ++(\sysLen,\sysHei);
+      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+      \draw (\innSep,\innSep) rectangle (\innSep+\innLen,\sysHei-\innSep);
+      \draw (\innSep-\borDis,\innSep-\borDis) rectangle (\innSep+\innLen+\borDis,\sysHei-\innSep+\borDis);
+      \draw (\sysLen-\innSep,\sysHei-\innSep) rectangle (\sysLen-\innSep-\innLen,\innSep);
+      \draw (\sysLen-\innSep+\borDis,\sysHei-\innSep+\borDis) rectangle (\sysLen-\innSep-\innLen-\borDis,\innSep-\borDis);
+      \foreach \x in {1,2,3} \draw (\innSep+\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(\leiLen,0) to ++(\leiAng:{(\sysLen-2*\innSep-2*\innLen-2*\leiLen)}) (\sysLen-\innSep-\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(-\leiLen,0);
+
+
+      \draw[->] (\picLen+\picDis,\sysHei/2) to node[above] {Enthemmung} ++(\arrLen,0);
+      \tikzset{shift={(\picLen+2*\picDis+\arrLen,0)}}
+
+      \draw (0,0) rectangle ++(\sysLen,\sysHei);
+      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+      \draw (\innSep,\innSep) rectangle (\innSep+\innLen,\sysHei-\innSep);
+      \draw (\sysLen-\innSep,\sysHei-\innSep) rectangle (\sysLen-\innSep-\innLen,\innSep);
+
+      \foreach \x in {1,2,3} \draw (\innSep+\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(\leiLen,0) to ++(\cloAng:{(\sysLen-2*\innSep-2*\innLen-2*\leiLen)}) (\sysLen-\innSep-\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(-\leiLen,0);
+      \draw[white] (\picLen,0) to ++(0,\sysHei);
+    \end{tikzpicture}
+    &
+    $S' > S$
+  \end{tabular}
+\end{table}
+
+\setlength{\tabcolsep}{1pt}
+\tikzset{every node/.style = {draw = none, fill = none,scale = 0.8}}
+\renewcommand{\arraystretch}{1}
+
+\uline{2. Hauptsatz}:\\
+\fbox{\parbox{0.98\textwidth}{Es gibt eine Extensive Zustandsgröße, Entropie $S$, die im adiabatisch eingeschlossenen System nicht abnehmen kann: $\Delta S \geq 0$,}}\\
+Häufig wird angenommen, dass $S$ eine streng monoton wachsende Funktion $S\norBra{E,X}$ der Energie und der extensiven Parameter $X$ ist, damit $S$ nach $E$ auflösbar ist: $E\norBra{S,X}$. Dies schließt negative Temperaturen aus.\\
+Für quasistatische Prozesse: $S$ kann (wie alle anderen Zustandsgrößen) als Funktion eines Satzes von Zustandsvariablen geschrieben werden.\\
+$\rightarrow$ $\dd{S}\norBra{E,X} = \pdv{S}{E}{X} \dd{E} + \pdv{S}{X}{E}\dd{X}$ ($\pdv{a}{b}{c} =$ partielle Ableitung bei festem $c$), $\frac{1}{T} \mDef \pdv{S}{E}{X}$\\
+Für kontrolliert und reverersibel zugeführte Arbeit gilt: $\delta W = f\dd{X}$. Zusätzlich adiabatisch ($\delta Q =0$), dann gilt: $\dd{E}= \delta W = f\dd{X}$. Reversibel $+$ adiabatisch: $\dd{S} = 0$, $\dd{E} = f\dd{X}$ $\rightarrow$ $\frac{1}{T}f\dd{X} +\pdv{S}{X}{E}\dd{X} = 0$ $\rightarrow$ $\frac{f}{T} = -\pdv{S}{X}{E}$\\
+\uwave{Alternativ}: Definiere $f$ über $\frac{f}{T} = -\pdv{S}{X}{E}$ und folgere daraus $\delta W = f\dd{X}$, wenn $\dd{S} = 0$ und $\delta Q= 0$.\\
+$\left.\begin{array}{r l}\rightarrow & \dd{S} = \frac{\dd{E}}{T} - \frac{f}{T} \dd{X}\\ \text{Umstellen} \rightarrow & \text{\fbox{\dd{E} = T \dd{S} + f\dd{X}}}\end{array}\right\}\begin{array}{c}\text{\uline{Gibbsche}}\\\text{\uline{Fundamentalform}}\end{array}$\\
+Für reversible Prozesse mit Wärmeaustausch gilt: $\dd{E} = \delta Q + f\dd{X}$\\
+$\rightarrow$ \fbox{$\dd{S} = \frac{\delta Q}{T}$} ($\frac{1}{T}$ ist integrierender Faktor.)\\
+Adiabatische Arbeit $\delta W_{nr}$, die nicht die Form $f\dd{X}$ hat: $\dd{S} \geq 0$, $\dd{E} = \delta W_{nr}$, $\dd{X} = 0$ $\rightarrow$ $\delta W_{nr} \geq 0$. Das heißt falls $\delta W_{nr} \neq 0$, dann $\dd{S} > 0$ (irreversibel) und $\delta W_{nr} > 0$ ($\nexists$ Perpetuum mobile 2. Art). Nichtreversibler Prozess mit Wärmeaustausch: $\dd{S} > \frac{\delta Q}{T}$.\\
+$\rightarrow$ Formulierung des 2. Hauptsatzes für Prozesse mit Wärme: \fbox{$\dd{S} \geq \frac{\delta Q}{T}$}.\\
+Ein allgemeiner Prozess mit konstanter Entropie heißt \uline{isentrop}.\\
+\uwave{Beispiel}: Gas mit Energie $E$, Volumen $V$.\\
+$\rightarrow$ $\dd{E} = T \dd{S} - p\dd{V}$ beziehungsweise $\dd{S} = \frac{\dd{E}}{T} + \frac{p}{T}\dd{V}$\\
+mit Druck $p = T\cdot\pdv{S}{V}{E}$\\
+Ideales Gas: $S = \frac52 N k_B + N k_B \ln\edgBra{\frac{V}{N h^3} \norBra{2 \pi m k_B T}^{\frac32}} = \frac52 N k_B + N k_B \ln\edgBra{\frac{V}{N h^3} \norBra{2 \pi m \frac{2 E}{3 V}}^{\frac32}}$\\
+$\rightarrow$ $\pdv{S}{V}{E} = \frac{N k_B}{V}$ $\rightarrow$ \fbox{$p V = N k_B T$} \uline{thermische Zustandsgleichung}\\
+\uline{Wärmekapazitäten}: $C=$\glqq$\frac{\delta Q}{\dd{T}}$\grqq$ = \frac{T\dd{S}}{\dd{T}} = T \ppv{S}{T}$\\
+konstantes Volumen: $C_V = T \pdv{S}{T}{V} = \pdv{E}{T}{V}$; konstanter Druck: $C_p = T\pdv{S}{T}{p} \neq \pdv{E}{T}{p}$; Ideales Gas: $C_V = \frac32 N k_B$; $C_p = \frac52 N k_B$\\
+Betrachte im Folgenden System mit extenxiven Variablen $V$, $N$ (\glqq einkomponentiges Fluidum\grqq). $\rightarrow$ $S = S\norBra{E,V,N}$.\\
+Auflösen nach $E$ $\rightarrow$ $E = E\norBra{S,V,N}$\\
+Totales Differential: $\dd{E} = \ppv{E}{S} \dd{S} + \ppv{E}{V} \dd{V} + \ppv{E}{N}\dd{N} = T \dd{S} -p \dd{V} +\mu\dd{N}$ da $\ppv{E}{S} = \frac{1}{\ppv{S}{E}} = T$; $\ppv{E}{V} = - p$ (Druck); $\ppv{E}{N} = \mu$ (chemisches Potential)\\
+\uwave{Einschub}: Rechenregeln für partielle Ableitungen\\
+Betrachte $z\norBra{x,y}$, das nach $x$ oder $y$ aufgelöst werden kann. $\rightarrow$ $x\norBra{y,z}$, $y\norBra{z,x}$
+
+\begin{itemize}
+  \item[1)] Bei festgehaltenem $y$ ist $x\norBra{y,z}$ die Umkehrfunktion von $z\norBra{x,y}$. $\rightarrow$ \fbox{$\pdv{x}{z}{y} = \frac{1}{\pdv{z}{x}{y}}$}
+  \item[2)] $\left. \begin{array}{c}\dd{z} = \pdv{z}{x}{y}\dd{y} + \pdv{z}{y}{x}\dd{y}\\
+  \dd{x} = \pdv{x}{y}{z}\dd{y} + \pdv{x}{z}{y}\dd{z}\end{array}\right\} \stackrel[\text{Spezialfall}]{\dd{z} =0}{\longrightarrow} \begin{array}{c} \pdv{z}{x}{y}\dd{x} +\pdv{z}{y}{x}\dd{y} = 0\\ \dd{x} = \pdv{x}{y}{z}\dd{y} = 0\end{array}$\\
+  $\rightarrow$ $\pdv{z}{x}{y}\pdv{x}{y}{z} + \pdv{z}{y}{x} = 0$\\
+  $\rightarrow$ \fbox{$\pdv{z}{x}{y}\pdv{x}{y}{z}\pdv{y}{z}{x} = -1$}
+\end{itemize}
+
+$\rightarrow$ \fbox{$\dd{E} = T\dd{S} -p\dd{V}+\mu\dd{N}$} oder \fbox{$\dd{S} = \frac{1}{T}\dd{E} +\frac{p}{T}\dd{V}-\frac{\mu}{T}\dd{N}$}

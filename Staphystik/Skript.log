@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.23)  22 MAR 2020 13:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.23)  25 MAR 2020 02:42
 entering extended mode
 **./Skript.tex
 (Skript.tex
@@ -680,6 +680,28 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@dima=\skip70
 \bigstrutjot=\dimen173
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty"
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip71
+\enit@outerparindent=\dimen174
+\enit@toks=\toks38
+\enit@inbox=\box44
+\enit@count@id=\count129
+\enitdp@description=\count130
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count131
+\calc@Bcount=\count132
+\calc@Adimen=\dimen175
+\calc@Bdimen=\dimen176
+\calc@Askip=\skip72
+\calc@Bskip=\skip73
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count133
+\calc@Cskip=\skip74
+)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
@@ -711,19 +733,6 @@ Package pdftexcmds Info: \pdfdraftmode found.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/mathtools\mathtools.sty"
 Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count129
-\calc@Bcount=\count130
-\calc@Adimen=\dimen174
-\calc@Bdimen=\dimen175
-\calc@Askip=\skip71
-\calc@Bskip=\skip72
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count131
-\calc@Cskip=\skip73
-)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
@@ -731,27 +740,27 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count132
-\l_MT_multwidth_dim=\dimen176
-\origjot=\skip74
-\l_MT_shortvdotswithinadjustabove_dim=\dimen177
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen178
-\l_MT_above_intertext_sep=\dimen179
-\l_MT_below_intertext_sep=\dimen180
-\l_MT_above_shortintertext_sep=\dimen181
-\l_MT_below_shortintertext_sep=\dimen182
+\g_MT_multlinerow_int=\count134
+\l_MT_multwidth_dim=\dimen177
+\origjot=\skip75
+\l_MT_shortvdotswithinadjustabove_dim=\dimen178
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen179
+\l_MT_above_intertext_sep=\dimen180
+\l_MT_below_intertext_sep=\dimen181
+\l_MT_above_shortintertext_sep=\dimen182
+\l_MT_below_shortintertext_sep=\dimen183
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/ulem\ulem.sty"
-\UL@box=\box44
-\UL@hyphenbox=\box45
-\UL@skip=\skip75
-\UL@hook=\toks38
-\UL@height=\dimen183
-\UL@pe=\count133
-\UL@pixel=\dimen184
-\ULC@box=\box46
+\UL@box=\box45
+\UL@hyphenbox=\box46
+\UL@skip=\skip76
+\UL@hook=\toks39
+\UL@height=\dimen184
+\UL@pe=\count135
+\UL@pixel=\dimen185
+\ULC@box=\box47
 Package: ulem 2019/11/18
-\ULdepth=\dimen185
+\ULdepth=\dimen186
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgfplots\pgfplots.sty"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots\pgfplots.revision.tex")
@@ -759,12 +768,12 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots\pgfplots.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots\pgfplotscore.code.tex"
-\t@pgfplots@toka=\toks39
-\t@pgfplots@tokb=\toks40
-\t@pgfplots@tokc=\toks41
-\pgfplots@tmpa=\dimen186
-\c@pgfplots@coordindex=\count134
-\c@pgfplots@scanlineindex=\count135
+\t@pgfplots@toka=\toks40
+\t@pgfplots@tokb=\toks41
+\t@pgfplots@tokc=\toks42
+\pgfplots@tmpa=\dimen187
+\c@pgfplots@coordindex=\count136
+\c@pgfplots@scanlineindex=\count137
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.
 tex"))
@@ -781,14 +790,14 @@ ructure.code.tex")
 ructureext.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/liststructure\pgfplotsarray.
 code.tex"
-\c@pgfplotsarray@tmp=\count136
+\c@pgfplotsarray@tmp=\count138
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/liststructure\pgfplotsmatrix
 .code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/numtable\pgfplotstableshared
 .code.tex"
-\c@pgfplotstable@counta=\count137
-\t@pgfplotstable@a=\toks42
+\c@pgfplotstable@counta=\count139
+\t@pgfplotstable@a=\toks43
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/liststructure\pgfplotsdeque.
 code.tex")
@@ -800,7 +809,7 @@ e.tex"))
 tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/libs\pgflibrarypgfplots.surf
 shading.code.tex"
-\c@pgfplotslibrarysurf@no=\count138
+\c@pgfplotslibrarysurf@no=\count140
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfs
 hading.pgfsys-pdftex.def")))
@@ -827,16 +836,16 @@ ex")))
 librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduledecorations.code
 .tex"
-\pgfdecoratedcompleteddistance=\dimen187
-\pgfdecoratedremainingdistance=\dimen188
-\pgfdecoratedinputsegmentcompleteddistance=\dimen189
-\pgfdecoratedinputsegmentremainingdistance=\dimen190
-\pgf@decorate@distancetomove=\dimen191
-\pgf@decorate@repeatstate=\count139
-\pgfdecorationsegmentamplitude=\dimen192
-\pgfdecorationsegmentlength=\dimen193
+\pgfdecoratedcompleteddistance=\dimen188
+\pgfdecoratedremainingdistance=\dimen189
+\pgfdecoratedinputsegmentcompleteddistance=\dimen190
+\pgfdecoratedinputsegmentremainingdistance=\dimen191
+\pgf@decorate@distancetomove=\dimen192
+\pgf@decorate@repeatstate=\count141
+\pgfdecorationsegmentamplitude=\dimen193
+\pgfdecorationsegmentlength=\dimen194
 )
-\tikz@lib@dec@box=\box47
+\tikz@lib@dec@box=\box48
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 librarydecorations.pathmorphing.code.tex"
@@ -846,13 +855,13 @@ ecorations.pathmorphing.code.tex"))
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count140
-\pgfplots@xmin@reg=\dimen194
-\pgfplots@xmax@reg=\dimen195
-\pgfplots@ymin@reg=\dimen196
-\pgfplots@ymax@reg=\dimen197
-\pgfplots@zmin@reg=\dimen198
-\pgfplots@zmax@reg=\dimen199
+\pgfplots@numplots=\count142
+\pgfplots@xmin@reg=\dimen195
+\pgfplots@xmax@reg=\dimen196
+\pgfplots@ymin@reg=\dimen197
+\pgfplots@ymax@reg=\dimen198
+\pgfplots@zmin@reg=\dimen199
+\pgfplots@zmax@reg=\dimen256
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 libraryplotmarks.code.tex"
@@ -868,9 +877,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 librarymath.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 libraryfpu.code.tex")
-\tikz@math@for@depth=\count141
-\tikz@math@dimen=\dimen256
-\tikz@math@toks=\toks43
+\tikz@math@for@depth=\count143
+\tikz@math@dimen=\dimen257
+\tikz@math@toks=\toks44
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 librarycalc.code.tex"
@@ -892,9 +901,9 @@ ecorations.shapes.code.tex"))
 librarydecorations.text.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
 ecorations.text.code.tex"
-\pgf@lib@dec@text@box=\box48
+\pgf@lib@dec@text@box=\box49
 )
-\tikz@lib@dec@te@box=\box49
+\tikz@lib@dec@te@box=\box50
 )
 
 Class scrartcl Warning: Usage of package `titlesec' together
@@ -905,19 +914,19 @@ Class scrartcl Warning: Usage of package `titlesec' together
 (scrartcl)              the extended optional argument of the section
 (scrartcl)              commands.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `titlesec' on input line 29.
+(scrartcl)              package `titlesec' on input line 31.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box50
-\beforetitleunit=\skip76
-\aftertitleunit=\skip77
-\ttl@plus=\dimen257
-\ttl@minus=\dimen258
-\ttl@toksa=\toks44
-\titlewidth=\dimen259
-\titlewidthlast=\dimen260
-\titlewidthfirst=\dimen261
+\ttl@box=\box51
+\beforetitleunit=\skip77
+\aftertitleunit=\skip78
+\ttl@plus=\dimen258
+\ttl@minus=\dimen259
+\ttl@toksa=\toks45
+\titlewidth=\dimen260
+\titlewidthlast=\dimen261
+\titlewidthfirst=\dimen262
 
 
 Package titlesec Warning: Non standard sectioning command \section
@@ -941,28 +950,28 @@ Package titlesec Warning: Non standard sectioning command \subparagraph
 
 )
 Class scrartcl Info: Deactivating the `titlesec' workaround,
-(scrartcl)           because package is newer than expected on input line 29.
+(scrartcl)           because package is newer than expected on input line 31.
  (Env.tex) (Skript.aux)
 \openout1 = `Skript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\atbegshi.sty"
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-\AtBeginShipoutBox=\box51
+\AtBeginShipoutBox=\box52
 )
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -1000,17 +1009,17 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
-\scratchdimen=\dimen262
-\scratchbox=\box52
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count145
-\MPscratchDim=\dimen263
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count144
+\scratchdimen=\dimen263
+\scratchbox=\box53
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen264
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks47
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1037,26 +1046,162 @@ G,.JBIG2,.JB2,.eps]
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 46.
+ on input line 50.
 
-(5.tex) [1
+(5.tex
+LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 11
+.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/cmbright\omlcmbrm.fd"
+File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
+)
+LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 11
+.
 
-{C:/Users/Klossfresser/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Skr
-ipt.aux) ) 
+("C:\Program Files\MiKTeX 2.9\tex/latex/cmbright\omscmbrs.fd"
+File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
+) [1
+
+{C:/Users/Klossfresser/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [2]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [3]
+LaTeX Font Info:    Try loading font information for U+dsss on input line 219.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/doublestroke\udsss.fd"
+File: Udsss.fd 1995/08/01 v0.1 Double stroke sans serif font definitions
+) [4]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [5]
+[6]) [7] (Skript.aux) ) 
 Here is how much of TeX's memory you used:
- 27713 strings out of 492895
- 685795 string characters out of 3133458
- 979787 words of memory out of 3000000
- 31136 multiletter control sequences out of 15000+200000
- 4650 words of font info for 18 fonts, out of 3000000 for 9000
+ 28441 strings out of 492895
+ 699750 string characters out of 3133458
+ 1012294 words of memory out of 3000000
+ 31838 multiletter control sequences out of 15000+200000
+ 9233 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,11n,100p,9108b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/publ
-ic/cmbright/dpi657\cmbr10.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\f
-onts/pk/ljfour/public/cmbright/dpi720\cmbr10.pk>
-Output written on Skript.pdf (1 page, 19775 bytes).
+ 64i,16n,100p,9108b,896s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/p
+k/ljfour/public/cmbright/dpi657\cmbrbs10.pk> <C:\Users\Klossfresser\AppData\Loc
+al\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi450\cmbr8.pk> <C:\Users\Klossf
+resser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/doublestroke/dpi657\dsss
+10.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/c
+mbright/dpi600\cmbr8.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/
+pk/ljfour/public/cmbright/dpi600\cmbrsy8.pk> <C:\Users\Klossfresser\AppData\Loc
+al\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi600\cmbrmi8.pk> <C:\Users\Klos
+sfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi657\cmbrsy
+10.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/c
+mbright/dpi657\cmbrmi10.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fon
+ts/pk/ljfour/public/cmbright/dpi657\cmbr10.pk> <C:\Users\Klossfresser\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi720\cmbr10.pk><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb>
+Output written on Skript.pdf (7 pages, 107953 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 265 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

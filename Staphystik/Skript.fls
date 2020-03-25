@@ -173,6 +173,10 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\t
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\stackrel.sty
@@ -189,8 +193,6 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty
@@ -293,10 +295,56 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
 INPUT 5.tex
 INPUT 5.tex
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbr8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbr8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\omlcmbrm.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\omlcmbrm.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrmi10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrmi8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrmi8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\omscmbrs.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\omscmbrs.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrsy10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrsy8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrsy8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbras10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbras8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbras8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrbs10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrbs8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrbs8.tfm
 OUTPUT Skript.pdf
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsss.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsss.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\doublestroke\dsss10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\doublestroke\dsss8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\doublestroke\dsss8.tfm
 INPUT Skript.aux
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrbs10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrbs10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbr8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbr8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\doublestroke\dpi657\dsss10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\doublestroke\dpi657\dsss10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbr8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbr8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbrsy8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbrsy8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbrmi8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbrmi8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrsy10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrsy10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrmi10.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrmi10.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbr10.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbr10.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\cmbr10.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\cmbr10.pk
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\latxfont\lasy6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\latxfont\lasy6.pfb
