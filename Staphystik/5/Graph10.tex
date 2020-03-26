@@ -1,0 +1,43 @@
+\begin{tikzpicture}[baseline=0cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\pinRad{0.1};
+  \def\pinDis{0.2};
+  \def\pisDis{0.05};
+  \def\pinLen{2.3};
+  \def\filCol{white!90!black};
+  \def\blaKkk{black};
+  \def\arrLen{2};
+  \def\picDis{0.5};
+  \def\borDis{0.1};
+  \def\smaArr{0.4};
+  \def\arrDis{0.2};
+  \def\befFil{0.3};
+  \def\aftFil{0.4};
+  \def\picLen{5};
+  \def\innSep{0.3};
+  \def\innLen{0.6};
+  \def\leiLen{0.45};
+  \def\leiAng{20};
+  \def\cloAng{2};
+
+  \draw (0,0) rectangle ++(\sysLen,\sysHei);
+  \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+  \draw (\innSep,\innSep) rectangle (\innSep+\innLen,\sysHei-\innSep);
+  \draw (\innSep-\borDis,\innSep-\borDis) rectangle (\innSep+\innLen+\borDis,\sysHei-\innSep+\borDis);
+  \draw (\sysLen-\innSep,\sysHei-\innSep) rectangle (\sysLen-\innSep-\innLen,\innSep);
+  \draw (\sysLen-\innSep+\borDis,\sysHei-\innSep+\borDis) rectangle (\sysLen-\innSep-\innLen-\borDis,\innSep-\borDis);
+  \foreach \x in {1,2,3} \draw (\innSep+\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(\leiLen,0) to ++(\leiAng:{(\sysLen-2*\innSep-2*\innLen-2*\leiLen)}) (\sysLen-\innSep-\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(-\leiLen,0);
+
+
+  \draw[->] (\picLen+\picDis,\sysHei/2) to node[above] {Enthemmung} ++(\arrLen,0);
+  \tikzset{shift={(\picLen+2*\picDis+\arrLen,0)}}
+
+  \draw (0,0) rectangle ++(\sysLen,\sysHei);
+  \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+  \draw (\innSep,\innSep) rectangle (\innSep+\innLen,\sysHei-\innSep);
+  \draw (\sysLen-\innSep,\sysHei-\innSep) rectangle (\sysLen-\innSep-\innLen,\innSep);
+
+  \foreach \x in {1,2,3} \draw (\innSep+\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(\leiLen,0) to ++(\cloAng:{(\sysLen-2*\innSep-2*\innLen-2*\leiLen)}) (\sysLen-\innSep-\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(-\leiLen,0);
+  \draw[white] (\picLen,0) to ++(0,\sysHei);
+\end{tikzpicture}

@@ -21,7 +21,7 @@ Energie kann auf zwei Arten geändert werden:
 Arbeit: $\delta W = f\cdot \dd{X}$ $f$ intensiv, $X$ extensiv (für kontrollierte, reversible Arbeit)\\
 \uwave{Beispiele}:
 \begin{itemize}[align=left, labelwidth=\widthof{4)}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth]
-  \item[1)]  Gas: Expansionsarbeit \begin{tikzpicture}[baseline=0.3cm]\fill[fill=white!90!black] (0,0) rectangle (5,1);\draw[thick] (7,0) to (0,0) to (0,1) to (7,1);\node at (2.5,0.5) {$V$};\draw[dashed] (5,0.05) rectangle (6,0.95);\draw[thick] (5,0.05)  to (5,0.95);\draw[decorate,decoration={brace,amplitude=3pt},yshift=2pt] (5,0) to (6,0);\node[anchor=south] at (5.5,0.1) {$\dd{X}$};\draw[->] (5,0.7) to (5.5,0.7);\end{tikzpicture}$\delta W = - F \dd{X} = -\frac{F}{A} A \dd{x} = - p \dd{V}$ mit Druck \fbox{$p=\frac{F}{A}$}, Kraft  des Systems auf Wand. $\delta W > 0$, wenn $\dd{V} > 0$
+  \item[1)]  Gas: Expansionsarbeit  $\delta W = - F \dd{X} = -\frac{F}{A} A \dd{x} = - p \dd{V}$ mit Druck \fbox{$p=\frac{F}{A}$}, Kraft  des Systems auf Wand. $\delta W > 0$, wenn $\dd{V} > 0$ \input{5/Graph4.tex}
   \item[2)] Gummiband: Dehnungsarbeit $\delta W = F\cdot\dd{l}$, $\dd{l}$: Längenänderung, $f>0$: Von außen angewandte Kraft Hier: $\delta W >0$, wenn $\dd{l}>0$
   \item[3)] Magnetisches System: $\delta W = \vec{B}\cdot\dd{\norBra{\vec{M}V}}$ $\vec{B}$: magnetische Flussdichte, $\vec{M}V$: Magnetisierung (hier magnetisches Moment pro Volumen)
   \item[4)] Chemische Arbeit: $\delta W = \mu \dd{N}$
@@ -64,80 +64,19 @@ $\rightarrow$ Abfolge von Gleichgewichtszuständen
 \begin{table}[H]
 \centering
 \begin{tabular}{c c}
-  \begin{tikzpicture}[baseline=0cm]
-    \def\sysLen{3};
-    \def\sysHei{1};
-    \def\pinRad{0.1};
-    \def\pinDis{0.2};
-    \def\pinExt{0.9};
-    \def\filCol{white!90!black};
-    \def\arrLen{2};
-    \def\picDis{0.5};
-    \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
-    \draw[thick] (0,0) rectangle (\sysLen,\sysHei);
-    \draw[thick] (\sysLen/2,-\pinDis) circle (\pinRad) to (\sysLen/2,\sysHei);
-    \draw[->] (\sysLen+\picDis,\sysHei/2) to ++(\arrLen,0);
-    \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
-    \draw[thick] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
-    \draw[thick] (3*\sysLen/2+\arrLen+2*\picDis,-\pinDis-\pinExt) circle (\pinRad) to (3*\sysLen/2+\arrLen+2*\picDis,\sysHei-\pinExt);
-  \end{tikzpicture}
+  \input{5/Graph1.tex}
   &
   \setlength{\tabcolsep}{1pt}
   \begin{tabular}{c}plötzliche Expansion\\ nicht quasistatisch\\ nicht reversibel\end{tabular}
   \setlength{\tabcolsep}{1cm}
   \\
-
-  \begin{tikzpicture}[baseline=0.3cm]
-    \def\sysLen{3};
-    \def\sysHei{1};
-    \def\pinRad{0.1};
-    \def\pinDis{0.2};
-    \def\pinLen{0.2};
-    \def\pisDis{0.05};
-    \def\pinExt{0.9};
-    \def\filCol{white!90!black};
-    \def\arrDis{0.2};
-    \def\smaArr{0.4};
-    \def\arrLen{2};
-    \def\picDis{0.5};
-    \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
-    \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
-    \draw[thick] (\sysLen/2,\pisDis) to ++(0,\sysHei-2*\pisDis);
-    \draw[thick] (\sysLen/2,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
-    \draw[<->] (\sysLen/2+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
-    \draw[->] (\sysLen+\picDis,\sysHei/2) to node[above] {Arbeit} node[below] {Wärme} ++(\arrLen,0);
-    \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(3*\sysLen/4,\sysHei);
-    \draw[thick] (\sysLen+\arrLen+2*\picDis+\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
-    \draw[thick] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4,\pisDis) to ++(0,\sysHei-2*\pisDis);
-    \draw[thick] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
-    \draw[<->] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
-  \end{tikzpicture}
+  \input{5/Graph2.tex}
   &
   \setlength{\tabcolsep}{1pt}
   \begin{tabular}{c}quasistatisch\\ und reversibel\\ (bei langsamer Bewegung)\end{tabular}
   \setlength{\tabcolsep}{1cm}
   \\
-
-
-  \begin{tikzpicture}[baseline=0.5cm]
-    \def\sysLen{3};
-    \def\sysHei{1};
-    \def\pinRad{0.1};
-    \def\pinDis{0.2};
-    \def\pinExt{0.9};
-    \def\filCol{white!90!black};
-    \def\arrLen{2};
-    \def\picDis{0.5};
-    \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
-    \draw[thick] (0,0) rectangle ++(\sysLen,\sysHei);
-    \foreach \x in {0,...,6} \draw[thick] (\sysLen/2+\x*\sysLen/16,-\pinDis) circle (\pinRad) to (\sysLen/2+\x*\sysLen/16,\sysHei);
-
-    \draw[->] (\sysLen+\picDis,\sysHei/2) to ++(\arrLen,0);
-
-    \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(10*\sysLen/16,\sysHei);
-    \draw[thick] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
-    \foreach \x in {0,...,6} \draw[thick] (3*\sysLen/2+\arrLen+2*\picDis+\x*\sysLen/16,{-\pinDis-\pinExt*(1/(1-\pinExt*exp(-(\x+2)/3))-1)}) circle (\pinRad) to (3*\sysLen/2+\arrLen+2*\picDis+\x*\sysLen/16,{\sysHei-\pinExt*(1/(1-\pinExt*exp(-(\x+2)/3))-1)});
-  \end{tikzpicture}
+  \input{5/Graph3.tex}
   &
   \setlength{\tabcolsep}{1pt}
   \begin{tabular}{c}quasistatisch, \\ nicht reversibel\end{tabular}
@@ -152,49 +91,9 @@ Adiabatischer Prozess: muss \glqq schnell genug\grqq\ ablaufen, um Wärmeaustaus
 \begin{table}[H]
   \centering
   \begin{tabular}{c c}
-    \begin{tikzpicture}[baseline=0.3cm]
-      \def\sysLen{3};
-      \def\sysHei{1};
-      \def\pinRad{0.1};
-      \def\pinDis{0.2};
-      \def\pisDis{0.05};
-      \def\pinLen{0.9};
-      \def\filCol{white!90!black};
-      \def\arrLen{2};
-      \def\picDis{0.5};
-      \def\borDis{0.1};
-      \def\smaArr{0.4};
-      \def\arrDis{0.2};
-      \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
-      \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
-      \draw[thick] (\sysLen,-\borDis) to ++(-\sysLen-\borDis,0) to ++(0,\sysHei+2*\borDis) to ++(\sysLen+\borDis,0);
-      \draw[thick] (\sysLen/2,\pisDis) to ++(0,\sysHei-2*\pisDis);
-      \draw[thick] (\sysLen/2,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
-      \draw[<->] (\sysLen/2+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
-    \end{tikzpicture}
+    \input{5/Graph5.tex}
     & reversible, adiabatische Arbeit $\delta W \stackrel{<}{>} 0$\\
-    \begin{tikzpicture}[baseline=0.3cm]
-      \def\sysLen{3};
-      \def\sysHei{1};
-      \def\pinRad{0.1};
-      \def\pinDis{0.2};
-      \def\pisDis{0.05};
-      \def\pinLen{0.9};
-      \def\filCol{white!90!black};
-      \def\arrLen{2};
-      \def\picDis{0.5};
-      \def\borDis{0.1};
-      \def\smaArr{0.2};
-      \def\arrDis{0.2};
-      \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
-      \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
-      \draw[thick] (\sysLen,-\borDis) to ++(-\sysLen-\borDis,0) to ++(0,\sysHei+2*\borDis) to ++(\sysLen+\borDis,0);
-      \draw[thick] (\sysLen/2,0) to ++(0,\sysHei);
-      \draw[thick] (\sysLen/2-\pinLen,\sysHei/2+\pinRad) circle(\pinRad);
-      \draw[thick] (\sysLen/2-\pinLen,\sysHei/2-\pinRad) circle(\pinRad);
-      \draw[thick] (\sysLen/2-\pinLen,\sysHei/2) to ++(2*\pinLen,0);
-      \draw[->] (\sysLen/2+\pinLen-\smaArr,\sysHei/2) arc(-180:170:\smaArr);
-    \end{tikzpicture}
+    \input{5/Graph6.tex}
     & Rührarbeit, adiabatisch und irreversibel $\delta W > 0$
   \end{tabular}
 \end{table}
@@ -204,6 +103,7 @@ Achtung: In anderen Gebieten, besonders Quantenmechanik, bedeutet \glqq adiabati
 
 
 \subsection{Temperatur}
+\label{sec:Temperatur}
 Empirisch: Systeme in Kontakt (diathermische Wände) können Wärme austauschen.\\
 \uline{Thermisches Gleichgewicht}: kein Netto-Austausch von Wärme\\
 \uline{Nullter Hauptsatz}:\\
@@ -232,18 +132,7 @@ $\rightarrow$ Definiere \uline{Differentialform} (\glqq 1-Form\grqq\ , \glqq Pfa
 $\delta G = y \dd{x} + \dd{y}$, $g_x = y$, $g_y = 1$, $\ppv{g_y}{x} = 0$, $\ppv{g_x}{y} = 1$
 \begin{figure}[H]
   \centering
-  \begin{tikzpicture}
-    \draw[->] (-0.15,0) to (10.25,0);
-    \draw[->] (0,-0.15) to (0,5.25);
-    \node[anchor=south] at (0,5.35) {$y$};
-    \node[anchor=west] at (10.35,0) {$x$};
-    \draw[thick,domain=0:5] plot (\x,\x);
-    \node[anchor=south] at (2.5,2.6) {$C_1$};
-    \draw[thick,domain=0:5] plot (\x,{\x^2/5});
-    \node[anchor=west] at (2.5,1.1) {$C_2$};
-    \fill[thick] (5,5) circle (0.1);
-    \node[anchor=west] at (5.1,5) {$(1,1)$};
-  \end{tikzpicture}
+  \input{5/Graph7.tex}
 \end{figure}
 
 \setlength{\tabcolsep}{5pt}
@@ -277,125 +166,17 @@ Bei der Wegnahme von einschränkenden Bedingungen (\glqq Enthemmung\grqq) strebt
 \begin{table}[H]
   \centering
   \begin{tabular}{c c}
-    \begin{tikzpicture}[baseline=0cm]
-      \def\sysLen{3};
-      \def\sysHei{1};
-      \def\pinRad{0.1};
-      \def\pinDis{0.2};
-      \def\pisDis{0.05};
-      \def\pinLen{2.3};
-      \def\filCol{white!90!black};
-      \def\blaKkk{black};
-      \def\arrLen{2};
-      \def\picDis{0.5};
-      \def\borDis{0.1};
-      \def\smaArr{0.4};
-      \def\arrDis{0.2};
-      \def\befFil{0.6};
-      \def\aftFil{0.3};
-      \def\picLen{5};
-
-      \fill[\filCol] (0,0) rectangle ++(\befFil*\sysLen,\sysHei);
-      \draw (0,0) rectangle ++(\sysLen,\sysHei);
-      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
-      \fill[\blaKkk] (\befFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
-      \draw (\befFil*\sysLen+\borDis,\sysHei/2) to ++(\pinLen,0) circle (\pinRad);
-      \draw[<-] (\befFil*\sysLen+\borDis+\pinLen-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
-      \draw[->] (\picLen+\picDis,\sysHei/2) to ++(\arrLen,0);
-
-      \fill[\filCol] (\picLen+2*\picDis+\arrLen,0) rectangle ++(\aftFil*\sysLen,\sysHei);
-      \draw (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
-      \draw (\picLen+2*\picDis+\arrLen-\borDis,-\borDis) rectangle ++(\sysLen+2*\borDis,\sysHei+2*\borDis);
-      \fill[\blaKkk] (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
-      \draw (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen+\borDis,\sysHei/2) to ++(\pinLen,0) circle (\pinRad);
-      \draw[white] (2*\picLen+2*\picDis+\arrLen,0) to ++(0,\sysHei);
-    \end{tikzpicture}
+    \input{5/Graph8.tex}
     &
     $S' = S$\\
-    \begin{tikzpicture}[baseline=0cm]
-      \def\sysLen{3};
-      \def\sysHei{1};
-      \def\pinRad{0.1};
-      \def\pinDis{0.2};
-      \def\pisDis{0.05};
-      \def\pinLen{2.3};
-      \def\filCol{white!90!black};
-      \def\blaKkk{black};
-      \def\arrLen{2};
-      \def\picDis{0.5};
-      \def\borDis{0.1};
-      \def\smaArr{0.4};
-      \def\arrDis{0.2};
-      \def\befFil{0.3};
-      \def\aftFil{0.4};
-      \def\picLen{5};
-
-      \fill[\filCol] (0,0) rectangle ++(\befFil*\sysLen,\sysHei);
-      \draw (0,0) rectangle ++(\sysLen,\sysHei);
-      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
-      \fill[\blaKkk] (\befFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
-      \draw[->] (\befFil*\sysLen+\borDis,\arrDis) to ++(\smaArr,0);
-      \draw[->] (\picLen+\picDis,\sysHei/2) to ++(\arrLen,0);
-
-      \fill[\filCol] (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
-      \draw (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
-      \draw (\picLen+2*\picDis+\arrLen-\borDis,-\borDis) rectangle ++(\sysLen+2*\borDis,\sysHei+2*\borDis);
-      \fill[\blaKkk] (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen,\borDis) rectangle ++(\borDis,\sysHei-\borDis);
-      \draw[white] (2*\picLen+2*\picDis+\arrLen,0) to ++(0,\sysHei);
-    \end{tikzpicture}
+    \input{5/Graph9.tex}
     &
     $S' > S$\\
-    \begin{tikzpicture}[baseline=0cm]
-      \def\sysLen{3};
-      \def\sysHei{1};
-      \def\pinRad{0.1};
-      \def\pinDis{0.2};
-      \def\pisDis{0.05};
-      \def\pinLen{2.3};
-      \def\filCol{white!90!black};
-      \def\blaKkk{black};
-      \def\arrLen{2};
-      \def\picDis{0.5};
-      \def\borDis{0.1};
-      \def\smaArr{0.4};
-      \def\arrDis{0.2};
-      \def\befFil{0.3};
-      \def\aftFil{0.4};
-      \def\picLen{5};
-      \def\innSep{0.3};
-      \def\innLen{0.6};
-      \def\leiLen{0.45};
-      \def\leiAng{20};
-      \def\cloAng{2};
-
-      \draw (0,0) rectangle ++(\sysLen,\sysHei);
-      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
-      \draw (\innSep,\innSep) rectangle (\innSep+\innLen,\sysHei-\innSep);
-      \draw (\innSep-\borDis,\innSep-\borDis) rectangle (\innSep+\innLen+\borDis,\sysHei-\innSep+\borDis);
-      \draw (\sysLen-\innSep,\sysHei-\innSep) rectangle (\sysLen-\innSep-\innLen,\innSep);
-      \draw (\sysLen-\innSep+\borDis,\sysHei-\innSep+\borDis) rectangle (\sysLen-\innSep-\innLen-\borDis,\innSep-\borDis);
-      \foreach \x in {1,2,3} \draw (\innSep+\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(\leiLen,0) to ++(\leiAng:{(\sysLen-2*\innSep-2*\innLen-2*\leiLen)}) (\sysLen-\innSep-\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(-\leiLen,0);
-
-
-      \draw[->] (\picLen+\picDis,\sysHei/2) to node[above] {Enthemmung} ++(\arrLen,0);
-      \tikzset{shift={(\picLen+2*\picDis+\arrLen,0)}}
-
-      \draw (0,0) rectangle ++(\sysLen,\sysHei);
-      \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
-      \draw (\innSep,\innSep) rectangle (\innSep+\innLen,\sysHei-\innSep);
-      \draw (\sysLen-\innSep,\sysHei-\innSep) rectangle (\sysLen-\innSep-\innLen,\innSep);
-
-      \foreach \x in {1,2,3} \draw (\innSep+\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(\leiLen,0) to ++(\cloAng:{(\sysLen-2*\innSep-2*\innLen-2*\leiLen)}) (\sysLen-\innSep-\innLen,{(\sysHei-2*\innSep)/4*\x+\innSep}) to ++(-\leiLen,0);
-      \draw[white] (\picLen,0) to ++(0,\sysHei);
-    \end{tikzpicture}
+    \input{5/Graph10.tex}
     &
     $S' > S$
   \end{tabular}
 \end{table}
-
-\setlength{\tabcolsep}{1pt}
-\tikzset{every node/.style = {draw = none, fill = none,scale = 0.8}}
-\renewcommand{\arraystretch}{1}
 
 \uline{2. Hauptsatz}:\\
 \fbox{\parbox{0.98\textwidth}{Es gibt eine Extensive Zustandsgröße, Entropie $S$, die im adiabatisch eingeschlossenen System nicht abnehmen kann: $\Delta S \geq 0$,}}\\
@@ -425,10 +206,182 @@ Betrachte $z\norBra{x,y}$, das nach $x$ oder $y$ aufgelöst werden kann. $\right
 
 \begin{itemize}
   \item[1)] Bei festgehaltenem $y$ ist $x\norBra{y,z}$ die Umkehrfunktion von $z\norBra{x,y}$. $\rightarrow$ \fbox{$\pdv{x}{z}{y} = \frac{1}{\pdv{z}{x}{y}}$}
-  \item[2)] $\left. \begin{array}{c}\dd{z} = \pdv{z}{x}{y}\dd{y} + \pdv{z}{y}{x}\dd{y}\\
-  \dd{x} = \pdv{x}{y}{z}\dd{y} + \pdv{x}{z}{y}\dd{z}\end{array}\right\} \stackrel[\text{Spezialfall}]{\dd{z} =0}{\longrightarrow} \begin{array}{c} \pdv{z}{x}{y}\dd{x} +\pdv{z}{y}{x}\dd{y} = 0\\ \dd{x} = \pdv{x}{y}{z}\dd{y} = 0\end{array}$\\
+  \item[2)] $\left. \begin{array}{c}\dd{z} = \pdv{z}{x}{y}\dd{y} + \pdv{z}{y}{x}\dd{y}\\ \dd{x} = \pdv{x}{y}{z}\dd{y} + \pdv{x}{z}{y}\dd{z}\end{array}\right\} \stackrel[\text{Spezialfall}]{\dd{z} =0}{\longrightarrow} \begin{array}{c} \pdv{z}{x}{y}\dd{x} +\pdv{z}{y}{x}\dd{y} = 0\\ \dd{x} = \pdv{x}{y}{z}\dd{y} = 0\end{array}$\\
   $\rightarrow$ $\pdv{z}{x}{y}\pdv{x}{y}{z} + \pdv{z}{y}{x} = 0$\\
   $\rightarrow$ \fbox{$\pdv{z}{x}{y}\pdv{x}{y}{z}\pdv{y}{z}{x} = -1$}
 \end{itemize}
 
-$\rightarrow$ \fbox{$\dd{E} = T\dd{S} -p\dd{V}+\mu\dd{N}$} oder \fbox{$\dd{S} = \frac{1}{T}\dd{E} +\frac{p}{T}\dd{V}-\frac{\mu}{T}\dd{N}$}
+$\rightarrow$ \fbox{$\dd{E} = T\dd{S} -p\dd{V}+\mu\dd{N}$} oder \fbox{$\dd{S} = \frac{1}{T}\dd{E} +\frac{p}{T}\dd{V}-\frac{\mu}{T}\dd{N}$}\\
+Definition der Temperatur $T = \frac{1}{\ppv{S}{E}}$ stimmt mit der statistischen Physik überein.\\
+Dort wurde gezeigt, dass für $2$ Systeme $a$, $b$ im thermischen Gleichgewicht gilt: $T_a= T_b$. (Wegen Entropiemaximierung $0=\ppv{}{E_a}\norBra{S_a+S_b} = \ppv{S_a}{E_a} - \ppv{S_b}{E_b}$)\\
+$\rightarrow$ Temperaturdefinition erfüllt auch die Anforderungen an eine \uline{empirische Temperatur} (siehe \ref{sec:Temperatur}).\\
+\uline{Weitere Arten von Gleichgewicht}:
+
+\begin{itemize}[align=left]
+  \item[--] Zwei Systeme, die Volumen austauschen (das heißt mechanische Wechselwirkung) und Wärme austauschen (thermische Wechselwirkung):\\
+  {\centering
+  \input{5/Graph11.tex}
+  }\\
+  $V = V_a + V_b$, $S = S_a + S_b$, $T_a = T_b$\\
+  $S$ ist maximal $\rightarrow$ $0 = \ppv{S}{V_a} = \ppv{S_a}{V_a} - \ppv{S_b}{V_b}$\\
+  $\rightarrow$ $\frac{p_a}{T_a} = \frac{p_b}{T_b}$ $\rightarrow$ $p_a = p_b$
+  \item[--] Zwei Systeme, die Wärme und Teilchen austauschen:\\
+  $T_a = T_b$, $N = N_a + N_b$, $S = S_a + S_b$ $\rightarrow$ $\mu_a = \mu_b$
+  \item[Beachte:]
+  \begin{itemize}
+      \item[--] Volumenaustausch ohne Energieänderung physikalisch wenig sinnvoll, außer wenn $p_b = 0$!
+      \item[--] Bei Volumenaustausch ohne Wärme, aber mit Zulassen irreversibler Arbeit ($\delta W \neq - p \dd{V}$):\\
+      gleiche Schlussfolgerung $p_a = p_b$
+  \end{itemize}
+\end{itemize}
+
+\uline{Entropieänderung bei Temperaturausgleich}:\\
+\input{5/Graph12.tex} $T_a > T_b$
+
+\begin{itemize}[align=left]
+  \item[Wärmekontakt:] $\Delta S = S_a\norBra{E_a + \Delta E_a} + S_b\norBra{E_b + \Delta E_b} - S_a\norBra{E_a} - S_b\norBra{E_b}$
+  \item[Differentiell:] $\dd{S} = \ppv{S_a}{E_a}\dd{E_a} + \ppv{S_b}{E_b}\dd{E_b} = \norBra{\frac{1}{T_a} - \frac{1}{T_b}}\dd{E_a}$\\
+  $\dd{S} > 0$ (2. Hauptsatz) und $\frac{1}{T_a} - \frac{1}{T_b} < 0$
+  \item[Falls $T_a = T_b$:] $\dd{S} = 0$ trotz $\dd{E} \neq 0$ (reversible Wärme).
+\end{itemize}
+
+\uwave{Analog}: Bei zwei Systemen im thermischen Gleichgewicht ($T_a = T_b$) dehnt sich das System mit höherem Druck aus ($\delta V_a >0$), wenn mechanische Kopplung erlaubt, und Teilchen fließen vom höheren zum niedrigeren chemischen Potential, wenn Teilchenaustausch erlaubt.
+\uline{Prinzip der minimalen Energie}: Bei konstanter Entropie (sowie $V=\text{konstant}$, $N=\text{konstant}$) nimmt ein Systemden Zustand minimaler Energie ein (wennn interne Nebenbedingungen variiert werden können).
+
+\begin{itemize}[align=left]
+  \item[\uline{Beweis}:] \begin{itemize}[align=left]
+    \item[1)] Betrachte Energieänderung $\delta E^{\norBra{1}}$ bei Einführen und Variation einer Nebenbedingung\\ \input{5/Graph13.tex}
+    \item[2)] Enthemmung bei abgeschlossenem System $\rightarrow$ $\delta S^{\norBra{2}}>0$.
+    \item[3)] Rückführung in den Anfangszustand durch Entnahme von Wärme: $\delta Q^{\norBra{3}}=-t\dd{S}^{\norBra{2}} < 0$ $\rightarrow$ $\delta E^{\norBra{1}} = -\delta Q^{\norBra{3}} > 0$.
+\end{itemize}
+  \item[\uline{Beachte}:] In $\dd{E} = T \dd{S} - p \dd{V} + \mu \dd{N}$ kommen nur Zustandsgrößen vor. diese sind zunächst nicht mit den Begriffen Arbeit und Wärme verbunden. Der Zusammenhang ist nicht universell, sondern wird erst durch die Art der Prozessrealisierung festgelegt.
+  \item[\uline{Beispiel}:] $2$ Arten der Realisierung der quasistatischen Ausdehnung bei konstanter Energie
+\end{itemize}
+
+\renewcommand{\arraystretch}{1}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c | c}
+    \uline{1) Adiabatisch eingeschlossen}
+    &
+    \underline{2) Mittels \glqq Wärmebad\grqq und \glqq Arbeitsbad\grqq }\\
+     & ($=$ Reservoir an Wärme/ Arbeit)\\
+    \input{5/Graph14.tex} & \input{5/Graph15.tex}\\
+    \multicolumn{2}{c}{\input{5/Graph16.tex}} \\
+    $\delta Q = \delta W = 0$ & Zu jedem Zeitpunkt:\\
+    $\Delta S_{\text{ges}} = \Delta S > 0$ & $\dd{E} = \delta{Q} + \delta W = 0$\\
+    (\uline{irreversibel}) & $\delta W = -p \dd{V}$\\
+    $\Delta S = \int\limits_{V_a}^{V_e} \pdv{S}{V}{E} \dd{V} = \int\limits_{V_a}^{V_e} \frac{p}{T} \dd{V}$ & $\dd{E} = T\dd{S} -p\dd{V}$\\
+     & $\rightarrow$ $\dd{S} = -\frac{\delta Q_{\text{res}}}{T}=-\dd{S_\text{res}}$\\
+     & (Temperatur des Wärmebads so zu wählen, dass $T_\text{res} = T\norBra{E_a,V}$)\\
+     & $\rightarrow$ $\Delta S = \int\dd{S} = \int\limits_{V_a}^{V_e} \frac{p}{T} \dd{V} = - \int\dd{S_\text{res}} = -\Delta S_\text{res}$\\
+     & $\rightarrow$ $\Delta S_\text{ges} = 0$ (\uline{reversibel})
+  \end{tabular}
+\end{table}
+
+\uline{Zusammenfassung Entropie}
+
+\begin{itemize}[align=left]
+  \item[--] Natürlich ablaufende Prozesse  (Streben ins Gleichgewicht) sind irreversibel und bedeuten $\Delta S > 0$ $\eDef$ Entropiemaximierung der statistischen Physik
+  \item[--] Quasistatische Prozsse erfüllen $\dd{E} = T\dd{S}-p\dd{V}+\mu\dd{N}$ unabhängig von der Prozessrealisierung (Arbeit/ Wärme)
+  \item[--] Temperaturdefinition $T^{-1} = \pdv{S}{E}{V,N}$ $\rightarrow$ Gleichgewichtsbedingung $T_a = T_b$.
+  \item[Achtung:] Gelegentlich wird \glqq quasistatisch\grqq\ (anders als hier) im Sinne von \glqq reversibel\grqq\ benutzt.
+\end{itemize}
+
+\subsection{Kreisprozesse}
+\uline{Ziel}:
+\begin{itemize}[align=left]
+  \item[--] Verrichten von Arbeit durch Umwandlung von Wärme in Arbeit (\uline{Wärme\-kraft\-maschine}/ \uline{Arbeitsmaschine})
+  \item[--] Transport von Wärme durch Arbeitseinsatz (\uline{Wärmepumpe}, \uline{Kältemaschine})
+\end{itemize}
+\uline{Maximale Arbeit}
+\begin{itemize}[align=left]
+  \item[Maschine:]
+  \begin{itemize}[align=left]
+      \item[\input{5/Graph17.tex}]
+      \item[Anfang] $S_0$, $E_o\norBra{S_0}$
+      \item[Ende] $S$, $E\norBra{S}$
+      \item[(äußere Parameter eventuell unterschiedlich)]
+    \end{itemize}
+  \item[$\rightarrow$] $W=E\norBra{S} - E_0\norBra{S_0} = W\norBra{S,S_0}$
+  \item[Arbeit als  Funktion der Entropie:] $\ppv{W}{S} = \ppv{E}{S} = T > 0$
+  \item[Von der Maschine verrichtete Nutz-Arbeit:] $W_N = -W$, $\ppv{W_N}{S} < 0$
+  \item[$\rightarrow$] Entropie muss möglichst klein sein, damit $W_N$ maximal.
+  \item[Idealfall:] $S=S_0$
+\end{itemize}
+
+\uline{Carnot-Prozess}\\
+Kombination aus isothermen (konstante Temperatur) und isentropen Prozessen an einem Hilfssystem (Arbeitsgas, Teil der Maschine).
+
+\tikzset{every node/.style={scale=0.8}}
+\begin{figure}[H]
+  \centering
+  \input{5/Graph18.tex}\\
+  \input{5/Graph19.tex}\\
+  $\Delta Q_1 <0$ $\Delta Q_2 > 0$
+\end{figure}
+\begin{itemize}[align=left]
+\item[Hilfssysteme arbeitet zyklisch und reversibel:] $\Delta  S = \frac{\Delta Q_1}{T_1} + \frac{\Delta Q_2}{T_2} = 0$\\ $\rightarrow$ $\Delta Q_1 = - \frac{T_1}{T_2}\Delta Q_2$
+\item[Gewonnene Arbeit:] $W_N = \Delta Q_2 + \Delta Q_1 = T_2 \Delta S_2 - T_1 \Delta S_2 = \norBra{T_2-T_1}\Delta S_2$\\ $=$ Fläche im $T$-$S$-Diagramm; $W_N = \norBra{1-\frac{T_1}{T_2}}\Delta Q_2$
+\item[\uline{Wirkungsgrad der Carnot-Wärmekraftmaschine}:] \fbox{$\eta = \frac{W_N}{\Delta Q_2} = 1-\frac{T_1}{T_2}$}
+\item[Damit $W_N > 0$:] Rechtsprozeß (Umlauf im Uhrzeigersinn), $\Delta Q_1 < 0$
+\item[Linksprozeß (gegen Uhrzeigersinn):] $\Delta Q_2 <0$, $\Delta Q_1 > 0$
+\item[$\rightarrow$] Betrieb als Wärmepumpe, Wirkungsgrad $\eta^H = \verBra{\frac{\Delta Q_2}{W_N}} = \frac{T_2}{T_2-T_1}$ (Heizeffektivität)
+\item[$\rightarrow$] Betrieb als Kältemaschine, Wirkungsgrad $\eta^K = \verBra{\frac{\Delta Q_1}{W_N}} = \frac{T_1}{T_2-T_1}$ (Kühleffektivität)
+\end{itemize}
+Carnot-Prozess dient vor allem als Idealisierung. In der Realität ist der isotherme Prozess nicht sehr praktikabel für einen Motor (lange Wartezeiten) und es treten Reibungsverluste auf ($\Delta S_\text{ges} > 0$).
+
+\uline{Allgemeiner Kreisprozess}
+\begin{figure}[H]
+  \centering
+  \input{5/Graph20.tex}
+\end{figure}
+
+$W_N= \Delta Q = \Delta Q_2 + \Delta Q_1$ mit $\Delta Q_2 > 0$, $\Delta Q_1 < 0$ beliebig auf dem Zyklus verteilt
+
+\begin{itemize}[align=left]
+  \item[Zweiter Hauptsatz:] $\dd{S} \geq \frac{\delta Q}{T}$ $\rightarrow$ $\Delta S = \oint \dd{S} \geq \oint \frac{\delta Q}{T} = \int\limits_{\delta Q > 0} \frac{\delta Q}{T} + \int\limits_{\delta Q < 0} \frac{\delta Q} {T}$
+  \item[Zyklisch] $\rightarrow$ $\Delta S = 0$
+  \item[Abschätzungen] Für $\delta Q > 0$: $\frac{\delta Q}{T} \geq\frac{\delta Q}{T_2}$, für $\delta Q < 0$: $\frac{\delta Q}{T} \geq \frac{\delta Q}{T_1}$
+  \item[$\rightarrow$] $0 \geq \frac{1}{T_2} \int\limits_{\delta Q > 0} \delta Q + \frac{1}{T_1} \int\limits_{\delta Q  < 0} \delta Q = \frac{\Delta Q_2}{T_2} +\frac{\Delta Q_1}{T_1}$
+  \item[$\rightarrow$] $\frac{\Delta Q_1}{\Delta Q_2} \leq - \frac{T_1}{T_2}$
+  \item[$\rightarrow$] $W_N = \Delta Q_2\norBra{1 + \frac{\Delta Q_1}{\Delta Q_2}} \leq \Delta Q_2\norBra{1- \frac{T_1}{T_2}}$
+  \item[$\rightarrow$] Wirkungsgrad \fbox{$\eta \leq 1 - \frac{T_1}{T_2}$}
+\end{itemize}
+
+Idealer Wirkungsgrad wird nur erreicht, wenn keine irreversiblen Prozesse und wenn Wärmeüberträge bei Minimal- und Maximaltemperatur.
+
+\subsection{Thermodynamische Potentiale}
+\subsubsection{Legendre-Transformation}
+
+\begin{itemize}[align=left]
+  \item[\uline{Erinnerung}:] klassische Mechanik mit Lagrange-Funktion $L\norBra{q,\dot{q},t}$ und Impuls $p = \ppv{L}{\dot{q}}$\\
+  $\rightarrow$ Hamiltonfunktion $H\norBra{q,p,t} = p\dot{q}\norBra{q,p} - L \norBra{q,\dot{q}\norBra{q,p},t}$
+  \item[\uline{Schnelle Herleitung in der Thermodynamik}:] \begin{itemize}[align=left]
+    \item[Umformung]$\dd{E} = T\dd{S} -p \dd{V} + \mu\dd{N} = \dd{ST} - S\dd{T} - p\dd{V} + \mu\dd{N}$
+    \item[Erkenntnis]$\dd{\norBra{E-ST}} = - S\dd{T} -p \dd{V} + \mu\dd{N}$
+    \item[Definition]$\rightarrow$ Definiere neue Funktion $F\mDef E-ST$ mit Variablen $T$, $V$, $N$.
+    \item[Motivation:] Variable $T$ ist praktischer als $S$ (Messbarkeit, Anschaulichkeit)
+  \end{itemize}
+  \item[\uline{Mathematisch}:] \begin{itemize}[align=left]
+    \item[Funktion] $f: x \mapsto f\norBra{x}$, $x\in\mathds{R}$, $f\norBra{x} \in\mathds{R}$
+    \item[Annahme:] $\xi = f'\norBra{x} \mDef \ddv{f}{x}\norBra{x}$ existiert und $f''\norBra{x} \neq 0$ $\forall x$ $\rightarrow$ $x = \phi\norBra{\xi}$
+    \item[Definiere:] $h\norBra{\xi} \mDef f\norBra{\phi\norBra{\xi}}$
+    \item[Problem:] $h$ enthält \glqq weniger Informationen\grqq\ als $f$.
+    \item[Gemeint:] $f$ kann nicht mehr eindeutig aus $h$ zurückgewonnen werden.
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \input{5/Graph21.tex}\\
+  $f_2\norBra{x} = f_1\norBra{x-a}$; $f_1$, $f_2$ liefern dasselbe $h$
+\end{figure}
+
+\uline{Legendre-Transformation}:
+\begin{figure}[H]
+  \centering
+  \input{5/Graph22.tex}
+\end{figure}
+\setlength{\tabcolsep}{1pt}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[baseline=0.4cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\filCol{white!90!black};
+  \def\filTwo{white!60!black};
+  \def\blaKkk{black};
+  \def\borDis{0.1};
+  \def\smaArr{0.5};
+  \def\arrDis{0.2};
+  \def\befFil{0.3};
+  \fill[\filCol] (0,0) rectangle ++(\befFil*\sysLen,\sysHei);
+  \fill[\filTwo] (\befFil*\sysLen,0) rectangle (\sysLen,\sysHei);
+  \node at (\befFil*\sysLen/2,\sysHei/2) {$a$};
+  \node at ({\sysLen-(\sysLen-\sysLen*\befFil)/2},\sysHei/2) {$b$};
+  \draw (0,0) rectangle ++(\sysLen,\sysHei);
+  \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+  \fill[\blaKkk] (\befFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
+  \draw[<->] (\befFil*\sysLen+\borDis/2-\smaArr/2,\sysHei/2) to ++(\smaArr,0);
+\end{tikzpicture}

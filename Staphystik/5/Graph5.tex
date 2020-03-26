@@ -1,0 +1,20 @@
+\begin{tikzpicture}[baseline=0.3cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\pinRad{0.1};
+  \def\pinDis{0.2};
+  \def\pisDis{0.05};
+  \def\pinLen{0.9};
+  \def\filCol{white!90!black};
+  \def\arrLen{2};
+  \def\picDis{0.5};
+  \def\borDis{0.1};
+  \def\smaArr{0.4};
+  \def\arrDis{0.2};
+  \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+  \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+  \draw[thick] (\sysLen,-\borDis) to ++(-\sysLen-\borDis,0) to ++(0,\sysHei+2*\borDis) to ++(\sysLen+\borDis,0);
+  \draw[thick] (\sysLen/2,\pisDis) to ++(0,\sysHei-2*\pisDis);
+  \draw[thick] (\sysLen/2,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
+  \draw[<->] (\sysLen/2+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[baseline=0.5cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\pinRad{0.1};
+  \def\pinDis{0.2};
+  \def\pinExt{0.9};
+  \def\filCol{white!90!black};
+  \def\arrLen{2};
+  \def\picDis{0.5};
+  \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+  \draw[thick] (0,0) rectangle ++(\sysLen,\sysHei);
+  \foreach \x in {0,...,6} \draw[thick] (\sysLen/2+\x*\sysLen/16,-\pinDis) circle (\pinRad) to (\sysLen/2+\x*\sysLen/16,\sysHei);
+
+  \draw[->] (\sysLen+\picDis,\sysHei/2) to ++(\arrLen,0);
+
+  \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(10*\sysLen/16,\sysHei);
+  \draw[thick] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(\sysLen,\sysHei);
+  \foreach \x in {0,...,6} \draw[thick] (3*\sysLen/2+\arrLen+2*\picDis+\x*\sysLen/16,{-\pinDis-\pinExt*(1/(1-\pinExt*exp(-(\x+2)/3))-1)}) circle (\pinRad) to (3*\sysLen/2+\arrLen+2*\picDis+\x*\sysLen/16,{\sysHei-\pinExt*(1/(1-\pinExt*exp(-(\x+2)/3))-1)});
+\end{tikzpicture}

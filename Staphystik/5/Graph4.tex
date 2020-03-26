@@ -1,0 +1,11 @@
+
+\begin{tikzpicture}[baseline=0.3cm]
+  \fill[fill=white!90!black] (0,0) rectangle (5,1);
+  \draw[thick] (7,0) to (0,0) to (0,1) to (7,1);
+  \node at (2.5,0.5) {$V$};
+  \draw[dashed] (5,0.05) rectangle (6,0.95);
+  \draw[thick] (5,0.05)  to (5,0.95);
+  \draw[decorate,decoration={brace,amplitude=3pt},yshift=2pt] (5,0) to (6,0);
+  \node[anchor=south] at (5.5,0.1) {$\dd{X}$};
+  \draw[->] (5,0.7) to (5.5,0.7);
+\end{tikzpicture}

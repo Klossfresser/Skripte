@@ -316,14 +316,58 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbras8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrbs10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrbs8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cmbright\cmbrbs8.tfm
+INPUT 5\Graph4.tex
+INPUT 5\Graph4.tex
 OUTPUT Skript.pdf
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT 5\Graph1.tex
+INPUT 5\Graph1.tex
+INPUT 5\Graph2.tex
+INPUT 5\Graph2.tex
+INPUT 5\Graph3.tex
+INPUT 5\Graph3.tex
+INPUT 5\Graph5.tex
+INPUT 5\Graph5.tex
+INPUT 5\Graph6.tex
+INPUT 5\Graph6.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsss.fd
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsss.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\doublestroke\dsss10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\doublestroke\dsss8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\doublestroke\dsss8.tfm
+INPUT 5\Graph7.tex
+INPUT 5\Graph7.tex
+INPUT 5\Graph8.tex
+INPUT 5\Graph8.tex
+INPUT 5\Graph9.tex
+INPUT 5\Graph9.tex
+INPUT 5\Graph10.tex
+INPUT 5\Graph10.tex
+INPUT 5\Graph11.tex
+INPUT 5\Graph11.tex
+INPUT 5\Graph12.tex
+INPUT 5\Graph12.tex
+INPUT 5\Graph13.tex
+INPUT 5\Graph13.tex
+INPUT 5\Graph14.tex
+INPUT 5\Graph14.tex
+INPUT 5\Graph15.tex
+INPUT 5\Graph15.tex
+INPUT 5\Graph16.tex
+INPUT 5\Graph16.tex
+INPUT 5\Graph17.tex
+INPUT 5\Graph17.tex
+INPUT 5\Graph18.tex
+INPUT 5\Graph18.tex
+INPUT 5\Graph19.tex
+INPUT 5\Graph19.tex
+INPUT 5\Graph20.tex
+INPUT 5\Graph20.tex
+INPUT 5\Graph21.tex
+INPUT 5\Graph21.tex
 INPUT Skript.aux
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbrmi8.pk
+INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbrmi8.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrbs10.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrbs10.pk
 INPUT C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbr8.pk

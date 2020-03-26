@@ -1,0 +1,20 @@
+\tikzset{every node/.style={scale=0.8}}
+\begin{tikzpicture}
+  \draw[->] (0,-0.15) to (0,5.25);
+  \draw[->] (-0.15,0) to (10.25,0);
+  \node[anchor=south] at (0,5.35) {$f\norBra{x}$};
+  \node[anchor=west] at (10.35,0) {$x$};
+
+  \draw (2,-0.15) to ++(0,0.3);
+  \draw (8,-0.15) to ++(0,0.3);
+  \draw[dashed] (2,0) to (2,3);
+  \draw[dashed] (8,0) to (8,3);
+  \node[anchor=north] at (5,-0.25) {$a$};
+
+  \draw[thick,domain=6:10] plot (\x,{0.3*(\x-8)^2+ 0.5*(\x-8) + 3});
+  \draw[thick,domain=0:4] plot (\x,{0.3*(\x-2)^2 + 0.5*(\x-2)+ 3});
+
+  \node[anchor=south] at (2,3.1) {$f_1$};
+  \node[anchor=south] at (8,3.1) {$f_2$};
+
+\end{tikzpicture}

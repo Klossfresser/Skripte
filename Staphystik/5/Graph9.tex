@@ -1,0 +1,31 @@
+\begin{tikzpicture}[baseline=0cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\pinRad{0.1};
+  \def\pinDis{0.2};
+  \def\pisDis{0.05};
+  \def\pinLen{2.3};
+  \def\filCol{white!90!black};
+  \def\blaKkk{black};
+  \def\arrLen{2};
+  \def\picDis{0.5};
+  \def\borDis{0.1};
+  \def\smaArr{0.4};
+  \def\arrDis{0.2};
+  \def\befFil{0.3};
+  \def\aftFil{0.4};
+  \def\picLen{5};
+
+  \fill[\filCol] (0,0) rectangle ++(\befFil*\sysLen,\sysHei);
+  \draw (0,0) rectangle ++(\sysLen,\sysHei);
+  \draw (-\borDis,-\borDis) rectangle ++ (\sysLen+2*\borDis,\sysHei+2*\borDis);
+  \fill[\blaKkk] (\befFil*\sysLen,0) rectangle ++(\borDis,\sysHei);
+  \draw[->] (\befFil*\sysLen+\borDis,\arrDis) to ++(\smaArr,0);
+  \draw[->] (\picLen+\picDis,\sysHei/2) to ++(\arrLen,0);
+
+  \fill[\filCol] (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
+  \draw (\picLen+2*\picDis+\arrLen,0) rectangle ++(\sysLen,\sysHei);
+  \draw (\picLen+2*\picDis+\arrLen-\borDis,-\borDis) rectangle ++(\sysLen+2*\borDis,\sysHei+2*\borDis);
+  \fill[\blaKkk] (\picLen+2*\picDis+\arrLen+\aftFil*\sysLen,\borDis) rectangle ++(\borDis,\sysHei-\borDis);
+  \draw[white] (2*\picLen+2*\picDis+\arrLen,0) to ++(0,\sysHei);
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[baseline=0.3cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\pinRad{0.1};
+  \def\pinDis{0.2};
+  \def\pinLen{0.2};
+  \def\pisDis{0.05};
+  \def\pinExt{0.9};
+  \def\filCol{white!90!black};
+  \def\arrDis{0.2};
+  \def\smaArr{0.4};
+  \def\arrLen{2};
+  \def\picDis{0.5};
+  \fill[\filCol] (0,0) rectangle (\sysLen/2,\sysHei);
+  \draw[thick] (\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+  \draw[thick] (\sysLen/2,\pisDis) to ++(0,\sysHei-2*\pisDis);
+  \draw[thick] (\sysLen/2,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
+  \draw[<->] (\sysLen/2+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+  \draw[->] (\sysLen+\picDis,\sysHei/2) to node[above] {Arbeit} node[below] {Wärme} ++(\arrLen,0);
+  \fill[\filCol] (\sysLen+\arrLen+2*\picDis,0) rectangle ++(3*\sysLen/4,\sysHei);
+  \draw[thick] (\sysLen+\arrLen+2*\picDis+\sysLen,0) to ++(-\sysLen,0) to ++(0,\sysHei) to ++(\sysLen,0);
+  \draw[thick] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4,\pisDis) to ++(0,\sysHei-2*\pisDis);
+  \draw[thick] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4,\sysHei/2) to ++(\pinLen+\pinDis,0) circle (\pinRad);
+  \draw[<->] (\sysLen+\arrLen+2*\picDis+3*\sysLen/4+\pinLen+\pinDis-\smaArr/2,\sysHei/2+\arrDis) to ++(\smaArr,0);
+\end{tikzpicture}

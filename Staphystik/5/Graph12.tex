@@ -1,0 +1,14 @@
+\begin{tikzpicture}[baseline=0.5cm]
+  \def\boxLen{1};
+  \def\boxDis{1};
+  \def\stkLen{0.3};
+  \def\stkAng{20};
+  \draw (0,0) rectangle ++(\boxLen,\boxLen);
+  \node at (\boxLen/2,2*\boxLen/3) {$a$};
+  \node at (\boxLen/2,\boxLen/3) {$T_a$};
+  \draw (\boxLen,\boxLen/2) to ++(\stkLen,0) to ++(\stkAng:\boxDis-2*\stkLen) (\boxLen+\boxDis,\boxLen/2) to ++(-\stkLen,0);
+  \tikzset{shift={(\boxLen+\boxDis,0)}}
+  \draw (0,0) rectangle ++(\boxLen,\boxLen);
+  \node at (\boxLen/2,2*\boxLen/3) {$b$};
+  \node at (\boxLen/2,\boxLen/3) {$T_b$};
+\end{tikzpicture}

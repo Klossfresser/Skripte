@@ -1,0 +1,24 @@
+\begin{tikzpicture}[baseline=0.5cm]
+  \def\sysLen{3};
+  \def\sysHei{1};
+  \def\sysDis{0.5};
+  \def\arrDis{0.2};
+  \def\arrLen{0.5};
+  \def\borDis{0.1};
+  \def\syoLen{1};
+  \def\pistIn{0.3};
+
+  \draw (0,0) rectangle (\sysLen,\sysHei);
+
+  \draw (-\borDis,-\borDis) rectangle (\sysLen+\borDis,\sysHei+\borDis);
+
+  \draw (\sysLen+\sysDis,0) rectangle ++(\syoLen,\sysHei);
+
+  \draw (\sysLen-\pistIn,\sysHei/2) to (\sysLen+\sysDis+\pistIn,\sysHei/2);
+
+  \fill[black] (\sysLen+\sysDis+\pistIn-\borDis/2,0) rectangle ++(\borDis,\sysHei);
+
+  \draw[<->] (\sysLen+\sysDis+\pistIn-\arrLen/2,\sysHei/2+\arrDis) to ++(\arrLen,0);
+
+  \node[anchor=south] at (\sysLen+\sysDis+\pistIn,\sysHei+\borDis) {$W$};
+\end{tikzpicture}

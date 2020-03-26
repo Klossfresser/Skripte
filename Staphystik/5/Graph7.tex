@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+  \draw[->] (-0.15,0) to (10.25,0);
+  \draw[->] (0,-0.15) to (0,5.25);
+  \node[anchor=south] at (0,5.35) {$y$};
+  \node[anchor=west] at (10.35,0) {$x$};
+  \draw[thick,domain=0:5] plot (\x,\x);
+  \node[anchor=south] at (2.5,2.6) {$C_1$};
+  \draw[thick,domain=0:5] plot (\x,{\x^2/5});
+  \node[anchor=west] at (2.5,1.1) {$C_2$};
+  \fill[thick] (5,5) circle (0.1);
+  \node[anchor=west] at (5.1,5) {$(1,1)$};
+\end{tikzpicture}

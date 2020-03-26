@@ -1,0 +1,21 @@
+\tikzset{every node/.style={scale=0.8}}
+\begin{tikzpicture}
+  \draw[->] (0,-0.15) to (0,5.25);
+  \draw[->] (-0.15,0) to (10.25,0);
+  \node[anchor=south] at (0,5.35) {$S$};
+  \node[anchor=west] at (10.35,0) {$V$};
+
+  \draw (3,-0.15) to ++(0,0.3);
+  \node[anchor=north] at (3,-0.25) {$V_a$};
+  \draw (7,-0.15) to ++(0,0.3);
+  \node[anchor=north] at (7,-0.25) {$V_e$};
+
+  \draw[thick] (3,1) .. controls (3.5,2) and (6.5,4) .. (7,4);
+
+  \fill[black] (3,1) circle (0.1) (7,4) circle (0.1);
+
+  \draw[thick,dashed] (3,1) to (7,1);
+
+  \draw[decorate,decoration={brace,amplitude=0.1 cm}] (7,4) to node[right] {$\Delta S>0$} (7,1);
+
+\end{tikzpicture}
