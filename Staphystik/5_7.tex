@@ -1,0 +1,355 @@
+\section{Thermodynamik}
+\subsection{Zustände}
+Im folgenden bedeutet \uline{Zustand} in der Regel: \uline{Gleichgewichts-Makrozustand},
+\begin{itemize}[align=left,labelwidth=\widthof{--},labelsep=1ex,labelindent=0pt,leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[--] zeitlich unveränderlich, wenn äußere Parameter nicht verändert werden,
+  \item[--] gekennzeichnet durch einige makroskopische Angaben (Energie, Volumen, \dots)
+\end{itemize}
+
+\begin{itemize}[align=left,labelwidth=\widthof{\uline{Zustandsvariable}:},labelsep=1ex,labelindent=0pt,leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[\uline{Zustandsgrößen}:] Größen, die in einem Zustand eindeutig festgelegt sind , zum Beispiel Energie, Entropie, Volumen, \dots; nicht: Arbeit, Wärme. Es gibt intensive/ extensive Zustandsgrößen.
+  \item[\uline{Zustandsvariable}:] Ein Satz von Zustandsgrößen, der ausreicht, um alle anderen Zustandsgrößen eindeutig festzulegen. \uwave{Beispiel}: Ideales Gas mit Variablen $E$, $V$, $N$; oder alternativ $T$, $V$, $N$; und so weiter.
+\end{itemize}
+
+\subsection{Arbeit und Wärme}
+Unterteile Zustandsgrößen in \uline{äußere Parameter} (\uline{Kontrollparameter}) (können vom Experimentator will\-kür\-lich von außen eingestellt werden, zum Beispiel Volumen, gegebenenfalls Teilchenzahl) und andere, \uline{innere Größen}, die auch von den inneren Eigenschaften abhängt. Oft genügt neben den äußeren Parametern eine weitere Variable (zum Beispiel Temperatur), um den Zustand festzulegen (\glqq einfaches System\grqq).\\
+Energie kann auf zwei Arten geändert werden:
+\begin{itemize}[align=left, labelwidth=\widthof{-- \uline{Wärme}:}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[-- \uline{Arbeit}:] Veränderung der Kontrollparameter
+  \item[-- \uline{Wärme}:] Energieübertragung ohne Änderung der Kontrollparameter
+\end{itemize}
+Arbeit: $\delta W = f\cdot \dd{X}$ $f$ intensiv, $X$ extensiv (für kontrollierte, reversible Arbeit)\\
+\uwave{Beispiele}:
+\begin{itemize}[align=left, labelwidth=\widthof{4)}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth]
+  \item[1)]  Gas: Expansionsarbeit  $\delta W = - F \dd{X} = -\frac{F}{A} A \dd{x} = - p \dd{V}$ mit Druck \fbox{$p=\frac{F}{A}$}, Kraft  des Systems auf Wand. $\delta W > 0$, wenn $\dd{V} > 0$ \input{5/Graph4.tex}
+  \item[2)] Gummiband: Dehnungsarbeit $\delta W = F\cdot\dd{l}$, $\dd{l}$: Längenänderung, $f>0$: Von außen angewandte Kraft Hier: $\delta W >0$, wenn $\dd{l}>0$
+  \item[3)] Magnetisches System: $\delta W = \vec{B}\cdot\dd{\norBra{\vec{M}V}}$ $\vec{B}$: magnetische Flussdichte, $\vec{M}V$: Magnetisierung (hier magnetisches Moment pro Volumen)
+  \item[4)] Chemische Arbeit: $\delta W = \mu \dd{N}$
+\end{itemize}
+\uline{1. Hauptsatz der Thermodynamik}:\\
+\fbox{\parbox{0.98\textwidth}{Es gibt in jedem System eine extensive Zustandsgröße \glqq innere Energie\grqq\ ($E$ oder $U$), die beim abgeschlossenen System erhalten bleibt und sich gemäß \fbox{$\dd{E} = \delta W + \delta{Q}$} verhält.}}\\
+(Kann als Energieerhaltungssatz beziehungsweise Definition von Wärme aufgefasst werden. Schreibweise \glqq$\dd{E}$\grqq\ deutet an, dass $E$ eine Zustandsgröße ist und daher $\dd{E}$ ein exaktes Differential ist.)\\
+\uline{Mikroskopische Interpretation}\\
+Energie $E = \angBra{E} = \sum\limits_j P_j E_j$
+\begin{tabbing}
+\hspace{4em} \= \kill
+$\rightarrow$\> $\dd{E} = \sum\limits_j P_j \dd{E_j} + \sum\limits_j E_j \dd{P_j}$\\
+Arbeit: \> $\sum\limits_j P_j \dd{E_j}$\\
+Wärme: \> $\sum\limits_jE_j \dd{P_j}$
+\end{tabbing}
+$\sum\limits_j P_j \dd{E_j} = \sum\limits_j P_j \ppv{E_j}{V} \dd{V} = - p \dd{V}$ mit $-p \mDef \sum\limits_j P_j \ppv{E_j}{V}$\\
+(wenn $E_j$ nur von $V$ abhängig; gilt zum Beispiel nicht für Arbeit mit Reibungsverlusten, zum Beispiel Rühren)
+\begin{itemize}[align=left, labelwidth=6em, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth, listparindent=\leftmargin]
+\item[$\rightarrow$ Arbeit] $\eDef$ Änderung der Energieniveaus $E_j$
+\item[$\rightarrow$ Wärme] $\eDef$ Änderung der Besetzungswahrscheinlichkeiten $P_j$
+\end{itemize}
+Achtung: Die geänderten $P_j$, $E_j$ entsprechen hier nicht unbedingt einem Gleichgewichtszustand. Ein solcher muss sich erst einstellen.
+
+\subsection{Thermodynamische Prozesse}
+Prozess $=$ Änderung von Zustandsgrößen
+
+\begin{itemize}[align=left, labelwidth=\widthof{\uline{Quasistatischer} Prozess:}, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth, listparindent=\leftmargin]
+\item[\uline{Quasistatischer} Prozess:] langsam genug, so dass System immer im Gleichgewicht ist; das heißt langsamer als die Relaxationszeit des Systems\\
+$\rightarrow$ Abfolge von Gleichgewichtszuständen
+\item[\uline{Reversibler} Prozess:] umkehrbar; genauer (Plancksche Definition): es ist möglich, den Prozess rück\-gängig zu machen und dazu auch alle benutzten Hilfsmittel in den Anfangszustand zu versetzen.
+\item[\uline{Adiabatischer} Prozess:] ohne Wärmeaustausch; thermisch isoliertes System
+\end{itemize}
+
+\uwave{Beispiele}:
+
+\tikzset{every node/.style = {draw = none, fill = none}}
+\setlength{\tabcolsep}{0.5cm}
+\renewcommand{\arraystretch}{2}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c}
+  \input{5/Graph1.tex}
+  &
+  \setlength{\tabcolsep}{1pt}
+  \begin{tabular}{c}plötzliche Expansion\\ nicht quasistatisch\\ nicht reversibel\end{tabular}
+  \setlength{\tabcolsep}{1cm}
+  \\
+  \input{5/Graph2.tex}
+  &
+  \setlength{\tabcolsep}{1pt}
+  \begin{tabular}{c}quasistatisch\\ und reversibel\\ (bei langsamer Bewegung)\end{tabular}
+  \setlength{\tabcolsep}{1cm}
+  \\
+  \input{5/Graph3.tex}
+  &
+  \setlength{\tabcolsep}{1pt}
+  \begin{tabular}{c}quasistatisch, \\ nicht reversibel\end{tabular}
+  \setlength{\tabcolsep}{1cm}
+
+\end{tabular}
+\end{table}
+Adiabatischer Prozess: muss \glqq schnell genug\grqq\ ablaufen, um Wärmeaustausch zu verhindern.\\
+\uwave{Beispiele}:
+\setlength{\tabcolsep}{1cm}
+\renewcommand{\arraystretch}{4}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c}
+    \input{5/Graph5.tex}
+    & reversible, adiabatische Arbeit $\delta W \stackrel{<}{>} 0$\\
+    \input{5/Graph6.tex}
+    & Rührarbeit, adiabatisch und irreversibel $\delta W > 0$
+  \end{tabular}
+\end{table}
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1}
+Achtung: In anderen Gebieten, besonders Quantenmechanik, bedeutet \glqq adiabatisch\grqq\ einen langsamen, reversiblen Prozess, bei dem die Besetzungswahrscheinlichkeiten konstant bleiben.
+
+
+\subsection{Temperatur}
+\label{sec:Temperatur5}
+Empirisch: Systeme in Kontakt (diathermische Wände) können Wärme austauschen.\\
+\uline{Thermisches Gleichgewicht}: kein Netto-Austausch von Wärme\\
+\uline{Nullter Hauptsatz}:\\
+\fbox{\parbox{0.98\textwidth}{Wenn Systeme $A$, $B$ im thermischen Gleichgewicht sind, sowie $B$, $C$ ebenso, dann sind auch $A$, $C$ im thermischen Gleichgewicht.}}
+\begin{itemize}[align=left, labelwidth=4em, labelsep=1ex, labelindent=0pt, leftmargin=\labelsep+\labelindent+\labelwidth, listparindent=\leftmargin]
+\item[$\rightarrow$] Ermöglicht die Definition der Temperatur durch Einteilen der physikalischen Systeme in Äqui\-valenz\-klas\-sen von Systemen im thermischen Gleichgewicht ($\eDef$ gleiche Temperatur).
+\item[$\rightarrow$]\uline{Empirische Temperatur}
+\item[$\rightarrow$]im Einklang mit der statistischen Definition $T^{-1}\mDef \ppv{S}{E}$.
+\end{itemize}
+
+
+\subsection{Differentiale}
+Betrachte Funktion $F: \mathds{R}^n \to \mathds{R}$\\
+\uline{Totales Differential}: \fbox{$\dd{f} = \sum\limits_j \ppv{f}{x_j} \dd{x_j}$} ($x=\norBra{x_1,\dots,x_n}\in \mathds{R}^n$)\\
+Anschaulich: Änderung von $f$ bei kleinen Änderungen $\dd{x_j}$.\\
+Saubere Definition: $\dd{f}$ ist eine lineare Abbildung $\mathds{R}^n \to \mathds{R}$, die im Limes $\dd{x}\to 0$ die Abbildung $f\norBra{x_0+\dd{x}}-f\norBra{X_0}$ approximiert. Hier sind $x_0$, $\dd{x}$ $\in \mathds{R}^n$.\\
+Kurvenintegral:\\
+$\left.\begin{array}{l r}\text{Differential}&\dd{f} \\ \text{Kurve}&C: \mathds{R} \to \mathds{R}^n; \tau \mapsto x\norBra{\tau}\end{array} \right\} \to \int\limits_C \dd{f} = \int\limits_{\tau_1}^{\tau_2} \sum\limits_j \ppv{f}{x_j}\dot{x}_j \dd{\tau}$\\
+mit $\dot{x}_j = \ddv{x_j}{\tau}$\\
+$\int\limits_C \dd{f} = f\norBra{x\norBra{\tau_2}}-f\norBra{x\norBra{\tau_1}}$ wegunabhängig\\
+\uline{Verallgemeinerung}: Ersetze $\ppv{f}{x_j}$ durch Funktionen $g_j: \mathds{R}^n \to \mathds{R}$, die nicht unbedingt partielle Ableitungen einer Funktion sind. $\rightarrow$ im Allgemeinen $\ppv{g_s}{x_k} \neq \ppv{g_k}{x_s}$.\\
+$\rightarrow$ Definiere \uline{Differentialform} (\glqq 1-Form\grqq\ , \glqq Pfaffsche Form\grqq\ ):\\
+\fbox{$\delta G \mDef \sum\limits_j g_j \dd{x_j}$} $\rightarrow$ Kurvenintegrale $\int\limits_C\delta G = \int\limits_{\tau_1}^{\tau_2} \sum\limits_j g_j \dot{x}_j \dd{\tau}$.\\
+\glqq$\delta G$\grqq\ ist nur Schreibweise und impliziert nicht die Existenz einer Funktion $G$. Wenn jedoch \fbox{$\ppv{g_j}{x_k} = \ppv{g_k}{x_j}$} $\forall j,k$, dann ist $\delta G$ ein \uline{exaktes Differential} und wir können schreiben$\delta G = \dd{G}$, $g_j = \ppv{G}{x_j}$. (Hier wurde angenommen, dass Definitionsbereich einfach geschlossen ist.) Dann heißt $G$ \uline{Potential} zu $\delta G$. Kurvenintegrale im Allgemeinen wegabhängig.\\
+\uwave{Beispiel}:\\
+$\delta G = y \dd{x} + \dd{y}$, $g_x = y$, $g_y = 1$, $\ppv{g_y}{x} = 0$, $\ppv{g_x}{y} = 1$
+\begin{figure}[H]
+  \centering
+  \input{5/Graph7.tex}
+\end{figure}
+
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c c}
+    $C_1$:&$\tau\in [0,1]$&$x\norBra{\tau} =\tau$&$y\norBra{\tau}=\tau$&$\int\limits_{C_1}\delta G = \int\limits_0^1 \norBra{g_x \dot{x} + g_y \dot{y}}\dd{\tau} = \int\limits_0^1 \norBra{y\cdot 1+1}\dd{\tau} = \frac32$\\
+    $C_2$:&$\tau\in [0,1]$&$x\norBra{\tau} = \tau$&$y\norBra{\tau} = \tau^2$&$\int\limits_{C_2}\delta G = \int\limits_0^1 \norBra{y\cdot 1 + 2\tau}\dd{\tau} = \int\limits_0^1\norBra{\tau^2+2\tau}\dd{\tau} = \frac43$
+  \end{tabular}
+\end{table}
+
+\uline{Rechenregeln} ($a,b\in \mathds{R}$ konstant): $\dd{a} = 0$, $\dd{\norBra{a f + b g}} = a\dd{f} + b \dd{g}$, $\dd{\norBra{fg}} =g\dd{f} + f\dd{g}$\\
+$\lambda\norBra{x}$ (überall $\neq 0$) heißt integrierender Faktor von $\delta G$, wenn $\lambda \delta G$ ein exaktes Differential ist. Dann gilt $\ppv{}{x_j}\lambda g_k = \ppv{}{x_k}\lambda g_j$.\\
+Beispiel: $e^{x}\norBra{y \dd{x} + x\dd{x}} = \dd{e^x y}$\\
+In $3$ Dimensionen: $\delta G = \vec{g}\cdot\vec{\dd{x}}$,
+$\vec{g} = \norBra{\begin{array}{c} g_1\\g_2\\g_3\end{array}}$,
+$\vec{\dd{x}} = \norBra{\begin{array}{c}\dd{x_1}\\ \dd{x_2}\\ \dd{x_3}\end{array}}$\\
+Exakt, wenn $\vec{\nabla}\times \vec{g} = 0$.\\
+Integrierender Faktor existiert, wenn $\vec{\nabla}\times \lambda \vec{g} = \lambda\vec{\nabla}\times \vec{g} - \vec{g}\times\vec{\nabla}\lambda = 0$ mit $\lambda \neq 0$. $\rightarrow$ $\vec{g}\cdot\lambda\vec{\nabla}\times\vec{g} = 0$ $\rightarrow$ \fbox{$\vec{g}\cdot\vec{\nabla}\times\vec{g} = 0$} (Frobenius-Bedingung)
+
+
+\subsection{Entropie und 2. Hauptsatz}
+Empirisch gilt in adiabatisch eingeschlossenen Systemen: Es gibt \uline{reversible} und \uline{irreversible} Prozesse.\\
+$\rightarrow$ Fasse alle (Gleichgewichts-)Zustände, die durch reversible Prozesse ineinander Überführt werden können, zu einer Äquivalenzklasse zusammen und führe eine Zustandsgröße $S$ ein (empirische Entropie), die für alle Zustände der Äquivalenzklasse denselben Wert hat.\\
+Ordnungsschema: $S$ so gewählt, dass $S$ durch irreversible Prozesse erhöht wird (Konvention).\\
+Bei der Wegnahme von einschränkenden Bedingungen (\glqq Enthemmung\grqq) strebt das System dem Zustand höchster Entropie zu (im Einklang mit dem Prinzip der maximalen Entropie der Statistischen Physik).
+
+\setlength{\tabcolsep}{0.5cm}
+\renewcommand{\arraystretch}{3}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c}
+    \input{5/Graph8.tex}
+    &
+    $S' = S$\\
+    \input{5/Graph9.tex}
+    &
+    $S' > S$\\
+    \input{5/Graph10.tex}
+    &
+    $S' > S$
+  \end{tabular}
+\end{table}
+
+\uline{2. Hauptsatz}:\\
+\fbox{\parbox{0.98\textwidth}{Es gibt eine Extensive Zustandsgröße, Entropie $S$, die im adiabatisch eingeschlossenen System nicht abnehmen kann: $\Delta S \geq 0$,}}\\
+Häufig wird angenommen, dass $S$ eine streng monoton wachsende Funktion $S\norBra{E,X}$ der Energie und der extensiven Parameter $X$ ist, damit $S$ nach $E$ auflösbar ist: $E\norBra{S,X}$. Dies schließt negative Temperaturen aus.\\
+Für quasistatische Prozesse: $S$ kann (wie alle anderen Zustandsgrößen) als Funktion eines Satzes von Zustandsvariablen geschrieben werden.\\
+$\rightarrow$ $\dd{S}\norBra{E,X} = \pdv{S}{E}{X} \dd{E} + \pdv{S}{X}{E}\dd{X}$ ($\pdv{a}{b}{c} =$ partielle Ableitung bei festem $c$), $\frac{1}{T} \mDef \pdv{S}{E}{X}$\\
+Für kontrolliert und reverersibel zugeführte Arbeit gilt: $\delta W = f\dd{X}$. Zusätzlich adiabatisch ($\delta Q =0$), dann gilt: $\dd{E}= \delta W = f\dd{X}$. Reversibel $+$ adiabatisch: $\dd{S} = 0$, $\dd{E} = f\dd{X}$ $\rightarrow$ $\frac{1}{T}f\dd{X} +\pdv{S}{X}{E}\dd{X} = 0$ $\rightarrow$ $\frac{f}{T} = -\pdv{S}{X}{E}$\\
+\uwave{Alternativ}: Definiere $f$ über $\frac{f}{T} = -\pdv{S}{X}{E}$ und folgere daraus $\delta W = f\dd{X}$, wenn $\dd{S} = 0$ und $\delta Q= 0$.\\
+$\left.\begin{array}{r l}\rightarrow & \dd{S} = \frac{\dd{E}}{T} - \frac{f}{T} \dd{X}\\ \text{Umstellen} \rightarrow & \text{\fbox{\dd{E} = T \dd{S} + f\dd{X}}}\end{array}\right\}\begin{array}{c}\text{\uline{Gibbsche}}\\\text{\uline{Fundamentalform}}\end{array}$\\
+Für reversible Prozesse mit Wärmeaustausch gilt: $\dd{E} = \delta Q + f\dd{X}$\\
+$\rightarrow$ \fbox{$\dd{S} = \frac{\delta Q}{T}$} ($\frac{1}{T}$ ist integrierender Faktor.)\\
+Adiabatische Arbeit $\delta W_{nr}$, die nicht die Form $f\dd{X}$ hat: $\dd{S} \geq 0$, $\dd{E} = \delta W_{nr}$, $\dd{X} = 0$ $\rightarrow$ $\delta W_{nr} \geq 0$. Das heißt falls $\delta W_{nr} \neq 0$, dann $\dd{S} > 0$ (irreversibel) und $\delta W_{nr} > 0$ ($\nexists$ Perpetuum mobile 2. Art). Nichtreversibler Prozess mit Wärmeaustausch: $\dd{S} > \frac{\delta Q}{T}$.\\
+$\rightarrow$ Formulierung des 2. Hauptsatzes für Prozesse mit Wärme: \fbox{$\dd{S} \geq \frac{\delta Q}{T}$}.\\
+Ein allgemeiner Prozess mit konstanter Entropie heißt \uline{isentrop}.\\
+\uwave{Beispiel}: Gas mit Energie $E$, Volumen $V$.\\
+$\rightarrow$ $\dd{E} = T \dd{S} - p\dd{V}$ beziehungsweise $\dd{S} = \frac{\dd{E}}{T} + \frac{p}{T}\dd{V}$\\
+mit Druck $p = T\cdot\pdv{S}{V}{E}$\\
+Ideales Gas: $S = \frac52 N k_B + N k_B \ln\edgBra{\frac{V}{N h^3} \norBra{2 \pi m k_B T}^{\frac32}} = \frac52 N k_B + N k_B \ln\edgBra{\frac{V}{N h^3} \norBra{2 \pi m \frac{2 E}{3 V}}^{\frac32}}$\\
+$\rightarrow$ $\pdv{S}{V}{E} = \frac{N k_B}{V}$ $\rightarrow$ \fbox{$p V = N k_B T$} \uline{thermische Zustandsgleichung}\\
+\uline{Wärmekapazitäten}: $C=$\glqq$\frac{\delta Q}{\dd{T}}$\grqq$ = \frac{T\dd{S}}{\dd{T}} = T \ppv{S}{T}$\\
+konstantes Volumen: $C_V = T \pdv{S}{T}{V} = \pdv{E}{T}{V}$; konstanter Druck: $C_p = T\pdv{S}{T}{p} \neq \pdv{E}{T}{p}$; Ideales Gas: $C_V = \frac32 N k_B$; $C_p = \frac52 N k_B$\\
+Betrachte im Folgenden System mit extenxiven Variablen $V$, $N$ (\glqq einkomponentiges Fluidum\grqq). $\rightarrow$ $S = S\norBra{E,V,N}$.\\
+Auflösen nach $E$ $\rightarrow$ $E = E\norBra{S,V,N}$\\
+Totales Differential: $\dd{E} = \ppv{E}{S} \dd{S} + \ppv{E}{V} \dd{V} + \ppv{E}{N}\dd{N} = T \dd{S} -p \dd{V} +\mu\dd{N}$ da $\ppv{E}{S} = \frac{1}{\ppv{S}{E}} = T$; $\ppv{E}{V} = - p$ (Druck); $\ppv{E}{N} = \mu$ (chemisches Potential)\\
+\uwave{Einschub}: Rechenregeln für partielle Ableitungen\\
+Betrachte $z\norBra{x,y}$, das nach $x$ oder $y$ aufgelöst werden kann. $\rightarrow$ $x\norBra{y,z}$, $y\norBra{z,x}$
+
+\begin{itemize}
+  \item[1)] Bei festgehaltenem $y$ ist $x\norBra{y,z}$ die Umkehrfunktion von $z\norBra{x,y}$. $\rightarrow$ \fbox{$\pdv{x}{z}{y} = \frac{1}{\pdv{z}{x}{y}}$}
+  \item[2)] $\left. \begin{array}{c}\dd{z} = \pdv{z}{x}{y}\dd{y} + \pdv{z}{y}{x}\dd{y}\\ \dd{x} = \pdv{x}{y}{z}\dd{y} + \pdv{x}{z}{y}\dd{z}\end{array}\right\} \stackrel[\text{Spezialfall}]{\dd{z} =0}{\longrightarrow} \begin{array}{c} \pdv{z}{x}{y}\dd{x} +\pdv{z}{y}{x}\dd{y} = 0\\ \dd{x} = \pdv{x}{y}{z}\dd{y} = 0\end{array}$\\
+  $\rightarrow$ $\pdv{z}{x}{y}\pdv{x}{y}{z} + \pdv{z}{y}{x} = 0$\\
+  $\rightarrow$ \fbox{$\pdv{z}{x}{y}\pdv{x}{y}{z}\pdv{y}{z}{x} = -1$}
+\end{itemize}
+
+$\rightarrow$ \fbox{$\dd{E} = T\dd{S} -p\dd{V}+\mu\dd{N}$} oder \fbox{$\dd{S} = \frac{1}{T}\dd{E} +\frac{p}{T}\dd{V}-\frac{\mu}{T}\dd{N}$}\\
+Definition der Temperatur $T = \frac{1}{\ppv{S}{E}}$ stimmt mit der statistischen Physik überein.\\
+Dort wurde gezeigt, dass für $2$ Systeme $a$, $b$ im thermischen Gleichgewicht gilt: $T_a= T_b$. (Wegen Entropiemaximierung $0=\ppv{}{E_a}\norBra{S_a+S_b} = \ppv{S_a}{E_a} - \ppv{S_b}{E_b}$)\\
+$\rightarrow$ Temperaturdefinition erfüllt auch die Anforderungen an eine \uline{empirische Temperatur} (siehe \ref{sec:Temperatur5}).\\
+\uline{Weitere Arten von Gleichgewicht}:
+
+\begin{itemize}[align=left]
+  \item[--] Zwei Systeme, die Volumen austauschen (das heißt mechanische Wechselwirkung) und Wärme austauschen (thermische Wechselwirkung):\\
+  {\centering
+  \input{5/Graph11.tex}
+  }\\
+  $V = V_a + V_b$, $S = S_a + S_b$, $T_a = T_b$\\
+  $S$ ist maximal $\rightarrow$ $0 = \ppv{S}{V_a} = \ppv{S_a}{V_a} - \ppv{S_b}{V_b}$\\
+  $\rightarrow$ $\frac{p_a}{T_a} = \frac{p_b}{T_b}$ $\rightarrow$ $p_a = p_b$
+  \item[--] Zwei Systeme, die Wärme und Teilchen austauschen:\\
+  $T_a = T_b$, $N = N_a + N_b$, $S = S_a + S_b$ $\rightarrow$ $\mu_a = \mu_b$
+  \item[Beachte:]
+  \begin{itemize}
+      \item[--] Volumenaustausch ohne Energieänderung physikalisch wenig sinnvoll, außer wenn $p_b = 0$!
+      \item[--] Bei Volumenaustausch ohne Wärme, aber mit Zulassen irreversibler Arbeit ($\delta W \neq - p \dd{V}$):\\
+      gleiche Schlussfolgerung $p_a = p_b$
+  \end{itemize}
+\end{itemize}
+
+\uline{Entropieänderung bei Temperaturausgleich}:\\
+\input{5/Graph12.tex} $T_a > T_b$
+
+\begin{itemize}[align=left]
+  \item[Wärmekontakt:] $\Delta S = S_a\norBra{E_a + \Delta E_a} + S_b\norBra{E_b + \Delta E_b} - S_a\norBra{E_a} - S_b\norBra{E_b}$
+  \item[Differentiell:] $\dd{S} = \ppv{S_a}{E_a}\dd{E_a} + \ppv{S_b}{E_b}\dd{E_b} = \norBra{\frac{1}{T_a} - \frac{1}{T_b}}\dd{E_a}$\\
+  $\dd{S} > 0$ (2. Hauptsatz) und $\frac{1}{T_a} - \frac{1}{T_b} < 0$
+  \item[Falls $T_a = T_b$:] $\dd{S} = 0$ trotz $\dd{E} \neq 0$ (reversible Wärme).
+\end{itemize}
+
+\uwave{Analog}: Bei zwei Systemen im thermischen Gleichgewicht ($T_a = T_b$) dehnt sich das System mit höherem Druck aus ($\delta V_a >0$), wenn mechanische Kopplung erlaubt, und Teilchen fließen vom höheren zum niedrigeren chemischen Potential, wenn Teilchenaustausch erlaubt.
+\uline{Prinzip der minimalen Energie}\label{minEnergie}: Bei konstanter Entropie (sowie $V=\text{konstant}$, $N=\text{konstant}$) nimmt ein Systemden Zustand minimaler Energie ein (wennn interne Nebenbedingungen variiert werden können).
+
+\begin{itemize}[align=left]
+  \item[\uline{Beweis}:] \begin{itemize}[align=left]
+    \item[1)] Betrachte Energieänderung $\delta E^{\norBra{1}}$ bei Einführen und Variation einer Nebenbedingung\\ \input{5/Graph13.tex}
+    \item[2)] Enthemmung bei abgeschlossenem System $\rightarrow$ $\delta S^{\norBra{2}}>0$.
+    \item[3)] Rückführung in den Anfangszustand durch Entnahme von Wärme: $\delta Q^{\norBra{3}}=-t\dd{S}^{\norBra{2}} < 0$ $\rightarrow$ $\delta E^{\norBra{1}} = -\delta Q^{\norBra{3}} > 0$.
+\end{itemize}
+  \item[\uline{Beachte}:] In $\dd{E} = T \dd{S} - p \dd{V} + \mu \dd{N}$ kommen nur Zustandsgrößen vor. diese sind zunächst nicht mit den Begriffen Arbeit und Wärme verbunden. Der Zusammenhang ist nicht universell, sondern wird erst durch die Art der Prozessrealisierung festgelegt.
+  \item[\uline{Beispiel}:] $2$ Arten der Realisierung der quasistatischen Ausdehnung bei konstanter Energie
+\end{itemize}
+
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{1pt}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c | c}
+    \uline{1) Adiabatisch eingeschlossen}
+    &
+    \underline{2) Mittels \glqq Wärmebad\grqq und \glqq Arbeitsbad\grqq }\\
+     & ($=$ Reservoir an Wärme/ Arbeit)\\
+    \input{5/Graph14.tex} & \input{5/Graph15.tex}\\
+    \multicolumn{2}{c}{\input{5/Graph16.tex}} \\
+    $\delta Q = \delta W = 0$ & Zu jedem Zeitpunkt:\\
+    $\Delta S_{\text{ges}} = \Delta S > 0$ & $\dd{E} = \delta{Q} + \delta W = 0$\\
+    (\uline{irreversibel}) & $\delta W = -p \dd{V}$\\
+    $\Delta S = \int\limits_{V_a}^{V_e} \pdv{S}{V}{E} \dd{V} = \int\limits_{V_a}^{V_e} \frac{p}{T} \dd{V}$ & $\dd{E} = T\dd{S} -p\dd{V}$\\
+     & $\rightarrow$ $\dd{S} = -\frac{\delta Q_{\text{res}}}{T}=-\dd{S_\text{res}}$\\
+     & (Temperatur des Wärmebads so zu wählen, dass $T_\text{res} = T\norBra{E_a,V}$)\\
+     & $\rightarrow$ $\Delta S = \int\dd{S} = \int\limits_{V_a}^{V_e} \frac{p}{T} \dd{V} = - \int\dd{S_\text{res}} = -\Delta S_\text{res}$\\
+     & $\rightarrow$ $\Delta S_\text{ges} = 0$ (\uline{reversibel})
+  \end{tabular}
+\end{table}
+
+\uline{Zusammenfassung Entropie}
+
+\begin{itemize}[align=left]
+  \item[--] Natürlich ablaufende Prozesse  (Streben ins Gleichgewicht) sind irreversibel und bedeuten $\Delta S > 0$ $\eDef$ Entropiemaximierung der statistischen Physik
+  \item[--] Quasistatische Prozsse erfüllen $\dd{E} = T\dd{S}-p\dd{V}+\mu\dd{N}$ unabhängig von der Prozessrealisierung (Arbeit/ Wärme)
+  \item[--] Temperaturdefinition $T^{-1} = \pdv{S}{E}{V,N}$ $\rightarrow$ Gleichgewichtsbedingung $T_a = T_b$.
+  \item[Achtung:] Gelegentlich wird \glqq quasistatisch\grqq\ (anders als hier) im Sinne von \glqq reversibel\grqq\ benutzt.
+\end{itemize}
+
+\subsection{Kreisprozesse}
+\uline{Ziel}:
+\begin{itemize}[align=left]
+  \item[--] Verrichten von Arbeit durch Umwandlung von Wärme in Arbeit (\uline{Wärme\-kraft\-maschine}/ \uline{Arbeits\-masch\-ine})
+  \item[--] Transport von Wärme durch Arbeitseinsatz (\uline{Wärmepumpe}, \uline{Kältemaschine})
+\end{itemize}
+\uline{Maximale Arbeit}
+\begin{itemize}[align=left]
+  \item[Maschine:]
+  \begin{itemize}[align=left]
+      \item[\input{5/Graph17.tex}]
+      \item[Anfang] $S_0$, $E_o\norBra{S_0}$
+      \item[Ende] $S$, $E\norBra{S}$
+      \item[(äußere Parameter eventuell unterschiedlich)]
+    \end{itemize}
+  \item[$\rightarrow$] $W=E\norBra{S} - E_0\norBra{S_0} = W\norBra{S,S_0}$
+  \item[Arbeit als  Funktion der Entropie:] $\ppv{W}{S} = \ppv{E}{S} = T > 0$
+  \item[Von der Maschine verrichtete Nutz-Arbeit:] $W_N = -W$, $\ppv{W_N}{S} < 0$
+  \item[$\rightarrow$] Entropie muss möglichst klein sein, damit $W_N$ maximal.
+  \item[Idealfall:] $S=S_0$
+\end{itemize}
+
+\uline{Carnot-Prozess}\\
+Kombination aus isothermen (konstante Temperatur) und isentropen Prozessen an einem Hilfssystem (Arbeitsgas, Teil der Maschine). $\Delta Q_1 <0$ $\Delta Q_2 > 0$
+
+\tikzset{every node/.style={scale=0.8}}
+\begin{figure}[H]
+  \centering
+  \input{5/Graph18.tex}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \input{5/Graph19.tex}
+\end{figure}
+\begin{itemize}[align=left]
+\item[Hilfssysteme arbeitet zyklisch und reversibel:] $\Delta  S = \frac{\Delta Q_1}{T_1} + \frac{\Delta Q_2}{T_2} = 0$\\ $\rightarrow$ $\Delta Q_1 = - \frac{T_1}{T_2}\Delta Q_2$
+\item[Gewonnene Arbeit:] $W_N = \Delta Q_2 + \Delta Q_1 = T_2 \Delta S_2 - T_1 \Delta S_2 = \norBra{T_2-T_1}\Delta S_2$\\ $=$ Fläche im $T$-$S$-Diagramm; $W_N = \norBra{1-\frac{T_1}{T_2}}\Delta Q_2$
+\item[\uline{Wirkungsgrad der Carnot-Wärmekraftmaschine}:] \fbox{$\eta = \frac{W_N}{\Delta Q_2} = 1-\frac{T_1}{T_2}$}
+\item[Damit $W_N > 0$:] Rechtsprozeß (Umlauf im Uhrzeigersinn), $\Delta Q_1 < 0$
+\item[Linksprozeß (gegen Uhrzeigersinn):] $\Delta Q_2 <0$, $\Delta Q_1 > 0$
+\item[$\rightarrow$] Betrieb als Wärmepumpe, Wirkungsgrad $\eta^H = \verBra{\frac{\Delta Q_2}{W_N}} = \frac{T_2}{T_2-T_1}$ (Heizeffektivität)
+\item[$\rightarrow$] Betrieb als Kältemaschine, Wirkungsgrad $\eta^K = \verBra{\frac{\Delta Q_1}{W_N}} = \frac{T_1}{T_2-T_1}$ (Kühleffektivität)
+\end{itemize}
+Carnot-Prozess dient vor allem als Idealisierung. In der Realität ist der isotherme Prozess nicht sehr praktikabel für einen Motor (lange Wartezeiten) und es treten Reibungsverluste auf ($\Delta S_\text{ges} > 0$).
+
+\uline{Allgemeiner Kreisprozess}
+\begin{figure}[H]
+  \centering
+  \input{5/Graph20.tex}
+\end{figure}
+
+$W_N= \Delta Q = \Delta Q_2 + \Delta Q_1$ mit $\Delta Q_2 > 0$, $\Delta Q_1 < 0$ beliebig auf dem Zyklus verteilt
+
+\begin{itemize}[align=left]
+  \item[Zweiter Hauptsatz:] $\dd{S} \geq \frac{\delta Q}{T}$ $\rightarrow$ $\Delta S = \oint \dd{S} \geq \oint \frac{\delta Q}{T} = \int\limits_{\delta Q > 0} \frac{\delta Q}{T} + \int\limits_{\delta Q < 0} \frac{\delta Q} {T}$
+  \item[Zyklisch] $\rightarrow$ $\Delta S = 0$
+  \item[Abschätzungen] Für $\delta Q > 0$: $\frac{\delta Q}{T} \geq\frac{\delta Q}{T_2}$, für $\delta Q < 0$: $\frac{\delta Q}{T} \geq \frac{\delta Q}{T_1}$
+  \item[$\rightarrow$] $0 \geq \frac{1}{T_2} \int\limits_{\delta Q > 0} \delta Q + \frac{1}{T_1} \int\limits_{\delta Q  < 0} \delta Q = \frac{\Delta Q_2}{T_2} +\frac{\Delta Q_1}{T_1}$
+  \item[$\rightarrow$] $\frac{\Delta Q_1}{\Delta Q_2} \leq - \frac{T_1}{T_2}$
+  \item[$\rightarrow$] $W_N = \Delta Q_2\norBra{1 + \frac{\Delta Q_1}{\Delta Q_2}} \leq \Delta Q_2\norBra{1- \frac{T_1}{T_2}}$
+  \item[$\rightarrow$] Wirkungsgrad \fbox{$\eta \leq 1 - \frac{T_1}{T_2}$}
+\end{itemize}
+
+Idealer Wirkungsgrad wird nur erreicht, wenn keine irreversiblen Prozesse und wenn Wärmeüberträge bei Minimal- und Maximaltemperatur.

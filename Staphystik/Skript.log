@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.23)  25 MAR 2020 23:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.23)  28 MAR 2020 06:21
 entering extended mode
 **./Skript.tex
 (Skript.tex
@@ -969,16 +969,12 @@ LaTeX Font Info:    ... okay on input line 50.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\atbegshi.sty"
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-\AtBeginShipoutBox=\box52
-)
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: showframe 
+* modes: 
 * h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
@@ -1005,13 +1001,12 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count144
 \scratchdimen=\dimen263
-\scratchbox=\box53
+\scratchbox=\box52
 \nofMPsegments=\count145
 \nofMParguments=\count146
 \everyMPshowfont=\toks46
@@ -1048,22 +1043,32 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into
 your preamble.
  on input line 50.
 
-(5.tex
-LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 11
-.
+(1.tex
+LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 4.
+
  ("C:\Program Files\MiKTeX 2.9\tex/latex/cmbright\omlcmbrm.fd"
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 11
-.
+LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 4.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/cmbright\omscmbrs.fd"
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
-) (5/Graph4.tex)
-[1
+)) (2.tex [1
 
 {C:/Users/Klossfresser/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(5/Graph1.tex
+LaTeX Font Info:    Try loading font information for U+dsss on input line 29.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/doublestroke\udsss.fd"
+File: Udsss.fd 1995/08/01 v0.1 Double stroke sans serif font definitions
+) [2] [3]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 101.
+
+[4] [5] [6] [7] [8] [9]) (3.tex [10] [11] [12]) (4.tex [13] [14] [15] [16]
+[17] [18] [19] [20]) (5_7.tex (5/Graph4.tex) [21] (5/Graph1.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1094,7 +1099,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [2] (5/Graph5.tex
+) [22] (5/Graph5.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1120,13 +1125,8 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-)
-[3]
-LaTeX Font Info:    Try loading font information for U+dsss on input line 119.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/doublestroke\udsss.fd"
-File: Udsss.fd 1995/08/01 v0.1 Double stroke sans serif font definitions
-)
-(5/Graph7.tex) [4] (5/Graph8.tex
+) [23] (5/Graph7.tex) [24]
+(5/Graph8.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1182,8 +1182,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [5] [6]
-(5/Graph11.tex
+) [25] [26] [27] (5/Graph11.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1193,7 +1192,8 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [7] (5/Graph12.tex
+)
+(5/Graph12.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1205,11 +1205,19 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) (5/Graph14.tex
+) [28] (5/Graph14.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) (5/Graph15.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1218,26 +1226,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
-(5/Graph15.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-) (5/Graph16.tex)
-Overfull \hbox (36.85236pt too wide) in paragraph at lines 265--281
- [][] 
- []
-
-[8] [9]
-Overfull \hbox (22.17891pt too wide) in paragraph at lines 295--296
-[]\OT1/cmbr/m/n/10.95 Verrichten von Ar-beit durch Um-wand-lung von Warme in A
-r-beit (|   [][]|   [][]|   []/ |   []) 
- []
-
-(5/Graph17.tex
+(5/Graph16.tex) [29] (5/Graph17.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1248,36 +1237,53 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 ) (5/Graph18.tex) (5/Graph19.tex
 Missing character: There is no ; in font nullfont!
-) [10] (5/Graph20.tex) [11]
-[12] (5/Graph21.tex)) [13] (Skript.aux) ) 
+) [30]
+(5/Graph20.tex) [31]) (5.tex (5/Graph21.tex) [32] (5/Graph22.tex) [33] [34]
+(5/Graph23.tex) [35] [36] (5/Graph24.tex) [37] [38] (5/Graph25.tex)
+(5/Graph26.tex) (5/Graph27.tex) [39] (5/Graph28.tex) [40] (5/Graph29.tex)
+[41] [42] (5/Graph30.tex) [43]) (6.tex [44] [45] [46] [47] [48] [49] [50]
+[51] [52] [53] [54] [55]) (7.tex [56] [57]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 65.
+
+[58] [59] [60] [61] [62] [63] [64] [65]) (8.tex [66] [67] [68]) [69]
+(Skript.aux) ) 
 Here is how much of TeX's memory you used:
- 28654 strings out of 492895
- 704526 string characters out of 3133458
- 1012295 words of memory out of 3000000
- 31986 multiletter control sequences out of 15000+200000
- 9233 words of font info for 38 fonts, out of 3000000 for 9000
+ 29444 strings out of 492895
+ 721013 string characters out of 3133458
+ 1005278 words of memory out of 3000000
+ 32723 multiletter control sequences out of 15000+200000
+ 9830 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,16n,100p,9108b,921s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Klossfresser\AppData\Local\
-MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi450\cmbrmi8.pk> <C:\Users\Klossfr
-esser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi657\cmbrbs10.
-pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbr
-ight/dpi450\cmbr8.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/
-ljfour/public/doublestroke/dpi657\dsss10.pk> <C:\Users\Klossfresser\AppData\Loc
-al\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi600\cmbr8.pk> <C:\Users\Klossf
-resser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi600\cmbrsy8.
-pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbr
-ight/dpi600\cmbrmi8.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/p
-k/ljfour/public/cmbright/dpi657\cmbrsy10.pk> <C:\Users\Klossfresser\AppData\Loc
-al\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi657\cmbrmi10.pk> <C:\Users\Klo
-ssfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi657\cmbr1
-0.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cm
-bright/dpi720\cmbr10.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfo
-nt/lasy6.pfb>
-Output written on Skript.pdf (13 pages, 141882 bytes).
+ <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
+public/cmbright/dpi600\cmbr9.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.
+9\fonts/pk/ljfour/public/cmbright/dpi600\cmbrbs8.pk> <C:\Users\Klossfresser\App
+Data\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi450\cmbrbs8.pk> <C:\Us
+ers\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi65
+7\cmbrbx10.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
+public/cmbright/dpi657\cmbrbs10.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/public/cmbright/dpi450\cmbrsy8.pk> <C:\Users\Klossfresser\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi450\cmbrmi8.pk> <C:
+\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dp
+i450\cmbr8.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
+public/doublestroke/dpi657\dsss10.pk> <C:\Users\Klossfresser\AppData\Local\MiKT
+eX\2.9\fonts/pk/ljfour/public/cmbright/dpi600\cmbr8.pk> <C:\Users\Klossfresser\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi600\cmbrsy8.pk> <C:
+\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dp
+i600\cmbrmi8.pk> <C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/public/cmbright/dpi657\cmbrmi10.pk> <C:\Users\Klossfresser\AppData\Local\MiKT
+eX\2.9\fonts/pk/ljfour/public/cmbright/dpi657\cmbrsy10.pk> <C:\Users\Klossfress
+er\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/dpi657\cmbr10.pk> <
+C:\Users\Klossfresser\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/cmbright/
+dpi720\cmbr10.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy
+6.pfb>
+Output written on Skript.pdf (69 pages, 461538 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
+ 734 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
