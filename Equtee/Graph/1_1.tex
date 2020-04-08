@@ -1,0 +1,88 @@
+\tikzset{thick,every node/.style={scale=1}}
+\begin{tikzpicture}
+  \def\wavFrt{3};
+  \def\wavArr{3};
+  \def\arrAng{60};
+  \def\arrLen{1.7};
+  \def\frtDis{0.7};
+  \def\sliDis{2.5};
+  \def\slitEx{0.8};
+  \def\openSl{0.3};
+  \def\blndEx{1.4};
+  \def\scrnDs{4.5};
+  \def\scdWav{2};
+  \def\scdFDs{0.3};
+  \def\scdArr{2};
+  \def\scdAng{100};
+  \def\scArLn{0.8};
+  \def\lensLn{0.5};
+  \def\lenThk{0.1};
+  \def\imgDis{1};
+  \def\pltThk{0.05};
+  \def\pltStr{0.8};
+  \def\pltIth{0.01};
+  \def\lamDee{2.1};
+  \tikzmath{\scrnEx = \slitEx+\openSl+\blndEx;
+  \slitMi = \slitEx+\openSl/2;}
+
+  \fill (0,0) circle(0.1);
+  \foreach \x in {1,...,\wavFrt} \draw (0,-\x*\frtDis) arc(-90:90:\x*\frtDis);
+  \foreach \x in {-\wavArr,...,\wavArr} \draw[->] (0,0) to ++(\x*\arrAng/\wavArr:\arrLen);
+  \node[anchor=south] at (\sliDis,\scrnEx+0.1) {Doppelspalt};
+  \node[anchor=south] at (\scrnDs,\scrnEx+0.1) {Schirm};
+  \node[anchor=north] at (\scrnDs,-\scrnEx-0.1) {Intensität $I_1\of{\vX}$};
+  \node[anchor=south west] at (0,\scrnEx+0.1) {Quelle};
+  \node[anchor=north] at (\sliDis,-\scrnEx-0.1) {(a)};
+  \draw (\sliDis,-\slitEx-\openSl-\blndEx) to ++(0,\blndEx) ++(0,\openSl) to ++(0,2*\slitEx) ++(0,\openSl) to ++(0,\blndEx);
+  \node[anchor=south east] at (\sliDis-0.1,\slitMi+0.1) {$1$};
+  \node[anchor=north east] at (\sliDis-0.1,-\slitMi-0.1) {$2$};
+  \draw (0,0) to ++(\sliDis,\slitEx+\openSl/2);
+  \foreach \x in {-\scdArr,...,\scdArr} \draw[->] (\sliDis,\slitEx+\openSl/2) to ++(\x*\scdAng/\wavArr:\scArLn);
+  \foreach \x in {1,...,\scdWav} \draw (\sliDis,\slitEx+\openSl/2) ++(0,-\x*\scdFDs) arc(-90:90:\x*\scdFDs);
+  \fill (\sliDis,-\slitMi-\lensLn/2) rectangle ++(\lenThk,\lensLn);
+
+  \draw[fill=white!80!black,shift={(\scrnDs,0)},samples=100,domain=-\scrnEx:\scrnEx] (0,-\scrnEx) plot ({-\pltThk*((sin(180*sin(atan(\pltStr*(\x-\slitMi)))))/(sin(atan(\pltStr*(\x-\slitMi)))))^2},\x) -- (0,\scrnEx) -- cycle;
+
+  \tikzset{shift={(\imgDis+\scrnDs,0)}}
+
+  \fill (0,0) circle(0.1);
+  \foreach \x in {1,...,\wavFrt} \draw (0,-\x*\frtDis) arc(-90:90:\x*\frtDis);
+  \foreach \x in {-\wavArr,...,\wavArr} \draw[->] (0,0) to ++(\x*\arrAng/\wavArr:\arrLen);
+  \node[anchor=south] at (\sliDis,\scrnEx+0.1) {Doppelspalt};
+  \node[anchor=south] at (\scrnDs,\scrnEx+0.1) {Schirm};
+  \node[anchor=north] at (\scrnDs,-\scrnEx-0.1) {Intensität $I_2\of{\vX}$};
+  \node[anchor=south west] at (0,\scrnEx+0.1) {Quelle};
+  \node[anchor=north] at (\sliDis,-\scrnEx-0.1) {(b)};
+  \draw (\sliDis,-\slitEx-\openSl-\blndEx) to ++(0,\blndEx) ++(0,\openSl) to ++(0,2*\slitEx) ++(0,\openSl) to ++(0,\blndEx);
+  \node[anchor=south east] at (\sliDis-0.1,\slitMi+0.1) {$1$};
+  \node[anchor=north east] at (\sliDis-0.1,-\slitMi-0.1) {$2$};
+  \draw (0,0) to ++(\sliDis,-\slitMi);
+  \foreach \x in {-\scdArr,...,\scdArr} \draw[->] (\sliDis,-\slitMi) to ++(\x*\scdAng/\wavArr:\scArLn);
+  \foreach \x in {1,...,\scdWav} \draw (\sliDis,-\slitMi) ++(0,-\x*\scdFDs) arc(-90:90:\x*\scdFDs);
+  \fill (\sliDis,+\slitMi-\lensLn/2) rectangle ++(\lenThk,\lensLn);
+
+  \draw[fill=white!80!black,shift={(\scrnDs,0)},samples=100,domain=-\scrnEx:\scrnEx] (0,-\scrnEx) plot ({-\pltThk*((sin(180*sin(atan(\pltStr*(\x+\slitMi)))))/(sin(atan(\pltStr*(\x+\slitMi)))))^2},\x) -- (0,\scrnEx) -- cycle;
+
+  \tikzset{shift={(\imgDis+\scrnDs,0)}}
+
+  \fill (0,0) circle(0.1);
+  \foreach \x in {1,...,\wavFrt} \draw (0,-\x*\frtDis) arc(-90:90:\x*\frtDis);
+  \foreach \x in {-\wavArr,...,\wavArr} \draw[->] (0,0) to ++(\x*\arrAng/\wavArr:\arrLen);
+  \node[anchor=south] at (\sliDis,\scrnEx+0.1) {Doppelspalt};
+  \node[anchor=south] at (\scrnDs,\scrnEx+0.1) {Schirm};
+  \node[anchor=north] at (\scrnDs,-\scrnEx-0.1) {Intensität $I\of{\vX}$};
+  \node[anchor=south west] at (0,\scrnEx+0.1) {Quelle};
+  \node[anchor=north] at (\sliDis,-\scrnEx-0.1) {(c)};
+  \draw (\sliDis,-\slitEx-\openSl-\blndEx) to ++(0,\blndEx) ++(0,\openSl) to ++(0,2*\slitEx) ++(0,\openSl) to ++(0,\blndEx);
+  \node[anchor=south east] at (\sliDis-0.1,\slitMi+0.1) {$1$};
+  \node[anchor=north east] at (\sliDis-0.1,-\slitMi-0.1) {$2$};
+  \draw (0,0) to ++(\sliDis,-\slitMi);
+  \foreach \x in {-\scdArr,...,\scdArr} \draw[->] (\sliDis,-\slitMi) to ++(\x*\scdAng/\wavArr:\scArLn);
+  \foreach \x in {1,...,\scdWav} \draw (\sliDis,-\slitMi) ++(0,-\x*\scdFDs) arc(-90:90:\x*\scdFDs);
+  \draw (0,0) to ++(\sliDis,\slitEx+\openSl/2);
+  \foreach \x in {-\scdArr,...,\scdArr} \draw[->] (\sliDis,\slitEx+\openSl/2) to ++(\x*\scdAng/\wavArr:\scArLn);
+  \foreach \x in {1,...,\scdWav} \draw (\sliDis,\slitEx+\openSl/2) ++(0,-\x*\scdFDs) arc(-90:90:\x*\scdFDs);
+
+  \draw[fill=white!80!black,shift={(\scrnDs,0)},samples=100,domain=-\scrnEx:\scrnEx] (0,-\scrnEx) plot ({-\pltIth*((sin(360*\lamDee*sin(atan(\pltStr*\x))))/(sin(atan(\pltStr*\x))))^2},\x) -- (0,\scrnEx) -- cycle;
+
+\end{tikzpicture}

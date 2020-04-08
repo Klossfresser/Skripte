@@ -1,0 +1,535 @@
+\section{Wellenmechanik}
+\subsection{Klassische Physik}
+
+\subsubsection{(Hamiltonsche) Mechanik}
+\begin{itemize}
+  \item Der \Hl{Zustand} eines Punktteilchens wird durch die Angabe von \Hl{Ort} $\vX$ und \Hl{Impuls} $\vP$, das heißt durch einen Punkt im Phasenraum beschrieben
+  \item Seine Dynamik ist durch die \Hl{Hamiltonfunktion} $H\of{\vX,\vP}$ und die \Hl{Hamiltonschen Be\-we\-gungs\-gleich\-ung\-en}
+  \begin{equation}
+    \dot{x}_i = \ppv{H}{p_i} \quad \dot{p}_i = - \ppv{H}{x_i}
+  \end{equation}
+  festgelegt.\\
+  Zum Beispiel für ein Teilchen der Masse $m$ in einem zeitabhängigen Potential $V\of{\vX}$ ist die Hamiltonfunktion die Gesamtenergie
+  \begin{equation}
+    H\of{\vX,\vP} = \frac{\vP^2}{2m} + V\of{\vX}
+  \end{equation}
+  und die Bewegungsgleichungen
+  \begin{equation}
+    \dot{x}_i = \frac{\dot{p}_i}{m} = v_i \quad \dot{p}_i = - \ppv{V}{x_i} = F_i
+  \end{equation}
+  \item Lösen der Bewegungsgleichungen unter Anfangsbedingungen $\norBra{\vX_0,\vP_0}$ zum Zeitpunkt $t_0$ ergibt die \Hl{Trajektorie} $\norBra{\vX\of{t},\vP\of{t}}$ des Teilchens. Die Trajektorie legt die Zustände des Teilchens zu beliebigen anderen Zeitpunkten fest.
+  \item Die Messung einer physikalischen \Hl{Messgröße} $M\of{\vX,\vP}$ zum Zeitpunkt $t$ liefert wie erwartet das Ergebnis $M\of{\vX\of{t},\vP\of{t}}$. Zum Beispiel Energie $H\of{\vX,\vP}$, Drehimpuls $\vL = \vX\times\vP$
+\end{itemize}
+Alle diese Punkte müssen in der Quantenmechanik revidiert werden.
+
+\subsubsection{Klassische Elektrodynamik}
+\begin{itemize}
+  \item Elektromagnetische Felder werden durch Angabe des elektrischen Feldes $\vE\of{\vX}$ und magnetischen Feldes $\vB\of{\vX}$ beschrieben.
+  \item Deren Dynamik ist durch die Maxwellgleichungen festgelegt. In Abwesenheit von Ladung und Strömen, erfüllen die Felder die Wellengleichung
+    \begin{equation}
+      \norBra{\frac{1}{c^2}\nppv{}{t}{2} - \Laplace} \E\of{\vX,t} = 0
+    \end{equation}
+  mit der fundamentalen Lösung
+    \begin{equation}
+      \E\of{\vX,t} = A \e{\mI\norBra{\vK\vX- \omega t}}
+    \end{equation}
+  wobei $\E$ eine beliebige Komponente von $\vE\of{\vX}$ darstellt und $A$ die \Hl{Amplitude} der Welle bezeichnet. Die physikalische Lösung ist $\Re\of{\E\of{\vX,t}} = \frac{1}{2}\norBra{\E\of{\vX,t} + \E\of{\vX,t}^*}$.
+  \item Die \Hl{Dispersionsrelation} das heißt der Zusammenhang zwischen \Hl{Kreisfrequenz} $\omega = 2 \pi \nu$ und \Hl{Wel\-len\-vek\-tor} $\vK$ beziehungsweise \Hl{Wellenzahl} $k = \Norm{\vK}$, lautet für elektromagnetische Wellen (im Vakuum)
+  \begin{equation}
+    \vK^2 - \frac{\omega^2}{c^2} = 0 \quad \text{beziehungsweise} \quad k = \Norm{\vK} = \frac{\omega}{c}
+  \end{equation}
+  \item Die Wellengleichung ist linear, also gilt das \Hl{Superpositionsprinzip}: Jede Linearkombination von Lösungen ist wieder eine Lösung. Die Allgemeine Lösung ist eine Superposition
+  \begin{equation}
+    \E\of{\vX,t} = \int\dn{k}{3} A\of{\vK} \e{\mI\norBra{\vK\vX - \omega t}}
+  \end{equation}
+  wobei $A\of{\vK}$ die Amplitude für Komponente mit Wellenvektor $\vK$ ist.
+  \item Die Energie im elektromagnetischen Feld ist
+  \begin{align}
+    E & = \int \dn{x}{3} \frac{\epsilon_0}{2}\norBra{\E^2\of{\vX,t}+ c^2\B^2\of{\vX,t}} \\
+      & = \int \dn{x}{3} \epsilon_0 \E^2\of{\vX,t}
+  \end{align}
+  (wegen $\Norm{\E} = c\Norm{\B}$) und der Energiefluss (Poynting-Vektor)
+  \begin{equation}
+    \vS =\mu_0 \vE\times\vB
+  \end{equation}
+  beziehungsweise für skalare Felder
+  \begin{equation}
+    \Norm{\vS} = c \epsilon_0 \E^2\of{\vX,t}
+  \end{equation}
+  Gemessen wird (in der Regel) die Intensität. Das ist der zeitlich über eine Periode $T = \frac{2\pi}{\omega} = \frac{1}{\nu}$ gemittelte Energiefluss
+  \begin{align}
+    I\of{\vX,t} & = c \epsilon_0 \frac{1}{T} \int\limits_t^{t+T} \dd{t'} \E^2\of{\vX,t} \\
+               & = c \epsilon_0 \Norm{\E\of{\vX,t}}^2
+  \end{align}
+  \item Der Nachweis der Wellennatur des elektromagnetischen Feldes im Youngschen Doppelspaltexperiment (Abb. Inspiriert aus Schwabl, Quantenmechanik)
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \input{Graph/1_1.tex}
+  \caption{Beugung am Doppelspalt (a) mit Spalt $1$ geöffnet, (b) mit Spalt $2$ geöffnet, (c) beide Spalte geöffnet}
+\end{figure}
+
+\begin{align}
+  I & \sim \Norm{E}^2 \\
+    & \sim \Norm{E_1}^2 + \Norm{E_2}^2 + 2 \Re\of{E_1E_2^*}
+\end{align}
+
+\subsubsection{Zusammenfassung}
+
+\begin{table}[H]
+  \centering
+  \input{Table/1_1.tex}
+\end{table}
+
+Die Trajektorien $\norBra{\vX\of{t},\vP\of{t}}$ der Teilchen gehen als Ladungs- und Stromdichten in die inhomogenen Maxwellgleichungen ein; Die Lösungen $\vB\of{\vX,t}$, $\vB\of{\vX,t}$ der Maxwellgleichungen gehen über die Lorentzkraft in die Bewegungsgleichungen der Teilchen ein.
+
+\subsection{Empirische Grundlagen der Quantenmechanik}
+
+\subsubsection{Wellen haben Teilchencharakter}
+
+\begin{itemize}
+  \item Erste Quantenhypothese durch Max Planck (1900) zur Erklärung des Spektrums der \Hl{Schwarz\-kör\-per\-strahl\-ung}: die Energie einer Welle der (Kreis-)Frequenz $\omega = 2\pi\nu$ ist ein ganzzahliges Vielfaches eines elementaren Energiequantums
+  \begin{equation}
+    E = h \nu = \hbar \omega \quad \hbar = \frac{h}{2\pi}
+  \end{equation}
+  Das \Hl{Plancksche Wirkungsquantum} $h$ hat die Einheit einer $\text{Wirkung} = \text{Energie} \times \text{Zeit}$, $\Unit{h} = \textbf{Js}$. Aus Plancks Quantenhypothese ergibt sich das \Hl{Plancksche Strahlungsgesetz}. Es beschreibt das empirisch bekannte Spektrum thermischer Strahlung, wenn
+  \begin{equation}
+    h = 6.62\cdot 10^{-34} \textbf{Js} \quad \hbar = 1.05\cdot 10^{-34} \textbf{Js}
+  \end{equation}
+  gewählt wird.
+  \item Albert Einsteins Erklärung für den \Hl{photoelektrischen Effekt} (1905): Licht der Frequenz $\omega$ besteht aus Teilchen der Energie $E = \hbar \omega$ und die Lichtteilchen (Photonen) haben einen Impuls
+  \begin{equation}
+    \vP = \hbar \vK \quad \text{($\vK$ Wellenvektor)}
+  \end{equation}
+  \item \Hl{Comptoneffekt} (1924, Vergrößerung der Wellenlänge des Lichts bei Streuung an Elektronen) kann mit $E = \hbar \omega$, $\vP = \hbar \vK$ als elastischer Stoß zweier Teilchen erklärt werden.
+  \item Doppelspaltexperiment mit Einzelphotonauflösung (Abb. nach Schwabl, Quantenmechanik)
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \input{Graph/1_2.tex}
+\end{figure}
+
+\subsubsection{Teilchen haben Wellencharakter}
+
+\begin{itemize}
+  \item \Hl{Bohrsches Atommodell} (1913)
+  \begin{enumerate}
+    \item Elektronen bewegen sich auf Kreisbahnen. Sie strahlen dabei keine elektromagnetische Energie ab.
+    \item Erlaubt sind nur Kreisbahnen mit Drehimpuls
+    \begin{equation}
+      L = n \hbar \quad n = 1,2,3
+    \end{equation}
+    \item Elektromagnetische Energie wird nur bei einem Übergang zwischen zwei Kreisbahnen abgestrahlt.
+  \end{enumerate}
+  \Hl{Konsequenzen aus den Bohrschen Postulaten}:
+  \item Mit dem Virialsatz
+  \begin{equation}
+    E_\text{kin} = - \frac{1}{2} E_\text{pot} \quad \frac{m v^2}{2} = \frac12 \frac{e^2}{4\pi\epsilon_0}\frac{1}{r}
+  \end{equation}
+  folgt aus der Forderung $L = m r v = n \hbar$ die Geschwindigkeit und der Radius für die $n$-te Kreisbahn
+  \begin{equation}
+    v_n = \alpha c \frac{1}{n} \quad r_n = a_0 n^2
+  \end{equation}
+  mit der Feinstrukturkonstanten $\alpha$ und dem Bohrradius $a_0$
+  \begin{equation}
+    \alpha = \frac{e^2}{4\pi\epsilon_0}\frac{1}{\hbar c} \simeq \frac{1}{137} \quad a_0 = \frac{\hbar}{\alpha m c} \simeq 0.5\cdot 10^{-10} \textbf{m}
+  \end{equation}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \input{Graph/1_3.tex}
+\end{figure}
+\begin{itemize}
+  \item Die Energie der $n$-ten Kreisbahn ist
+  \begin{equation}
+    E_n = - \frac12 \frac{m\alpha^2c^2}{n^2}
+  \end{equation}
+  Bei einem Übergang von der $n$-ten zur $m$-ten Kreisbahn wird Strahlung emittiert mit einer Frequenz
+  \begin{equation}
+    \nu = \frac{E_n-E_m}{h} = R \norBra{\frac{1}{m^2} - \frac{1}{n^2}}
+  \end{equation}
+  Wobei $R = \frac{m\alpha^2c^2}{2 h}$ die Rydbergkonstante ist.
+  \item Luis de Broglie(1924): Die Bewegung eines massiven Teilchens mit Impuls $p$ entspricht einer \glqq Materiewelle\grqq\ mit einer \Hl{de-Broglie-Wellenlänge}
+  \begin{equation}
+    \lambda = \frac{h}{p}
+  \end{equation}
+  Damit entsprechen die Bohrschen Kreisbahnen stehenden Wellen der Materiewelle
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \input{Graph/1_4.tex}
+\end{figure}
+
+\begin{equation}
+  \lambda_n = \frac{h}{m v_n} = 2\pi a_0 n \quad \rightarrow \quad n \lambda_n = 2\pi a_0 n^2 = 2 \pi r_n
+\end{equation}
+
+\begin{itemize}
+  \item Direkter Nachweis der Wellennatur geschieht in Interferenzexperimenten:\\
+  Davisson und Germer (1927): Elektron an Kristallgittern\\
+  Jönssen (1954): Doppelspaltexperiment mit Elektronen\\
+  Inerferometrie mit organischen Molekülen
+\end{itemize}
+
+\subsection{Die Wellenfunktion}
+[Es folgt eine provisorische und vereinfachte Darstellung der Postulate der nichtrelativistischen Quantenmechanik. Die exakte und vollständige Darstellung folgt später in Kapitel 2.]
+\begin{itemize}
+  \item Die Erfahrung zeigt:
+  \begin{itemize}
+    \item Der \Hl{Zustand} eines Teilchens wird durch eine (komplexe) \Hl{Wellenfunktion}
+    \begin{equation}
+      \psi\of{\vX,t}
+    \end{equation}
+    beschrieben.
+    \item Seine \Hl{Dynamik} (zeitliche Entwicklung, Evolution) ist durch die \Hl{Schrödingergleichung} festgelegt
+    \begin{equation}
+      \mI \hbar \ppv{\psi\of{\vX,t}}{t} = - \frac{\hbar^2}{2 m} \Laplace \psi\of{\vX,t} + V\of{\vX,t}\psi\of{\vX,t}
+    \end{equation}
+    Die Lösung der Schrödingergleichung unter einer Anfangsbedingung $\psi\of{\vX,0}$ ergibt die zeitlich entwickelte Wellenfunktion $\psi\of{\vX,t}$.
+    \item Die Wellenfunktion $\psi\of{\vX,t}$ legt die \Hl{Statistik} der Resultate von Messungen physikalischer Messgrößen $A\of{\vX,\vP}$ zum Zeitpunkt $t$ fest:\\
+    Für die Messung der \Hl{Position} des Teilchens gilt (Bornsche Regel): Die Wahrscheinlichkeit, das Teilchen zum Zeitpunkt $t$ in einem Volumen $\dn{x}{3}$ vorzufinden,ist
+    \begin{equation}
+      P\of{\vX,\vP} = \Norm{\psi\of{\vX,t}}^2 \dn{x}{3}
+    \end{equation}
+    Das heißt, die \Hl{Wahrscheinlichkeitsdichte} im Raum ist
+    \begin{equation}
+      \rho\of{\vX,t} = \Norm{\psi\of{\vX,t}}^2 \quad \norBra{\Unit{\rho\of{\vX,t}} = \mtr^{-3}}
+    \end{equation}
+  \end{itemize}
+  \item Die Wahrscheinlichkeit, das Teilchen irgendwo im Raum vorzufinden, muss $1$ sein:
+  \begin{equation}
+    1 = \int \dn{x}{3} \rho\of{\vX,t} = \int \dn{x}{3} \Norm{\psi\of{\vX,t}}^2
+  \end{equation}
+  Wir fordern daher, dass eine als Wellenfunktion in Frage kommende Funktion $\psi\of{\vX,t}$
+  \begin{itemize}
+    \item quadratintegrabel und
+    \item auf $1$ normiert ist.
+  \end{itemize}
+  Eine Wellenfunktion (für den Bewegungszustand eines Teilchens) ist damit Element des \Hl{Hilbert\-raumes} $L^2\of{\mathds{R}^3}$ der quadratintegrablen Funktionen,
+  \begin{equation}
+    L^2\of{\mathds{R}^3} = \setProp{\psi : \mathds{R}^3 \to \mathds{C}}{\int \dn{x}{3} \Norm{\psi\of{\vX}}^2 < \infty}
+  \end{equation}
+  \item Die \Hl{Schrödingergleichung für ein freies Teilchen} ($V\of{\vX,t} \equiv 0$)
+  \begin{equation}
+    \mI \ppv{}{t}\psi\of{\vX,t} = - \frac{\hbar^2}{2 m} \Laplace \psi\of{\vX,t}
+  \end{equation}
+  wird durch \Hl{ebene Wellen} gelöst
+  \begin{equation}
+    \psi\of{\vX,t} = c \e{\mI\norBra{\vK\cdot\vX - \omega t}}
+  \end{equation}
+  mit $c \in \mathds{C}$ und der Dispersionsrelation
+  \begin{equation}
+    \omega = \frac{\hbar \vK^2}{2 m}
+  \end{equation}
+  Mit $E = \hbar \omega$ und $\vP = \hbar \vK$ (beziehungsweise $p = \frac{\hbar 2 \pi}{\lambda} = \frac{h}{\lambda}$) ist das äquivalent zu $E = \frac{\vP^2}{2 m}$. Eine ebene Materiewelle mit Wellenvektor $\vK$ beschreibt die Bewegung eines freien Teilchens mit Energie
+  \begin{equation}
+    E = \frac{\norBra{\hbar\vK}^2}{2 m}
+  \end{equation}
+  Die Wahrscheinlichkeitsdichte einer ebenen Welle ist
+  \begin{equation}
+    \rho\of{\vX,t} = \Norm{\psi\of{\vX,t}}^2 = \Norm{c}^2 \equiv \text{konstant}
+  \end{equation}
+  Die Aufenthaltswahrscheinlichkeit ist also gleichmäßig im ganzen Raum. Ebene Wellen sind nicht normierbar (nicht Element von $L^2\of{\mathds{R}^3}$)! Sie sind keine physikalischen Zustände.\\
+  Durch Superposition von ebenen Wellen können normierbare, physikalische Zustände aufgebaut werden, sogenannte \Hl{Wellenpakete}:
+  \begin{equation}
+    \psi\of{\vX,t} = \frac{1}{\norBra{2\pi}^\frac{3}{2}}\int \dn{k}{3} c\of{\vK} \e{\mI\edgBra{\vK\cdot\vX-\omega\of{\vK} t}}
+  \end{equation}
+  löst die Schrödingergleichung, wenn $\omega\of{\vK} = \frac{\hbar\vK^2}{2m}$ für beliebige Amplituden $c\of{\vK}$.\\
+  Normierung erfordert
+  \begin{equation}
+    1 = \int \dn{x}{3} \Norm{\psi\of{\vX,t}}^2= \int \dn{k}{3} \Norm{c\of{\vK}}^2
+  \end{equation}
+  Das heißt, es muss $c\of{\vK}$ selbst quadratintegrabel und normiert sein.
+  \item Die lösung der Schrödingergleichung für eine vorgegebene Anfangsbedingung $\psi\of{\vX,0}$ zum Zeitpunkt $t = 0$ erhält man aus der Bedingung
+  \begin{equation}
+    \psi\of{\vX,0} = \frac{1}{\norBra{2\pi}^\frac{3}{2}}\int \dn{k}{3} c\of{\vK} \e{\mI\vK\cdot\vX}
+  \end{equation}
+  Also ist $\psi\of{\vX,0}$ die Fouriertransformierte von $c\of{\vK}$. Die inverse Transformation ergibt
+  \begin{equation}
+    c\of{\vK} = \frac{1}{\norBra{2\pi}^{\frac32}} \int \dn{x}{3} \psi\of{\vX,0} e^{-\mI\vK\cdot\vX}
+  \end{equation}
+  Einsetzen der aus der Anfangsbedingung $\psi\of{\vX,0}$ bestimmten Amplituden in die Allgemeine Lösung ergibt die Wellenfunktion zu Zeiten $t$
+  \begin{equation}
+    \psi\of{\vX,t} = \frac{1}{\norBra{2\pi}^\frac{3}{2}} \int \dn{k}{3} c\of{\vK} \e{\mI\edgBra{\vK\cdot\vX - \omega t}}
+  \end{equation}
+\end{itemize}
+
+\subsection{Die Impulswellenfunktion}
+\begin{itemize}
+  \item Die Koeffizienten $c\of{\vK}$ sind die Amplituden der ebenen Wellen $\e{\mI\vK\cdot\vX}$ (mit festem Impuls $\vP = \hbar \vK$) im Wellenpaket $\psi\of{\vX}$.\\
+  Wir erwarten, dass $\Norm{c\of{\vK}}^2$ die Wahrscheinlichkeit festlegt, bei einer Messung des Impulses $\vP$ an einem Teilchen im Zustand $\psi\of{\vX}$ den Wert $\vP = \hbar\vK$ zu finden.
+  \item Allgemein definieren wir die \Hl{Impulswellenfunktion} $\varphi\of{\vP,t}$ bei gegebener \Hl{(Raum)-Wellenfunktion} $\psi\of{\vX,t}$
+  \begin{equation}
+    \varphi\of{\vP,t} = \frac{1}{\norBra{2\pi}^\frac{3}{2}} \int \dn{x}{3} \psi\of{\vX,t} \e{-\mI\frac{\vP\cdot\vX}{\hbar}}
+  \end{equation}
+  (Damit gilt $\varphi\of{\vP,0} = \hbar^{-\frac{3}{2}}c\of{\frac{\vP}{\hbar}}$.)\\
+  Die Wahrscheinlichkeit, bei einer Messung des Impulses einen Wert $\vP$ zu finden ist
+  \begin{equation}
+    \prob{\vP,t} = \Norm{\varphi\of{\vP}}^2\dn{p}{3}
+  \end{equation}
+  Die Wahrscheinlichkeitsdichte im Impulsraum ist
+  \begin{equation}
+    \Norm{\varphi\of{\vP}}^2
+  \end{equation}
+  Es gilt
+  \begin{equation}
+    \int \dn{p}{3} \Norm{\varphi\of{\vP}}^2 = 1
+  \end{equation}
+\end{itemize}
+
+\subsection{Wellenmechanik in einer Dimension}
+\begin{itemize}
+  \item Wir betrachten im Folgenden die Bewegung eines Teilchens in \Hl{einer Dimension}. Sein Zustand wird beschrieben durch eine Wellenfunktion $\varphi\of{x,t}$ in
+  \begin{equation}
+    L^2\of{\mathds{R}} = \setProp{\varphi:\mathds{R} \to \mathds{C}}{\int\dd{x}\Norm{\varphi\of{x}}^2< \infty}
+  \end{equation}
+  \item Ein Teilchen mit Energie $E = \frac{\norBra{\hbar k}^2}{2 m}$ wird beschrieben durch eine \Hl{ebene Welle}
+  \begin{equation}
+    \varphi\of{x,t} = \e{\mI\norBra{kx - \omega t}}
+  \end{equation}
+  \item Ein \Hl{Wellenpaket} in einer Dimension ist
+  \begin{equation}
+    \varphi\of{x,t} = \frac{1}{\sqrt{2\pi}} \int\limits_{-\infty}^{\infty} \dd{k} c\of{k} \e{\mI\norBra{kx-\omega t}}
+  \end{equation}
+  mit $\omega = \frac{\hbar k^2}{2 m}$ und $\int\limits_{-\infty}^{\infty} \dd{k} \Norm{c\of{k}}^2 = 1$. Die zugehörige Impulswellenfunktion ist
+  \begin{equation}
+    \psi\of{p,t} = \frac{1}{\sqrt{2\pi \hbar}} \int\limits_{-\infty}^{\infty} \dd{x} \varphi\of{x,t} \e{-\mI\frac{x}{\hbar}}
+  \end{equation}
+  Insbesondere für $t = 0$ ist $\psi\of{p,0} = \frac{1}{\hbar} c \of{\frac{p}{\hbar}}$
+  \item Beispiel: \Hl{Gaußsches Wellenpaket}
+  \begin{equation}
+    \varphi\of{x,0} = \norBra{\frac{2}{\pi a^2}}^\frac{1}{4} \e{\mI k_0 x - \frac{x^2}{a^2}}
+  \end{equation}
+  mit $k_0,a \in \mathds{R}$. Die  Wahrscheinlichkeitsdichte im Ort ist
+  \begin{equation}
+    \rho\of{x,0} = \Norm{\varphi\of{x,0}}^2 = \norBra{\frac{2}{\pi a^2}}^\frac{1}{2} \e{-2\frac{x^2}{a^2}}
+  \end{equation}
+  Es gilt:
+  \begin{align}
+    & \int \dd{x} \rho\of{x} = 1 \\
+    \erw{x} = & \int \dd{x} x \rho\of{x} = 0 \\
+    \erw{x^2} = & \int \dd{x} x^2 \rho\of{x} = \frac{a^2}{4} \\
+    \Delta x = & \sqrt{\erw{x^2}-\erw{x}^2} = \frac{a}{2}
+  \end{align}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \input{Graph/1_5.tex}
+\end{figure}
+\begin{itemize}
+  \item Die Amplituden $c\of{k}$ sind
+  \begin{align}
+    c\of{k} & = \frac{1}{\sqrt{2\pi}} \int\limits_{-\infty}^{\infty} \dd{x} \varphi\of{x,0}\e{-\mI k x} \\
+    & = \norBra{\frac{a^2}{2\pi}}^\frac{1}{4} \e{-\norBra{k-k_0}^2\frac{a^2}{4}}
+  \end{align}
+  \item Die Impulswellenfunktion zum Zeitpunkt $t = 0$ ist
+  \begin{equation}
+    \psi\of{p,0} = \norBra{\frac{a^2}{2\pi \hbar^2}}^\frac{1}{4} \e{-\norBra{p-p_0}^2\frac{a^2}{4\hbar^2}}
+  \end{equation}
+	Es gilt:
+	\begin{align}
+		& \int \dd{p} \Norm{\psi\of{p,0}}^2 = 1 \\
+		\erw{p} = & \int \dd{p} p \Norm{\psi\of{p,0}}^2 = p_0 = \hbar k_0 \\
+		\erw{p^2} = & \int \dd{p} p^2 \Norm{\psi\of{p,0}}^2 = p_0^2 + \frac{\hbar^2}{a^2} \\
+		\Delta p = & \sqrt{\erw{p^2}- \erw{p}^2} = \frac{\hbar}{a}
+	\end{align}
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\input{Graph/1_6.tex}
+\end{figure}
+Das heißt, dass die Unschärfen in Ort und Impuls nicht unabhängig sind
+\begin{equation}
+	\Delta x \Delta p = \frac{\hbar}{2}
+\end{equation}
+\begin{itemize}
+	\item Das zeitlich entwickelte Wellenpaket
+	\begin{equation}
+		\psi\of{x,t} = \frac{11}{\sqrt{2\pi}}\int\limits_{-\infty}^{\infty} \dd{k} c\of{k} \e{\mI\norBra{kx - \frac{\hbar k^2}{2 m} t}} = \norBra{\frac{2}{\pi a^2}}^\frac14 \frac{\e{\mI\norBra{k_0 x - \phi}}}{\norBra{1 + \gamma^2 t^2}^{1/4}} \e{-\frac{x-v_0 t}{a^2\norBra{1 + \mI \gamma t}}}
+	\end{equation}
+	wobei
+	\begin{equation}
+		v_0 = \frac{\hbar k_0}{m} = \frac{p_0}{m} \quad \gamma = \frac{2\hbar}{m a^2} \quad \varphi = \theta + \frac{k_0 v_0 t}{2} \quad \tan\of{2\theta} = \gamma t
+	\end{equation}
+	Die Wahrscheinlichkeitsdichte ist
+	\begin{align}
+		\rho\of{x,t} & = \Norm{\psi\of{x,t}}^2 \\
+		 & = \norBra{\frac{2}{\pi a^2}}^\frac12\frac{1}{\norBra{1 + \gamma^2 t^2}^{1/2}}\e{-\frac{2\norBra{x-x_0}^2}{a^2\norBra{1 + \gamma^2 t^2}}}
+	\end{align}
+	mit dem Mittelwert
+	\begin{align}
+		\erw{x}_t & = v_0 t \\
+		\Delta x_t & = \frac{a}{2}\sqrt{1 +\gamma^2 t^2}
+	\end{align}
+\end{itemize}
+\begin{figure}
+	\centering
+	\input{Graph/1_7.tex}
+\end{figure}
+\begin{itemize}
+	\item Es gibt keine Änderungen des Impulses beziehungsweise der Statistik von Impulsmessungen für ein freies Teilchen und
+	\begin{equation}
+		\Norm{\varphi\of{p,t}}^2 = \Norm{\varphi\of{p,0}}^2
+	\end{equation}
+\end{itemize}
+
+\subsection{Erhaltung der Wahrscheinlichkeit}
+\begin{itemize}
+	\item In der Elektrodynamik gilt für die Ladungsdichte $\rho_q\of{\vX,t}$ und die Stromdichte $\vJ_q\of{\vX,t}$ der Erhaltungssatz ($\rightarrow$ Kontinuitätsgleichung)
+	\begin{equation}
+		\ppv{}{t} \rho_q\of{\vX,t} + \Nabla \cdot \vJ_q\of{\vX,t} = 0
+	\end{equation}
+	Die Gesamtladung ist erhalten
+	\begin{align}
+		\ppv{}{t}\int\nolimits_V \dn{x}{3} \rho_q\of{\vX,t} & = - \int\nolimits_V \dn{x}{3} \Nabla\cdot\vJ_q\of{\vX,t} \\
+		& = - \int\nolimits_{\partial V} \dd{\vS}\cdot\vJ_q\of{\vX,t} \\
+		& = 0 \text{, für } V\to\infty \text{ wegen } \lim\limits_{x\to \infty} \vJ_q\of{\vX,t} = 0
+	\end{align}
+	\item In der Quantenmechanik gilt ein entsprechender \Hl{Erhaltungssatz der Wahrscheinlichkeit}. Wir betrachten die Änderung der Wahrscheinlichkeitsdichte
+	\begin{align}
+		\ppv{}{t} \rho\of{\vX,t} & = \ppv{}{t} \Norm{\psi\of{\vX,t}}^2 = \ppv{}{t} \psi^*\of{\vX,t}\psi\of{\vX,t} \\
+		& = \psi\of{\vX,t}\dot{\psi}^*\of{\vX,t} + \psi^*\of{\vX,t}\dot{\psi}\of{\vX,t}
+	\end{align}
+	Die Schrödingergleichung
+	\begin{equation}
+		\mI \hbar \dot{\psi} = - \frac{\hbar^2}{2 m} \Laplace \psi + V\psi
+	\end{equation}
+	impliziert
+	\begin{equation}
+		-\mI\hbar\dot{\psi}^* = - \frac{\hbar^2}{2m}\Laplace\psi^* + V\psi^*
+	\end{equation}
+	Damit ergibt sich
+	\begin{equation}
+		\psi^*\dot{\psi} + \psi\dot{\psi}^* = \frac{1}{\mI\hbar}\norBra{-\frac{\hbar^2}{2m}\psi^*\Laplace\psi + V \psi^*\psi} - \frac{1}{\mI\hbar}\norBra{-\frac{\hbar^2}{2 m} \psi\Laplace\psi^* + V\psi^*\psi}
+	\end{equation}
+	Also
+	\begin{equation}
+		\ppv{}{t} \rho\of{\vX,t} + \frac{\hbar}{2m\mI}\norBra{\psi^*\Laplace\psi - \psi\Laplace\psi^*} = 0
+	\end{equation}
+	Wir definieren den \Hl{Wahrscheinlichkeitsstrom}
+	\begin{align}
+		\vJ\of{\vX,t} & = \frac{\hbar}{2 m \mI}\norBra{\psi^*\of{\vX,t} \Nabla\psi\of{\vX,t} - \psi\of{\vX,t}\Nabla\psi^*\of{\vX,t}} \\
+		& = \frac{1}{m} \Re \edgBra{\psi^*\of{\vX,t}\norBra{-\mI\hbar\Nabla}\psi\of{\vX,t}}
+	\end{align}
+	so, dass
+	\begin{equation}
+		\Nabla\cdot\vJ = \frac{\hbar}{2 m \mI} \norBra{\Nabla\psi^*\cdot\Nabla\psi + \psi^*\Laplace\psi - \Nabla\psi\cdot\Nabla\psi^* - \psi\Laplace\psi^*}
+	\end{equation}
+	Damit gilt der \Hl{Erhaltungssatz der Wahrscheinlichkeit}
+	\begin{equation}
+		\ppv{}{t}\rho\of{\vX,t} + \Nabla\cdot\vJ = 0
+	\end{equation}
+	Die Gesamtwahrscheinlichkeit $\int\dn{x}{3}\rho\of{\vX,t} = 1$ ist erhalten (Beweis wie in der Elektrodynamik; $\lim\limits_{x\to\infty}\vJ\of{\vX,t} = 0$ weil $\lim\limits_{x\to\infty} \psi\of{\vX,t} = 0$)
+	\item Beispiel: Der Wahrscheinlichkeitsstrom für eine ebene Welle $\psi\of{\vX,t} = \e{\mI\norBra{\vK\vX - \omega t}}$ ist
+	\begin{align}
+		\vJ\of{\vX,t} & = \frac{\hbar}{2m\mI} \norBra{\psi^*\norBra{\mI\vK}\psi - \psi\norBra{-\mI\vK}\psi^*} \\
+		& = \frac{2 \mI\hbar \vK}{2 m\mI} \psi^*\psi \\
+		& = \frac{\hbar\vK}{m} = \frac{\vP}{m} = \vV
+	\end{align}
+	\item Beispiel: Superpostition zweier ebener Wellen in $1$D
+	\begin{equation}
+		\psi\of{x,t} = A\e{\mI\norBra{kx-\omega t}} + B\e{\mI\norBra{-kx-\omega t}}
+	\end{equation}
+	der Strom ist
+	\begin{equation}
+		\vJ = \frac{\hbar\vK}{m}\norBra{\Norm{A}^2-\Norm{B}^2}\vUn_x
+	\end{equation}
+\end{itemize}
+
+\subsection{Zeitunabhängige Schrödingergleichung}
+
+\begin{itemize}
+	\item Falls das Potential $V\of{\vX}$ nicht explizit von der Zeit abhängt, so ist die Schrödingergleichung
+	\begin{align}
+		\mI\hbar\ppv{}{t}\Psi\of{\vX,t} & = \norBra{-\frac{\hbar^2}{2m}\Laplace + V\of{\vX}}\Psi\of{\vX,t} \\
+		& = H\of{\vX}\Psi\of{\vX,t}
+	\end{align}
+	$H\of{\vX}$ wird als \Hl{Hamiltonoperator} des Systems bezeichnet.
+	\item \Hl{Separation der Variablen}: Wir suchen Lösungen der Art
+	\begin{equation}
+		\Psi\of{\vX,t} = \chi\of{t}\psi\of{\vX}
+	\end{equation}
+	Damit folgt:
+	\begin{equation}
+		\mI\hbar\dot{\chi}\of{t}\psi\of{\vX} = \chi\of{t}H\of{\vX}\psi\of{\vX} \quad \rightarrow \quad \mI\frac{\dot{\chi}\of{t}}{\chi\of{t}} = \frac{H\of{\vX}\psi\of{\vX}}{\psi\of{\vX}} \equiv E
+	\end{equation}
+	mit einer Separationskonstanten $E$ (der Dimension Energie). Also fordern wir
+	\begin{align}
+		\mI\hbar\frac{\dot{\chi}\of{t}}{\chi\of{t}} = E \label{sep1} \\
+		\frac{H\psi\of{\vX}}{\psi\of{\vX}} = E \label{sep2}
+	\end{align}
+	\item \eqref{sep1} äquivalent zu
+	\begin{equation}
+		\dot{\chi}\of{t} = - \mI \frac{E}{\hbar}\chi\of{t} \quad \rightarrow \quad \chi\of{t} = \e{-\mI\frac{E t}{\hbar}}\chi\of{0} = \e{-\mI\frac{E t}{\hbar}}
+	\end{equation}
+	\item \eqref{sep2} ergibt die \Hl{zeitunabhängige Schrödingergleichung}
+	\begin{align}
+		H\of{\vX}\psi\of{\vX} & = E \psi\of{\vX} \\
+		\norBra{-\frac{\hbar^2}{2m}\Laplace + V\of{\vX}}\psi\of{\vX} & = E \psi\of{\vX}
+	\end{align}
+	Dies ist eine \Hl{Eigenwertgleichung}:
+	\begin{itemize}
+		\item $\psi\of{\vX}$ ist eine \Hl{Eigenfunktion} (\Hl{Energieeigenzustand} oder \Hl{stationärer Zustand}) des Hamiltonoperators $H$.
+		\item $E$ ist der zur Eigenfunktion $\psi\of{\vX}$ gehörende \Hl{Eigenwert} (\Hl{Energieeigenwert}).
+	\end{itemize}
+	Für eine gegebene Eigenfunktion $\psi\of{\vX}$ mit Eigenwert $E$ ist die Lösung der zeitabhängigen Schrö\-dinger\-gleichung
+	\begin{equation}
+		\Psi\of{\vX,t} = \psi\of{\vX}\e{\mI\frac{E t}{\hbar}}
+	\end{equation}
+	\item Im Allgemeinen besitzt ein Hamiltonoperator mehrere (unendlich viele) Eigenfunktionen und Eigenwerte
+	\begin{equation}
+		H\psi_{n,\alpha}\of{\vX} = E_n\psi_{n,\alpha}\of{\vX}
+	\end{equation}
+	$n$ legt die Eigenwerte $E_n$ fest ($n$, $\alpha$) legen die Eigenzustände $\psi_{n,\alpha}$ fest. $\alpha$ ist ein Entartungsindex, der verschidene Eigenzustände zum selben Eigenwert unterscheidet. Die Indizes ($n$, $\alpha$) können diskret und / oder kontinuierlich verteilt sein. Die Menge der Energieeigenwerte $\curBra{E_n}$ ist das \Hl{Spektrum} des Hamiltonoperators. Das Spektrum kann entsprechend diskret und / oder kontinuierlich sein. [Wir werden alle diese Fälle in Beispielen kennenlernen.]
+	\item Die zeitunabhängige Lösung für jede Eigenfunktion ist
+	\begin{equation}
+		\Psi\of{\vX,t} = \e{-\mI\frac{E_n t}{\hbar}}\psi_{n,\alpha}\of{\vX}
+	\end{equation}
+	Die \Hl{allgemeine Lösung der Schrödingergleichung} ist eine Superposition der einzelnen Lösungen
+	\begin{equation}
+		\Psi\of{\vX,t} = \sum\limits_{n,\alpha} c_{n,\alpha} \Psi_{n,\alpha}\of{\vX,t} = \sum\limits_{n,\alpha} c_{n,\alpha} \e{-\mI\frac{E_n t}{\hbar}} \psi_{n,\alpha}
+	\end{equation}
+	Die $c_{n,\alpha}$ sind die Amplituden für die Eigenzustände $\psi_{n,\alpha}$ und ergeben sich aus der Anfangsbedingung $\Psi\of{\vX,0}$ [siehe später].
+	\item Beispiel: Freies Teilchen: Es gilt also $V\of{\vX} \equiv 0$ also ist der Hamiltonoperator $H\of{\vX} = - \frac{\hbar^2}{2 m} \Laplace$ und die zuitunabhängige Schrödingergleichung $H\psi = E \psi$ lautet
+	\begin{equation}
+		-\frac{\hbar^2}{2m}\Laplace\psi\of{\vX} = E \psi\of{\vX}
+	\end{equation}
+	Eigenzustände des Hamiltonoperators sind ebene Wellen
+	\begin{equation}
+		\psi_{\vK}\of{\vX} = \e{\mI\vK\cdot\vX}
+	\end{equation}
+	mit zugehörigem Eigenwert
+	\begin{equation}
+		E_{\vK} = \frac{\hbar^2\vK^2}{2m}
+	\end{equation}
+	Der Wellenvektor $\vK \in \mathds{R}$ legt die Eigenzustände und -werte fest.\\
+	Die allgemeine Lösung lautet
+	\begin{equation}
+		\Psi\of{\vX,t} = \int\dn{k}{3} c\of{\vK} \e{\mI\norBra{\vK\cdot\vX - \omega t}} \quad \text{mit } \omega = \frac{E_{\vK}}{\hbar}
+	\end{equation}
+	Ist also ein Wellenpaket. Die Amplituden $c\of{\vK}$ ergeben sich aus der Anfangsbedingung $\Psi\of{\vX,0}$.
+\end{itemize}
+
+\subsection{Wellenmechanik in einer Dimension mit Potential}
+
+\begin{itemize}
+	\item Die Schrödingergleichung soll für stückweise konstantes, zeitunabhägiges Potential $V\of{\vX}$ gelöst werden, also zum Beispiel.
+	\begin{figure}[H]
+		\centering
+		\input{Graph/1_8.tex}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\input{Graph/1_9.tex}
+	\end{figure}
+	Die zeitunabhängige Schrödingergleichung ist
+	\begin{equation}
+		\norBra{-\frac{\hbar^2}{2m}\nppv{}{x}{2}+V\of{x}} \psi\of{x} = E\psi\of{x}
+	\end{equation}
+	\begin{figure}[H]
+		\centering
+		\input{Graph/1_10.tex}
+	\end{figure}
+\end{itemize}

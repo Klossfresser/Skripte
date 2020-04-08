@@ -1,0 +1,15 @@
+\tikzset{thick,every node/.style={scale=1}}
+\begin{tikzpicture}
+  \def\a{1.5};
+	\def\po{7};
+
+  \draw[->] (-0.15,0) to (10.4,0);
+  \draw[->] (0,-0.15) to (0,5.2);
+  \node[anchor=west] at (10.5,0) {$p$};
+  \node[anchor=south] at (0,5.3) {$\Norm{\varphi\of{p}}^2$};
+  \draw[thick,domain=0:10.4,samples=100] plot (\x,{5*exp(-2*(\x-\po)*(\x-\po)/\a/\a)});
+  \draw[<->] (\po-\a/2,{5*exp(-1/2)-0.2}) to  node[anchor=north west] {$\frac{\hbar}{2}$} ++ (\a,0);
+	\draw[dashed] (\po,0) to (\po,5);
+	\draw (\po,-0.15) to ++(0,0.3);
+	\node[anchor=north] at (\po,-0.25) {$p_0$};
+\end{tikzpicture}

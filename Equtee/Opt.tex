@@ -1,0 +1,48 @@
+
+\usepackage{fancyhdr}
+\usepackage{cmbright}
+\usepackage[sans]{dsfont}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage[margin = 2cm]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{pgfmath}
+\usepackage{multirow}
+\usepackage{enumitem}
+\setlist{align=left}
+\usepackage{calc}
+\usepackage[doublespacing]{setspace}
+% \setlength{\tabcolsep}{1pt}
+\usepackage{stackrel}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs}
+\everymath{\displaystyle}
+\DeclareMathOperator{\tr}{Tr}
+% Underline uwave
+\usepackage[normalem]{ulem}
+\usepackage{pgfplots}
+\pgfmathsetseed{2}
+\usepackage{ifthen}
+\usetikzlibrary{math,calc,patterns,decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,decorations.text}
+\usepackage[explicit]{titlesec}
+\titleformat{\section}{\normalfont\large}{}{0pt}{\uline{\thesection.\hspace{1ex}#1}}
+\titleformat{\subsection}{\normalfont}{}{0pt}{\uline{\thesubsection.\hspace{1ex}#1}}
+\titleformat{\subsubsection}{\normalfont}{}{0pt}{\uline{\thesubsubsection. \hspace{1ex} #1}}
+\pagestyle{fancy}
+\rhead{}
+\chead{}
+\lhead{}
+\cfoot{-\thepage-}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\setlength{\footskip}{20pt}
+\setlength{\footheight}{11pt}
+\setlength{\headsep}{9pt}
+\setlength{\headheight}{20pt}
+% \tikzset{every node/.style = {draw = none, fill = none,scale = 0.8}}
