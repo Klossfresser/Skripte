@@ -1,0 +1,21 @@
+\tikzset{thick,every node/.style={scale=1}}
+\begin{tikzpicture}[declare function = {
+	refl(\t) = ((\t-sqrt(\t^2 - 1))/(\t+sqrt(\t^2 - 1)))^2;
+	tran(\t) = (4*\t*sqrt(\t^2 - 1))/((\t + sqrt(\t^2 - 1))^2);
+}]
+  \draw[->] (-0.15,0) to (10.2,0);
+  \draw[->] (0,-0.15) to (0,5.2);
+  \node[anchor=west] at (10.3,0) {$k\edgBra{\sqrt{\frac{2mV_0}{\hbar^2}}}$};
+ 	\node[anchor=south] at (0,5.3) {$T$, $R$};
+ 	\draw (0.5,-0.15) to ++(0,0.3);
+ 	\node[anchor=north] at (0.5,-0.25) {$1.0$};
+ 	\node[anchor=east] at (-0.25,0) {$0.0$};
+ 	\draw (-0.15,5) to ++(0.3,0);
+ 	\node[anchor=east] at (-0.25,5) {$1.0$};
+ 	\draw (9.5,-0.15) to ++(0,0.3);
+ 	\node[anchor=north] at (9.5,-0.25) {$1.2$};
+	\draw[thick,smooth,samples=200,domain=0.0001:9] plot(\x+0.5,{5*tran((\x/45+1))});
+	\node at (5,3.5) {$T$};
+	\draw[thick,smooth,samples=200,domain=0.0001:9] plot(\x+0.5,{5*refl((\x/45+1))});
+	\node at (5,1.5) {$R$};
+\end{tikzpicture}

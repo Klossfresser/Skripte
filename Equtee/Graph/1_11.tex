@@ -1,0 +1,12 @@
+\tikzset{thick,every node/.style={scale=1}}
+\begin{tikzpicture}
+	\fill[white!90!black] (0,0) to (5,0) to (5,5) to (0,5) to (0,0);
+  \draw[->] (-5.1,0) to (5.1,0);
+  \draw[->] (0,-0.15) to (0,5.2);
+  \node[anchor=west] at (5.2,0) {$x$};
+ 	\node[anchor=south] at (0,5.3) {$V\of{x}$};
+	\draw (-0.15,5) to ++(0.3,0);
+	\node[anchor=east] at (-0.25,5) {$V_0$};
+	\node[anchor=north] at (0,-0.25) {$x_0$};
+	\draw[thick] (-5,0) to (0,0) to (0,5) to (5,5);
+\end{tikzpicture}

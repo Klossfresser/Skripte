@@ -1,0 +1,202 @@
+\begin{bemerkung}
+	Halbeinfach spielt für die Darstellungstheorie und Anwendungen in der Physik eine große Rolle. \\
+	Sei $\dim\of{L} = \dim_{\bF} = n$
+	\newcommand{\eInd}[1]{e\indices{_#1}}
+	\begin{equation}	
+		\sDef{\eInd{a}}{a = 1, \dots, n} \text{ Basis}
+	\end{equation}
+	Dann existieren $\frac{1}{2} n^2\of{n-1}$ Koeffizienten
+	\newcommand{\cInd}[3]{C\indices{^#1_#2_#3}}
+	\begin{equation}
+		\cInd{c}{a}{b} = - \cInd{c}{b}{a} \text{ mit } \eof{\eInd{a},\eInd{b}} = \cInd{c}{a}{b} \eInd{c}
+	\end{equation}
+	Wegen $\sum\limits_{\of{a,b,c} \in S_3} \eof{\eInd{a},\eof{\eInd{b},\eInd{c}}} = 0$
+	\begin{equation}
+		\eqval \cInd{m}{a}{n} \cInd{n}{b}{c} + \cInd{m}{b}{n} \cInd{n}{c}{a} + \cInd{m}{c}{n} \cInd{n}{a}{b} = 0
+	\end{equation}
+	Also genügen die Koeffizienten $\cInd{c}{a}{b}s$ den Bedingungen
+	\begin{enumerate}
+		\item $\cInd{c}{a}{b} = - \cInd{c}{b}{a}$
+		\item $\cInd{m}{n}{a} \cInd{n}{b}{c} = 0$
+	\end{enumerate}
+	Umgekehrt gilt: Ein Satz von Koeffizienten $\cInd{c}{a}{b}$ der 1) \& 2) genügt definiert eine Lie-Algebra. \\
+	Unter Basiswechsel
+	\newcommand{\ebInd}[1]{e'{}\indices{_#1}}
+	\newcommand{\cbInd}[3]{C'{}\indices{^#1_#2_#3}}
+	\begin{equation}
+		\eInd{a} \mapsto \ebInd{a} \mDef A\indices{^b_a} \eInd{b}
+	\end{equation}
+	ist
+	\begin{equation}
+		\eof{\ebInd{a},\ebInd{b}} = \cbInd{c}{a}{b} \ebInd{c}
+	\end{equation}
+	\begin{equation}
+		\cInd{c}{a}{b} \mapsto \cbInd{c}{a}{b} = \of{A^{-1}}\indices{^c_l} \cInd{l}{m}{n}A\indices{^m_a}A\indices{^n_b}
+	\end{equation}
+	$\cof{\cInd{c}{a}{b}}$ und $\cof{\cbInd{c}{a}{b}}$ definieren gleiche \bzw isomorphe Lie-Algebren.
+\end{bemerkung}
+\begin{definition}
+	Die direkte Summe zweier Lie-Algebren $L'\of{V',\eof{\cdot,\cdot}'}$, $L'' = \of{V'',\eof{\cdot,\cdot}''}$ ist gegeben durch:
+	\begin{gather}
+		L = \of{V,\eof{\cdot,\cdot}} \text{ mit } V = V' \oplus V'' \\
+		\eof{x'\oplus x'',y'\oplus y''} = \eof{x',y'}'\oplus \eof{x'',y''} \\
+		\fuerall x',y' \in V' \; x'','' \in V''
+	\end{gather}
+\end{definition}
+\begin{definition}
+	Eine Derivation $\varphi\in \der\of{L}$ der Lie-Algebra $L = \of{V,\eof{\cdot,\cdot}}$ ist ein $\varphi\in \eMo\of{V}$ mit:
+	\begin{equation}
+		\varphi\of{\eof{x,y}} = \eof{\varphi\of{x},y} + \eof{x,\varphi\of{y}}
+	\end{equation}
+	$\der\of{L} \subset \eMo\of{V}$ ist eine Lie-Unteralgebra, denn für $\varphi,\varphi' \in \der\of{L}$:
+	\begin{equation}
+		\begin{split}
+			\eof{\varphi,\varphi'}\of{\eof{x,y}} & \mDef\of{\varphi\circ\varphi' - \varphi'\circ\varphi}\eof{x,y} \\
+			& = \eof{\varphi\circ\varphi'\of{x},y} + \eof{\varphi'\of{x},\varphi\of{y}} + \eof{\varphi\of{x},\varphi'\of{y}} + \eof{x,\varphi\circ\varphi'\of{y}} \\
+			& \phantom{=} \eof{\varphi'\circ\varphi\of{x},y} + \eof{\varphi\of{x},\varphi'\of{y}} + \eof{\varphi'\of{x},\varphi\of{y}} + \eof{x,\varphi'\circ\varphi\of{y}} \\
+			& = \eof{\eof{\varphi,\varphi'}\of{x},y} + \eof{x,\eof{\varphi,\varphi'}\of{y}}
+		\end{split}
+	\end{equation}
+	Es existiert ein natürlicher Gruppenhomomorphismus
+	\begin{gather}
+		\fDef{\ad}{L}{\der\of{L}} \\
+		x \mapsto \ad_x\mDef \eof{x,\cdot} \\
+		\ad_x : y \mapsto \ad_x\of{y} = \eof{x,y}
+		\ad_x \in \der\of{L}
+	\end{gather}
+\end{definition}
+\begin{proof}
+	\begin{equation}
+		\begin{split}
+			\ad_x\of{\eof{y,z}} & = \eof{x,\eof{y,z}} \\
+			& = - \eof{y,\eof{z,x}} - \eof{z,\eof{x,y}} \\
+			& = \eof{\eof{x,y},z} + \eof{y,\eof{x,z}} \\
+			& = \eof{\ad_x\of{y},z} + \eof{y,\ad_x\of{z}}
+		\end{split}
+	\end{equation}
+	$\fDef{\ad}{L}{\der\of{L}}$ ist Lie-Homomorphismus
+	\begin{equation}
+		\ad_{\eof{x,y}} = \eof{\ad_x,\ad_y} = \ad_x \circ \ad_y - \ad_y\circ\ad_x
+	\end{equation}
+	Anwenden auf $z \in L$:
+	\begin{equation}
+		\begin{split}
+			\eof{\eof{x,y},z} & = - \eof{\eof{y,z},x} - \eof{\eof{z,x},y} \\
+			& = \eof{x\eof{y,z}} - \eof{y,\eof{x,z}} \\
+			& = \ad_x\circ\ad_y\of{z} - \ad_y\circ\ad_x\of{z}
+		\end{split}
+	\end{equation}
+\end{proof}
+Den so definierten Lie-Homomorphismus
+\begin{equation}
+	L \to \eMo\of{L} \quad x \mapsto \ad_x
+\end{equation}
+auch die \hl{adjungierte} Darstellung der Lie-Algebra (auf sich selbst). \\
+Einen Lie-Homomorphismus
+\begin{equation}
+	L \to \eMo\of{W}
+\end{equation}
+auf $W$ als $\bF\text{-Vektorraum}$ nennt man eine Darstellung von $L$ auf $W$
+\begin{definition}
+	Seien $L' = \of{V',\eof{\cdot,\cdot}'}$ und $L'' = \of{V'',\eof{\cdot,\cdot}''}$ Lie-Algebren und 
+	\begin{gather}
+		\fDef{\sigma}{L''}{\der\of{L'}} \\
+		x'' \mapsto \sigma_{x''}
+	\end{gather}
+	ein Lie-Homomorphismus. Dann ist:
+	\begin{gather}
+		L = \of{V,\eof{\cdot,\cdot}} \\
+		L = L' \rtimes_\sigma L''
+	\end{gather}
+	die \hl{Semidirekte Summe} von $L'$ mit $L''$ definiert durch:
+	\begin{equation}
+		V = V' \oplus V''
+	\end{equation}
+	und
+	\begin{equation}
+		\eof{x'\oplus x'', y' \oplus y''} = \of{\eof{x',y'}' + \sigma_{x''}\of{y'} - \sigma_{y''}\of{x'}} \oplus \eof{x'',y''}''
+	\end{equation}
+	Antisymmetrie, Bilinearität und Jacobi-Identität in der Übung nachgerechnet.
+\end{definition}
+\begin{definition}
+	Die \hl{Killing-Form} einer Lie-Algebra $L = \of{V, \eof{\cdot,\cdot}}$ ist eine symmetrische Bilinearform
+	\begin{equation}
+		\fDef{K}{V\times V}{\bF}
+	\end{equation}
+	definiert durch 
+	\begin{equation}
+		K\of{x,y} = \spur\of{\ad_x\circ\ad_y}
+	\end{equation}
+	\newcommand{\eInd}[1]{e\indices{_#1}}
+	\newcommand{\cInd}[3]{C\indices{^#1_#2_#3}}
+	Bezüglich einer Basis $\sDef{\eInd{a}}{a = 1, \dots, n}$ von $L$ ist $\eof{\eInd{a},\eInd{b}} = \cInd{c}{a}{b}$ und 
+	\begin{equation}
+		\of{\ad_{\eInd{a}}}\indices{^c_b} = \cInd{c}{a}{b}
+	\end{equation}
+	Damit
+	\begin{equation}
+		K\indices{_a_b} = K\of{\eInd{a},\eInd{b}} = \spur\of{\ad_x\circ\ad_y} = \cInd{n}{a}{m}\cInd{m}{b}{n}
+	\end{equation}
+\end{definition}
+\begin{proposition}
+	$\fuerall x,y \in L$ gilt:
+	\begin{equation}
+		K\of{\eof{x,y},z} = K\of{x,\eof{y,z}} \eqval K\of{\eof{y,x},z} + K\of{x,\eof{y,z}} = 0
+	\end{equation}
+\end{proposition}
+\begin{proof}
+	Aus $\ad_{\eof{x,y}} = \eof{\ad_x,\ad_y}$ folgt:
+	\begin{equation}
+		\begin{split}
+			& \spur\of{\ad_{\eof{x,y}}\circ\ad_z} \\
+			= & \spur\of{\ad_x\circ\ad_y\circ\ad_z - \ad_y\circ\ad_x\circ\ad_z} \\
+			= & \spur\of{\ad_x\circ\ad_y\circ\ad_z - \ad_x\circ\ad_z\circ\ad_y}\\
+			= & \spur\of{\ad_x\circ\ad_{\eof{y,z}}}
+		\end{split}
+	\end{equation}
+\end{proof}
+Der \hl{Nullraum} von $K$ ist definiert durch
+\begin{equation}
+	N\of{L} \mDef \sDef{x\in L}{K\of{x,y} = 0 \fuerall y \in L}
+\end{equation}
+Ist $x \in N\of{L}$, dann folgt aus 
+\begin{equation}
+	K\of{\eof{x,y},z} = K\of{x,\eof{y,z}} = 0 \fuerall y,z
+\end{equation}
+$N\of{L}$ ist ein Ideal. Das kann verallgemeinert werden zu:
+\begin{korollar}
+	Sei $I \subset L$ ein Ideal dann ist auch $I^{\perp}$ ein Ideal:
+	\begin{equation}
+		I^{\perp} = \sDef{x\in L}{K\of{x,y} = 0 \fuerall y \in I}
+	\end{equation}
+\end{korollar}
+\begin{proof}
+	\begin{equation}
+		K\of{\eof{I^{\perp},L},I} = K\of{I^{\perp},\eof{L,I}} = K\of{I^{\perp},I} = 0
+	\end{equation}
+	Damit folgt $\eof{I^{\perp},L} \subset I^{\perp}$
+\end{proof}
+\begin{proposition}
+	Ist $I \subset L$ ein Ideal, dann ist
+	\begin{equation}
+		K_I = \evLi{K}_I,
+	\end{equation}
+	\dah die Killingform von $I$ ist gleich der Einschränkung der Killingform von $L$ auf $I$
+\end{proposition}
+\begin{proof}
+	Ist $\varphi \in \eMo\of{V}$ mit $\img\of{\varphi} \subset W \subset V$, dann gilt 
+	\begin{equation}
+		\spur\of{\varphi} = \spur\of{\evLi{\varphi}_W}
+	\end{equation}
+	Angewandt auf $\varphi = \ad_x \circ \ad_y \in \eMo\of{V}$ mit $x,y \in I$, dann ist $\img\of{\varphi} \subset I \subset L$.s
+\end{proof}
+\begin{satz}[Cartan]
+	$L$ ist genau dann halbeinfach, wenn $K$ nicht ausgeartet ist, \dah $N\of{L} = \cof{0}$
+\end{satz}
+\begin{proof}
+	Ist $I \subset L$ ein abelsches Ideal $\neq \cof{0}$ und $0 \neq x \in I$, $y \in L$, dann 
+	\begin{equation}
+		K\of{x,y} = \spur\of{\ad_x\circ\ad_y} = \spur\of{\evLi{\ad_x}_I,\evLi{\ad_y}_I} = 0
+	\end{equation}
+	Da $\evLi{\ad_x}_I = 0$ falls $I$ abelsch \kla{ und $\img \subset I$}. Andere Richtung als Übung.
+\end{proof}

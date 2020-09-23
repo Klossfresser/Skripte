@@ -184,9 +184,9 @@ Die Trajektorien $\norBra{\vX\of{t},\vP\of{t}}$ der Teilchen gehen als Ladungs- 
     \end{equation}
     beschrieben.
     \item Seine \Hl{Dynamik} (zeitliche Entwicklung, Evolution) ist durch die \Hl{Schrödingergleichung} festgelegt
-    \begin{equation}
+    \begin{empheq}[box=\widefbox]{equation}
       \mI \hbar \ppv{\psi\of{\vX,t}}{t} = - \frac{\hbar^2}{2 m} \Laplace \psi\of{\vX,t} + V\of{\vX,t}\psi\of{\vX,t}
-    \end{equation}
+    \end{empheq}
     Die Lösung der Schrödingergleichung unter einer Anfangsbedingung $\psi\of{\vX,0}$ ergibt die zeitlich entwickelte Wellenfunktion $\psi\of{\vX,t}$.
     \item Die Wellenfunktion $\psi\of{\vX,t}$ legt die \Hl{Statistik} der Resultate von Messungen physikalischer Messgrößen $A\of{\vX,\vP}$ zum Zeitpunkt $t$ fest:\\
     Für die Messung der \Hl{Position} des Teilchens gilt (Bornsche Regel): Die Wahrscheinlichkeit, das Teilchen zum Zeitpunkt $t$ in einem Volumen $\dn{x}{3}$ vorzufinden,ist
@@ -409,18 +409,18 @@ Das heißt, dass die Unschärfen in Ort und Impuls nicht unabhängig sind
 		\ppv{}{t} \rho\of{\vX,t} + \frac{\hbar}{2m\mI}\norBra{\psi^*\Laplace\psi - \psi\Laplace\psi^*} = 0
 	\end{equation}
 	Wir definieren den \Hl{Wahrscheinlichkeitsstrom}
-	\begin{align}
+  \begin{empheq}[box=\widefbox]{align}
 		\vJ\of{\vX,t} & = \frac{\hbar}{2 m \mI}\norBra{\psi^*\of{\vX,t} \Nabla\psi\of{\vX,t} - \psi\of{\vX,t}\Nabla\psi^*\of{\vX,t}} \\
 		& = \frac{1}{m} \Re \edgBra{\psi^*\of{\vX,t}\norBra{-\mI\hbar\Nabla}\psi\of{\vX,t}}
-	\end{align}
+	\end{empheq}
 	so, dass
 	\begin{equation}
 		\Nabla\cdot\vJ = \frac{\hbar}{2 m \mI} \norBra{\Nabla\psi^*\cdot\Nabla\psi + \psi^*\Laplace\psi - \Nabla\psi\cdot\Nabla\psi^* - \psi\Laplace\psi^*}
 	\end{equation}
 	Damit gilt der \Hl{Erhaltungssatz der Wahrscheinlichkeit}
-	\begin{equation}
+  \begin{empheq}[box=\widefbox]{equation}
 		\ppv{}{t}\rho\of{\vX,t} + \Nabla\cdot\vJ = 0
-	\end{equation}
+	\end{empheq}
 	Die Gesamtwahrscheinlichkeit $\int\dn{x}{3}\rho\of{\vX,t} = 1$ ist erhalten (Beweis wie in der Elektrodynamik; $\lim\limits_{x\to\infty}\vJ\of{\vX,t} = 0$ weil $\lim\limits_{x\to\infty} \psi\of{\vX,t} = 0$)
 	\item Beispiel: Der Wahrscheinlichkeitsstrom für eine ebene Welle $\psi\of{\vX,t} = \e{\mI\norBra{\vK\vX - \omega t}}$ ist
 	\begin{align}
@@ -465,10 +465,10 @@ Das heißt, dass die Unschärfen in Ort und Impuls nicht unabhängig sind
 		\dot{\chi}\of{t} = - \mI \frac{E}{\hbar}\chi\of{t} \quad \rightarrow \quad \chi\of{t} = \e{-\mI\frac{E t}{\hbar}}\chi\of{0} = \e{-\mI\frac{E t}{\hbar}}
 	\end{equation}
 	\item \eqref{sep2} ergibt die \Hl{zeitunabhängige Schrödingergleichung}
-	\begin{align}
+  \begin{empheq}[box=\widefbox]{align}
 		H\of{\vX}\psi\of{\vX} & = E \psi\of{\vX} \\
 		\norBra{-\frac{\hbar^2}{2m}\Laplace + V\of{\vX}}\psi\of{\vX} & = E \psi\of{\vX}
-	\end{align}
+	\end{empheq}
 	Dies ist eine \Hl{Eigenwertgleichung}:
 	\begin{itemize}
 		\item $\psi\of{\vX}$ ist eine \Hl{Eigenfunktion} (\Hl{Energieeigenzustand} oder \Hl{stationärer Zustand}) des Hamiltonoperators $H$.
@@ -528,8 +528,253 @@ Das heißt, dass die Unschärfen in Ort und Impuls nicht unabhängig sind
 	\begin{equation}
 		\norBra{-\frac{\hbar^2}{2m}\nppv{}{x}{2}+V\of{x}} \psi\of{x} = E\psi\of{x}
 	\end{equation}
+  Wie verhält sich $\psi\of{\vX}$ an den Sprungstellen von $V\of{x}$? Sei $x_0$ eine der Sprungstellen
 	\begin{figure}[H]
 		\centering
 		\input{Graph/1_10.tex}
 	\end{figure}
+  \begin{equation}
+    \nppv{}{x}{2} \psi\of{x} = \frac{2m}{\hbar^2}\of{V\of{x} - E}\psi\of{x}
+  \end{equation}
+  Integrieren im Intervall $\edgBra{x_0 - \epsilon,x_0+\epsilon}$ ergibt
+  \begin{align}
+    \int\limits_{x_0-\epsilon}^{x_0+\epsilon} \dd{x} \nppv{}{x}{2} \psi\of{x} & = \frac{2m}{\hbar^2} \int\limits_{x_0-\epsilon}^{x_0+\epsilon} \dd{x} \of{V\of{x} - E} \psi\of{x} \\
+    \ppv{}{x} \psi\of{x_0+\epsilon} - \ppv{}{x}\psi\of{x_0-\epsilon} & = \frac{2m}{\hbar^2} \edgBra{\int\limits_{x_0-\epsilon}^{x_0} \dd{x} \of{V_0-E}\psi\of{x} + \int\limits_{x_0}^{x_0+\epsilon}\dd{x} \of{V_1-E}\psi\of{x}} \\
+    & = \frac{2m}{\hbar^2} \edgBra{\of{V_0-E} \int\limits_{x_0-\epsilon}^{x_0} \dd{x} \psi\of{x} + \of{V_1 - E}\int\limits_{x_0}^{x_0+\epsilon} \dd{x} \psi\of{x}}
+  \end{align}
+  Im Limes $\epsilon\to 0$ ist:
+  \begin{equation}
+    \ppv{}{x} \psi\of{x_0+\epsilon} - \ppv{}{x}\psi\of{x_0-\epsilon}\to 0
+  \end{equation}
+  Die Ableitung des Wellenfunktion an der Sprungstelle des Potentials ist \Hl{stetig}. Damit ist auch die Wellenfunktion selbst an der Sprungstelle stetig. An Sprungstellen $x_0$ von $V\of{x}$ gilt:
+  \begin{empheq}[box=\widefbox]{align}   
+    \lim\limits_{\epsilon\to 0} \psi\of{x_0+\epsilon} & = \lim\limits_{\epsilon\to 0} \psi\of{x_0-\epsilon} \\
+    \lim\limits_{\epsilon\to 0} \ppv{}{x} \psi\of{x_0+\epsilon} & = \lim\limits_{\epsilon\to 0} \ppv{}{x} \of{x_0-\epsilon}
+  \end{empheq}
+\end{itemize}
+
+\subsubsection{Potentialstufe}
+
+\begin{itemize}
+  \item Gegeben sei ein Potential der Form
+  \begin{figure}[H]
+    \centering
+    \input{Graph/1_11.tex}
+  \end{figure}
+  \begin{equation}
+    V\of{x} = \begin{faelle} 0 & x \leq 0 \\ V_0 & x > 0 \end{faelle}
+  \end{equation}
+  Wir suchen die Eigenfunktionen und Eigenwerte der zeitunabhängigen Schrödingergleichung
+  \begin{equation}
+    \of{-\frac{\hbar^2}{2m}\nppv{}{x}{2} + V\of{x}}\psi\of{x} = E\psi\of{x}
+  \end{equation}
+  das heißt in den Bereichen \eqref{eq:gebiet1} und \eqref{eq:gebiet2} gilt:
+  \begin{align}
+    \nppv{}{x}{2} \psi\of{x} & = - \frac{2m}{\hbar^2} E \psi\of{x} \label{eq:gebiet1} \ref{I} \\
+    \nppv{}{x}{2} \psi\of{x} & = - \frac{2m}{\hbar^2} \of{E-V_0} \psi\of{x} \label{eq:gebiet2} \ref{II}
+  \end{align}
+  \item \Hl{1. Fall:} Das Teilchen habe eine \Hl{Energie oberhalb der Potentialstufe}, $E > V_0$.
+  \begin{equation}
+    k = \sqrt{\frac{2mE}{\hbar^2}} \quad q \mDef \sqrt{\frac{2m\of{E-V-0}}{\hbar^2}} < k
+  \end{equation}
+  Die Lösungen in \eqref{eq:gebietLsg1} und \eqref{eq:gebietLsg2} sind dann
+  \begin{align}
+    \psi\of{x} & = A\e{\mI k x} + B\e{- \mI k x} \label{eq:gebietLsg1} \tag{I} \\
+    \psi\of{x} = C \e{\mI q x} + D \e{-\mI q x} \label{eq:gebietLsg2} \tag{II}
+  \end{align}
+  mit beliebigen Amplituden $A,B,C,D$
+  \item Die Anschlussbedingungen an den Sprungstellen sind
+  \begin{align}
+    A + B & = C + D \\
+    \mI k \of{A - B} & = \mI q \of{C - D}
+  \end{align}
+  Die Amplituden $B,C$ der auslaufenden Wellen sollen in Abhängigkeit von den Amplituden der einlaufenden Wellen $A,D$ bestimmt werden:
+  \begin{align}
+    B - C & = - A + D \\
+    k B + q C & = k A + q D \\
+    \matTwo{1}{-1}{k}{q} \twoArr{B}{C} & = \matTwo{-1}{1}{k}{q} \twoArr{A}{D} \\
+    \twoArr{B}{C} & = \matTwo{1}{-1}{k}{q}^{-1}\matTwo{-1}{1}{k}{q}\twoArr{A}{D} \\
+    & = \frac{1}{k+q} \matTwo{q}{1}{-k}{1}\matTwo{-1}{1}{k}{q}\twoArr{A}{D}
+  \end{align}
+  \item Wir betrachten den Fall eines von links einlaufenden Teilchen, das heißt $A\neq 0$ und $D = 0$ (sodass $j_A \neq 0$und $j_D = 0$). Damit ist
+  \begin{equation}
+    B = \frac{k-q}{k+q} A \quad C = \frac{2k}{k+q} A
+  \end{equation}
+  Damit sind die Ströme
+  \begin{align}
+    j_A & = \frac{\hbar k}{m} \Norm{A}^2 \\
+    j_B & = -\frac{\hbar k}{m}\of{\frac{k-q}{k+q}}^2\Norm{A}^2 = - \of{\frac{k-q}{k+q}}^2 j_A \\
+    j_C & = \frac{\hbar q}{m}\of{\frac{2k}{k+q}}^2 \Norm{A}^2 = \frac{4kq}{\of{k+q}^2} j_A
+  \end{align}
+  \item Die \Hl{Reflexions- und Transmissionskoeffizienten} für ein von links mit einem Impuls $p = \hbar k$ (beziehungsweise mit einer kinetischen Energie $E = \frac{\hbar^2 k^2}{2m} > V_0$) einfallenden Teilchens sind
+  \begin{align}
+    R & = \Norm{\frac{j_B}{j_A}} = \of{\frac{k-q}{k+q}}^2 \quad q = \sqrt{k^2 - \frac{2mV_0}{\hbar^2}} \\
+    T & = \Norm{\frac{j_C}{j_A}} = \frac{4kq}{\of{k+q}^2}
+  \end{align}
+  (Annahme: $k > \frac{2mV_0}{\hbar}$)\\
+  Es gilt $R+ T = 1$
+  \begin{figure}[H]
+    \centering
+    \input{Graph/1_12.tex}
+  \end{figure}
+  Für Energien $E > V_0$ gibt es eine endliche Wahrscheinlichkeit, reflektiert zu werden!
+  \item Das \Hl{Eigenwertproblem}
+  \begin{equation}
+    H\psi_k\of{x} = E_k \psi_k\of{x} \quad E_k = \frac{\hbar^2 k^2}{2 m}
+  \end{equation}
+  ist (für Wellen mit $E > V_0$ und $D = 0$, $A = 1$) gelöst mit 
+  \begin{equation}
+    \psi_k = \begin{faelle} \e{\mI k x} + \frac{k-q}{k+q} \e{-\mI k x} & x < 0 \\ \frac{2 k}{k + q} \e{\mI q x} & x \geq 0 \end{faelle}
+  \end{equation}
+  Durch Superposition dieser Wellen können von links einlaufende Wellenpakete konstruiert werden
+  \begin{equation}
+    \Psi\of{x,t} = \frac{1}{\sqrt{2\pi}} \int\dd{k} g\of{k} \e{-\mI w_k t} \psi_k\of{x}
+  \end{equation}
+  \item \Hl{2. Fall:} Das Teilchen habe eine \Hl{Energie unterhalb der Potentialstufe}, $E < V_0$. \\
+  Die Schrödingergleichung ist nun
+  \begin{align}
+    \nppv{}{x}{2} \psi\of{x} & = - \frac{2m}{\hbar^2}  \psi\of{x} \\
+    \nppv{}{x}{2} \psi\of{x} & = \frac{2m}{\hbar^2} \of{V_0 - E} \psi\of{x} 
+  \end{align}
+  Mit 
+  \begin{equation}
+    k = \sqrt{\frac{2mE}{\hbar^2}} \quad \mu \mDef \sqrt{\frac{2m\of{V_0-E}}{\hbar^2}}
+  \end{equation}
+  lauten die Lösungen in (I) und (II)
+  \begin{align}
+    \psi\of{x} & = A \e{\mI k x} + B \e{-\mI k x} \\
+    \psi\of{x} & = C \e{-\mu x} + D \e{\mu x}
+  \end{align}
+  Die Lösungen in (I) sind wieder ebene Wellen. In (II) ergeben sich Exponentialfunktionen.
+  \item Die Komponente $\e{+\mu x}$ divergiert für $x\to \infty$. Die Wellenfunktion muss normierbar sein. Also fordern wir $D\equiv 0$. Die Anschlussbedingungen bei $x = 0$ liefern dann für den Fall eines von links einlaufenden Teilchens
+  \begin{equation}
+    B = \frac{k - \mI \mu}{k + \mI \mu} A \quad C = \frac{2k}{k+\mI \mu} A
+  \end{equation}
+  Die Energieeigenfunktion zum Energieeigenwert $E_k = \frac{\hbar^2\vK^2}{2m}$ lauten damit ($A = 1$)
+  \begin{equation}
+    \psi_k\of{x} = \begin{faelle} \e{\mI k x} + \frac{k - \mI \mu}{k + \mI \mu} \e{-\mI k x} & x \leq 0 \\ \frac{2k}{k+\mI \mu} \e{-\mu x} & x > 0 \end{faelle}
+  \end{equation}
+  \item Die Wahrscheinlichkeitsdichte in $x > 0$ ist 
+  \begin{equation}
+    \Norm{\psi_k\of{x}}^2 = \frac{4k^2}{k^2 + \mu^2} \e{-2\mu x} = \frac{4 E}{V_0} \e{-2\mu x}
+  \end{equation}
+  Die \Hl{Eindringtiefe} ist
+  \begin{equation}
+    \frac{1}{\mu} = \frac{\hbar}{\sqrt{2m\of{V_0-E}}}
+  \end{equation}
+  Die Eindringtiefe ist klein für große Massen und hohe Potentiale $V_0 \gg E$.
+  \item Insbesondere für eine \Hl{unendlich hohe Potentialstufe} $V_0 \to \infty$ gilt
+  \begin{equation}
+    \psi_k\of{x} \propto \begin{faelle} \sin k x & x < 0 \\ 0 & x \geq 0 \end{faelle}
+  \end{equation}
+  Das heißt, die Randbedingung für eine unendlich hohe Potentialstufe bei $x_0$ ist 
+  \begin{equation}
+    \psi\of{x_0} = 0
+  \end{equation}
+  Die Ableitung der Wellenfunktion ist in $x_0$ unstetig!
+\end{itemize}
+
+\subsubsection{Potentialschwelle}
+\begin{itemize}
+  \item Wir betrachten ein Potential der Form 
+  \begin{equation}
+    V\of{x} = \begin{faelle} 0 & x \leq 0 \\ V_0 & 0 \leq x \leq l \\ 0 & l \leq x \end{faelle}
+  \end{equation}
+  \begin{figure}[H]
+    \centering
+    \input{Graph/1_10.tex}
+  \end{figure}
+  \item \Hl{1. Fall:} Das Teilchen habe eine Energie \Hl{oberhalb der Potentialschwelle}, $E > V_0$. Die Lösung der Schrödingergleichung in den $3$ Bereichen ist
+  \begin{align}
+    \psi\of{x} & = A \e{\mI k x} + B \e{-\mI k x} \\
+    \psi\of{x} & = C \e{\mI q x} + D \e{-\mI q x} \\
+    \psi\of{x} & = F \e{\mI k x} + G \e{-\mI k x}
+  \end{align}
+  wobei
+  \begin{equation}
+    k = \sqrt{\frac{2mE}{\hbar^2}} \quad q \mDef \sqrt{\frac{2m\of{E-V_0}}{\hbar^2}} < k
+  \end{equation}
+  \begin{figure}[H]
+    \centering
+    \input{Graph/1_11.tex}
+  \end{figure}
+  \item Die Anschlussbedingungen erfordern Stetigkeit von $\psi\of{x}$ und $\psi'\of{x}$ bei $x = 0$ und $x = l$
+  \begin{align}
+    A + B & = C + D \\
+    k\of{A - B} & = q \of{C - D} \\
+    C \e{\mI q l} + D \e{-\mI q l} & = F \e{\mI k l} + G \e{-\mI k l} \\
+    q\of{C \e{\mI q l} - C \e{-\mI q l}} & = k\of{F \e{\mI k l} - G \e{-\mI k l}}
+  \end{align}
+  Die auslaufenden Wellen $B, F$ sollen für gegebene einlaufende Wellen $A,G$ berechnet werden. Wir können uns auf ein von links einlaufendes Teilchen spezialisieren, $G = 0$. \\
+  Die Lösung (mit Matrixmethode, wie vorher) ist:
+  \begin{align}
+    F & = \edgBra{\cos ql - \mI \frac{k^2 + q^2}{2kq} \sin ql}^{-1} \e{-\mI k l} A \\
+    B & = \mI \frac{q^2 - k^2}{2kq} \sin ql \e{\mI k l} F
+  \end{align}
+  \item Der transmittierte/reflektierte Strom ist
+  \begin{equation}
+    j_F = \frac{\hbar k}{m} \Norm{F}^2 \quad j_B = \frac{\hbar k}{m} \Norm{B}^2
+  \end{equation}
+  und der \Hl{Reflexions- und Transmissionskoeffizient}
+  \begin{empheq}[box=\widefbox]{align}
+    R = \frac{j_B}{j_A} & = \frac{\of{k^2 - q^2}^2 \sin^2 ql}{4k^2 q^2 + \of{k^2 - q^2}^2 \sin^2 ql} \\
+    T = \frac{j_F}{j_A} & = \frac{4k^2 q^2}{4k^2 q^2 + \of{k^2 - q^2}^2 \sin^2 ql}
+  \end{empheq}
+  \Hl{Diskussion:}
+  \begin{itemize}
+    \item Es gilt $R + T = 1$.
+    \item Transmissionskoeffizient gegen Breite $l$ der Schwelle (für feste Energie $E = \frac{\hbar^2k^2}{2m}$ des Teilchens und Potentialhöhe $V_0$)
+    \item Die Transmission besitzt sogenannte \Hl{Streuresonanzen} bei 
+    \begin{equation}
+      \sin q l \quad \text{also} \quad ql = n \pi \quad n\in \mathbb{N}
+    \end{equation}
+    also für eine Wellenzahl $q = \frac{n\pi}{l}$. Im Bereich der Barrieren entstehen dann stehende Wellen.
+  \end{itemize}
+  \item \Hl{2.Fall:} Wir betrachten ein Teilchen mit \Hl{Energie unterhalb der Potentialschwelle}, $E < V_0$. Die Lösung in (II) ist nun (wie vorher)
+  \begin{equation}
+    \psi\of{x} = C \e{-\mu x} + D\e{+\mu x}
+  \end{equation}
+  Die Lösung ist die gleiche wie für $E > V_0$ mit $q \to \mI \mu$, $\mu = \sqrt{\of{V_0 - E} \frac{2m}{\hbar^2}}$. Der Reflexions- und Transmissionskoeffizient ist
+  \begin{align}
+    R & = \frac{\of{k^2 + \mu^2}^2 \sinh^2 \mu l}{4k^2 \mu^2 + \of{k^2 + \mu^2}^2 \sinh^2 \mu l} \\
+    T & = \frac{4k^2 \mu^2}{4k^2 \mu^2 + \of{k^2 + \mu^2}^2 \sinh^2 \mu l}
+  \end{align}
+  \Hl{Diskussion:}
+  \begin{itemize}
+    \item $T \neq 0$ sogar für $E < V_0$: \Hl{Tunneleffekt}
+    \item Für kleine Energien $E$ und lange Barrieren $l$, so dass
+    \begin{equation}
+      \mu l = \sqrt{\frac{2m\of{V_0-E}}{\hbar^2}} l \gg 1
+    \end{equation}
+    gilt
+    \begin{equation}
+      T \approx \frac{16\of{E-V_0}}{V_0}^2 \e{- 2 \mu l}
+    \end{equation}
+    Die Eindringtiefe ist wieder
+    \begin{equation}
+      \frac{1}{\mu} = \frac{\hbar}{\sqrt{2m\of{V_0 - E}}}
+    \end{equation}
+    \item \Hl{Beispiel 1:} Für ein Elektron mit Energie $E = 1 \unit{eV}$, $V_0 = 2 \unit{eV}$ ist die Eindringtiefe $\mu^{-1} \approx 2 \cdot 10^{-10} \unit{m} = 2 \unit{\AA}$. Bei einer Barriere mit $l = 1 \unit{\AA}$ ist die Transmissionswahrscheinlichkeit $T = 0.78$.
+    \item \Hl{Beispiel 2:} Für ein Proton ($m_p = 1840 m_e$) mit $E = 1 \unit{eV}$ und $V_0 = 2 \unit{eV}$ ist $\mu^{-1} = 5 \cdot 10^{-12} \unit{m}$ und für $l = 1 \unit{\AA}$ ist $T = 4\cdot 10^{-19}$
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Der Potentialtopf}
+\begin{itemize}
+  \item Wir betrachten ein Potential der Form
+  \begin{equation}
+    V\of{x} = \begin{faelle} -V_0 & \Norm{x} \leq l \\ 0 & \Norm{x} > l \end{faelle}
+  \end{equation}
+  Die zeitunabhängige Schrödingergleichung
+  \begin{equation}
+    \of{-\frac{\hbar^2}{2m} \nppv{}{x}{2} + V\of{x}}\psi\of{x} = E \psi\of{x}
+  \end{equation}
+  Die Zustände mit $E > 0$ entsprechenim wesentlichen denen der Potentialschwelle für ($E > V_0$). Welche Zustände mit $E < 0$ gibt es im Potentialtopf?
+  \item Für $-V_0 < E < 0$ sind die Lösungen in den $3$ Bereichen
+  \begin{align}
+    \psi\of{x} & = A \e{\mu x} \\
+    \psi\of{x} & = B \cos kx + C\sin kx \\
+    \psi\of{x} & = D \e{-\mu x} 
+  \end{align}
+  mit:
 \end{itemize}

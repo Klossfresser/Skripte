@@ -1,0 +1,163 @@
+\section{Grundprinzipien relativistischer Beschreibung}
+
+\begin{itemize}
+	\item Raum \& Zeit als Grundstruktur, also Punktmenge mit geometrischen Strukturen sei gegeben
+	\item Automorphismengruppe der Raumzeit (\exmpl Galilei-Gruppe, Poincaré-Gruppe)
+	\item Automorphismengruppe als \hl{Symmetrie} dynamischer Gesetze, Bewegungsgleichungen für \qt{Teilchen} \& \qt{Felder} 
+	\begin{itemize}
+		\item Teilchen: \abb $\fDef{\gamma}{\bR}{M}$ (Raumzeit)
+		\item Felder: \abb $\fDef{F}{M}{V}$ (Vektorraum)
+	\end{itemize}
+	Aktion der Automorphismengruppe \kla{der Raumzeit} auf dynamischen Größen \qt{Teilchen} \& \qt{Felder}
+\end{itemize}
+\begin{definition}{Aktion}
+	Aktion einer Gruppe $G$ auf Menge $M$ ist ein Homomorphismus 
+	\begin{gather}
+		\fDef{\Phi}{G}{\bij\of{M}} \\
+		g \mapsto \phi_g \\
+		\phi_{g_1} \circ \phi_{g_2} = \phi_{g_1 \circ g_2} \\
+		\phi_{e_G} = \id_M
+	\end{gather}
+\end{definition}
+Allgemeine Form von Bewegungsgleichungen:
+\begin{equation}
+	B\eof{\Sigma;\gamma,F} = 0
+\end{equation}
+Mit $F$ einem Feld und $\gamma$ der Bahnkurve in der Raumzeit der Teilchen. Gelöst wird nach $\of{\gamma,F}$ bei gegebenem $\Sigma$ (Hintergrundstrukturen). Sei $T$ eine Aktion der Gruppe $G$ auf den dynamischen Größen $\of{\gamma,F}$
+\begin{equation}
+	g \mapsto T_g : \of{\gamma,F} \mapsto \of{T_g \gamma, T_g F}
+\end{equation}
+Dann heißt $G$ Symmetriegruppe der Bewegungsgleichung \kla{\bwg} wenn
+\begin{equation}
+	B\eof{\Sigma;T_g \gamma, T_g F} = 0 \eqval B\eof{\Sigma; \gamma, F} = 0 \fuerall g \in G
+\end{equation}
+\dah die mit $g$ transformierten dynamischen Größen erfüllen wieder dieselbe \bwg.
+\\
+Unterschied Symmetrie zu Kovarianz: Bei Symmetrie dürfen nur die dynamischen Größen transformiert werden, bei Kovarianz aber alle. 
+Kovarianz: 
+\begin{equation}
+	B\eof{T_g \Sigma; T_g \gamma, T_g F} = 0 \eqval B\eof{\Sigma; \gamma, F} = 0
+\end{equation}
+Bei $T_g \Sigma$ werden auch die Hintergrundstrukturen transformiert. Kovarianz ist eine \qt{relativ} triviale \kla{leicht zu erfüllende} Forderung, im Gegensatz zu Symmetrie.
+
+\begin{beispiel}{Diffusionsgleichung}
+	\begin{equation}
+		\del{t} \phi = k \Laplace \phi
+	\end{equation}
+	Sei $n^{\mu} = \of{1,0,0,0}$ , so dass $n^{\mu} \del{\mu} = \del{t}$
+	\begin{equation}
+		n^{\mu}\del{\mu} \phi = k \of{n^{\mu}n^{\nu} - \eta^{\mu\nu}} \del{\mu}\del{\nu} \phi
+	\end{equation}
+	wobei $\eta_{\mu\nu} = \diag\of{1,-1,-1,-1}$ und $\eta^{\mu\nu} = \diag\of{1,-1,-1,-1}$ die Minkowski-Metrik sind. In $B\eof{\Sigma;\gamma,F}$ kommen $\eta,n$ aus den Strukturen, also $\Sigma$, $\phi$ ist ein Feld $F$. Würde man $n$ \& $\eta$ mittransformieren, so wäre die Diffusionsgleichung Poincarékovariant. Aber natürlich ist die Poincaré-Gruppe \hl{keine} Symmetrie-Gruppe dieser \bwg. \hl{Achtung:} Terminologie \hl{nicht} eindeutig.
+\end{beispiel}
+
+Ist $G$ eine Gruppe und 
+\begin{gather}
+	\fDef{\phi}{G}{\bij\of{M}} \\
+	g \mapsto \phi_g
+\end{gather}
+ein Homomorphismus, dann heißt
+\begin{equation}
+	\of{\phi,G,M}
+\end{equation}
+\kla{verallgemeinerte} Darstellung, oder auch \qt{Wirkung} von $G$ auf $M$. 
+\begin{itemize}
+	\item Die Darstellung heißt \hl{treu} \bzw effektive \kla{Wirkung} $\eqval \phi$ injektiv \kla{$G$ wird durch $\phi$ in $\bij\of{M}$ \qt{eingebettet}}. Damit wird also nur das neutrale Element auf das neutrale Element abgebildet. Die Wirkung jedes nicht neutralen Gruppenelements bewegt mindestens einen Punkt.
+	\item Die Wirkung heißt \hl{frei}, falls $\phi_g$ für $g \neq e_G$ keine Fixpunkte besitzt. Damit werden alle Punkte bewegt.
+	\item Die WIrkung heißt \kla{einfach} transitiv, falls für $p,q \in M$ \kla{genau} ein $g\in G$ existiert mit $\phi_g\of{p} = q$.
+\end{itemize}
+Sind $G$ \& $H$ Gruppen. Auf der Menge $G\times H$ existieren mehrere Gruppenstrukturen
+\begin{enumerate}
+	\item Direktes Produkt:
+	\begin{gather}
+		G \times H = \sDef{\of{g,h}}{g\in G,h\in H} \\
+		\of{g,h}\of{g',h'} = \of{gg',hh'} \\
+		\of{e_g,e_h} \text{ neutrales Element}
+	\end{gather}
+	\item Semidirekte Produkte:
+	\begin{equation}
+		G \rtimes_\alpha H \quad \alpha \in \hom\of{H,\aut\of{G}}
+	\end{equation}
+	wobei $\aut\of{G}$ die Gruppe der Isomorphien auf $G$ sind. Jeder Homomorphismus $\alpha \in \hom\of{H,\aut\of{G}}$ definiert eine Gruppenstruktur auf der Menge $G\times H$ wie folgt:
+	\begin{equation}
+		\of{g,h}\of{g',h'} = \of{g\alpha_h\of{g'},hh'}
+	\end{equation}
+	Man rechnet leicht nach: $\of{e_G,e_H}$ ist neutrales Element $\of{g,h}^{-1} = \of{\alpha_{h^{-1}}\of{g^{-1}},h^{-1}}$. Außerdem gilt Assoziativität:
+	\begin{equation}
+		\of{g,h}\eof{\of{g',h'}\of{g'',h''}} = \eof{\of{g,h}\of{g',h'}}\of{g'',h''}
+	\end{equation}
+	Diese Gruppe heißt das semi-direkte Produkt von $G$ auf $H$ bezüglich $\alpha$. Bezeichnung $G \rtimes_{\alpha} H$ \kla{Achtung Notation nicht einheitlich}. Übungsaufgaben: Inverses Element und Assoziativität.
+\end{enumerate}
+In der Physik wichtig sind semi-direkte Produkte mit $G = V = $ Vektorraum \kla{aufgefasst als abelsche Gruppe}, $H \subset \gl\of{V}$ \kla{invertierbare lineare Abbildungen von $V$ auf sich selbst} und $\alpha : H \hookrightarrow \gl\of{V}$ \kla{$=$ stetige Automorphismen der Gruppe $V$}. Dann ist das semidirekte Produkt einfach:
+\begin{gather}
+	\of{v,h}\of{v',h'} = \of{v + h\of{v'},hh'} \\
+	\of{v,h}^{-1} = \of{-h^{-1}\of{v},h^{-1}} \\
+	\of{0,e_H} \text{ neutrales Element}
+\end{gather}
+Konkreter: $V = \bR^n$ und $H \subset \gl\of{n,\bR}$. Man kann $\bR^n \rtimes H$, $H \subset \gl\of{n,\bR}$ als Untergruppe von $\gl\of{n+1,\bR}$ auffassen, \dah se gibt eine Einbettung $j: \bR^n\rtimes H \hookrightarrow \gl\of{n+1,\bR}$
+\begin{equation}
+	j : \of{v,h} \mapsto \of{\begin{array}{c|c}1&0 \\\midrule v & h \end{array}}
+\end{equation}
+\begin{equation}
+	j\of{v,h}\cdot j\of{v',h'} = \of{\begin{array}{c c} 1 & 0 \\ v & h \end{array}}\of{\begin{array}{c c}1 & 0 \\ v' & h' \end{array}} = \of{\begin{array}{c c}1 & 0 \\ v + h\of{v'} & h'\end{array}} = j\of{\of{v,h},\of{v',h'}}
+\end{equation}
+Lie-Gruppen als Mannigfaltigkeit \kla{\mft}?
+\begin{gather}
+	\so\of{3} \cong \rPr^3 \\
+	\suGr\of{2} \cong \bS^3 \\
+	\uGr\of{1} \cong \bS^1 \\
+	E^3 = \bR^3 \rtimes \so\of{2} \cong \bR^3 \times \rPr^3 \\
+	\bR^4 \rtimes \of{\so\of{1,3}} \text{ Lorentz-Gruppe}
+\end{gather}
+
+\section{Lie-Algebren und Lie-Gruppen}
+Im folgenden bezeichnet $\bF$ den Körper $\bR$ oder $\bC$.
+\begin{definition}
+	Eine Lie-Algebra über $\bF$ ist ein Vektorraum über $\bF$ mit einer Abbildung:
+	\begin{gather}
+		V\times V \to V \\
+		\of{x,y} \mapsto \eof{x,y}
+	\end{gather}
+	genannt \qt{Lie-Produkt} oder \qt{Lie-Klammer}, sodass $\fuerall x,y,z \in V$ und alle $a \in \bF$ gilt:
+	\begin{enumerate}
+		\item $\eof{x,y} = - \eof{y,x}$ \kla{Antisymmetrie}
+		\item $\eof{x,y+az} = \eof{x,y} + a \eof{x,z}$ \kla{Bilnearität}
+		\item $\eof{x,\eof{y,z}} + \eof{y,\eof{z,x}} + \eof{z,\eof{x,y}} = 0$ \kla{Jacobi-Identität}
+	\end{enumerate}
+	Achtung: Es gibt keine Assoziativtät! $\eof{x,\eof{y,z}} \neq \eof{\eof{x,y},z}$
+\end{definition}
+\begin{beispiel}
+	\begin{equation}
+		V = \bR^3 \quad \eof{\vX,\vY} = \vX \times \vY
+	\end{equation}
+	1) \& 2) trivial, 3) folgt so:
+	\begin{equation}
+		\begin{split}
+			& \vX \times \of{\vY\times\vZ} + \vY \times\of{\vZ\times\vX} + \vZ \times\of{\vX\times\vY} \\
+			= & \vY\of{\vX\vZ} - \vZ\of{\vX\vY} + \vZ\of{\vX\vY} - \vX\of{\vY\vZ} + \vX\of{\vZ\vY} - \vY\of{\vX\vZ} \\
+			= & 0
+		\end{split}
+	\end{equation}
+	Jede assoziative Algebra ist auch eine Lie-Algebra, \exmpl Algebra der $n\times n\text{-Matrizen}$
+	\begin{equation}
+		\eof{X,Y} = XY - YX
+	\end{equation}
+	1) \& 2) sind wieder klar. 3) folgt aus Assoziativität \\
+	Sei $V$ ein Vektorraum und $\eMo\of{V} = \text{Endomorphismen von $V$}$ eine assoziative Algebra unter $\circ$, \dah für $\varphi,\varphi' \in \eMo\of{V}$:
+	\begin{equation}
+		\eof{\varphi,\varphi'} = \varphi\circ\varphi' - \varphi'\circ\varphi
+	\end{equation}
+\end{beispiel}
+\begin{definition}
+	Ist $L$ Lie-Algebra, dann ist $L'$ eine Lie-Unteralgebra $\eqval$ $L'$ ist Untervektorraum und falls $\evLi{\eof{\cdot,\cdot}}_{L'}$ zu einer Lie-Algebra macht, $\eof{L',L'} \subset L'$. \\
+	Eine Lie-Unteralgebra $L' \subset L$ heißt \hl{Ideal}, falls: $\eof{x,y} \in L' \fuerall x \in L'$ und $\fuerall y \in L$ Man schreibt dann auch $\eof{L',L} \subset L'$. Lie-Ideale sind für Lie-Algebren, was Normalteiler \kla{invariante Untergruppen} für Gruppen sind. Ist $L' \subset L$ ideal, dann ist $L/L'$ wieder Lie-Algebra.
+	\begin{equation}
+		\eof{\eof{x}_{L'},\eof{y}_{L'}} = \eof{\eof{x,y}}_{L'}
+	\end{equation}
+\end{definition}
+\begin{definition}
+	Seien $L = \of{V,\eof{\cdot,\cdot}}$ und $L' = \of{V',\eof{\cdot,\cdot}'}$ Lie-Algebren: Eine lineare \abb $\fDef{\varphi}{V}{V'}$ heißt \hl{Lie-Homomorphismus} $\eqval$ $\varphi\of{\eof{x,y}} = \eof{\varphi\of{x},\varphi\of{y}}' \fuerall x,y \in L$.  \\
+	Wie üblich definiert $\ker\of{\varphi} = \sDef{x\in L}{\varphi\of{x} = 0}$ Der Kern eines Lie-Homomorphismus ist ein Ideal. Eine Lie-Algebra heißt \hl{Abelsch} $\eqval$ $\eof{x,y} = 0 \fuerall x,y \in L$. \\
+	$L$ heißt \hl{einfach} $\eqval$ $\cof{0}$ und $L$ sind die einzigen Ideale, \dah $L$ hat keine nicht-trivialen Ideale. Oft fordert man zusätzlich, dass $\dim\of{L} = \dim_{\bF}\of{V} \geq 2$ \\
+	$L$ heißt \hl{halbeinfach}, wenn $\dim\of{L} \geq 2$ und $\cof{0}$ das einzige abelsche Ideal ist.
+\end{definition}
