@@ -77,9 +77,141 @@ Sei $G \subset\eMo\of{V}$ \kla{$V \cong \bF^n$} eine Gruppe \& $\fDef{A}{\bR\sup
 		$\dot{C}_L$ analog. 
 	\end{enumerate}
 \end{proof}
-Da die Lie-Struktur durch die von $\eMo\of{V}$ induziert wird, gilt automatisch die Jacobi-Identität. \\
-Ist $D \in \hom\of{G,\opGL\of{W}}$ eine lineare Darstellung von $G$ auf den Vektorraum $W$, dann induziert diese eindeutig eine Darstellung
+	Da die Lie-Struktur durch die von $\eMo\of{V}$ induziert wird, gilt automatisch die Jacobi-Identität. \\
+	Ist $D \in \Hom\of{G,\opGL\of{W}}$ eine lineare Darstellung von $G$ auf den Vektorraum $W$, dann induziert diese eindeutig eine Darstellung
+	\begin{equation}
+		D_{*} \in \Hom\of{\lie\of{G},\eMo\of{W}}
+	\end{equation}
+\begin{proof}
+	Das sieht man so: Sei $A\of{s}$ Kurve in $G$ mit $A\of{0} = e$ und $\evLi{\dd{s}}_{s=0} A\of{s} = X$. Dann ist $A'\of{s} = \of{D\circ A}\of{s} = D\of{A\of{s}}$ eine Kurve in $\opGL\of{W}$ mit $A'\of{0} = \evLi{e}_{\opGL\of{W}}$. Wir sehen voraus, dass $D$ differenzierbar ist. 
+	\begin{equation}
+		\evLi{\dd{s}}_{s=0} A'\of{s} = D_{*}\of{X}.
+	\end{equation}
+	Dabei ist $D_{*}$ die Ableitung der \abb $D$ bei $e \in G$. Wir müssen zeigen:
+	\begin{equation}
+		D_{*}\of{\eof{X,Y}} = \eof{D_{*}\of{X},D_{*}\of{Y}}
+	\end{equation}
+	Wir zuvor betrachten wir Kurven in $G$; $A\of{s}$ $B\of{s}$ mit $\dot{A} = X$ $\dot{B} = Y$ und $C\of{s}$ \defs wie oben und deren Bilder unter $D$ in $\opGL\of{W}$ \kla{$A',B',C'$}. Für $s \geq 0$ ist dann:
+	\begin{equation}
+		C'\of{s} = D\of{C\of{s}}
+	\end{equation}
+	Abgeleitet ergibt einerseits
+	\begin{equation}
+		\dot{C}' = D_{*} \dot{C} = D_{*}\of{\eof{X,Y}}
+	\end{equation}
+	\newcommand{\oftau}{\of{\tau\of{s}}}
+	andererseits, weil $D$ Homomorphismus 
+	\begin{equation}
+		C' = D\of{A\oftau}D\of{B\oftau}\eof{D\of{A\oftau}}^{-1}\eof{D\of{A\oftau}}^{-1}
+	\end{equation}
+	folgt nach identischer Rechnung $\dot{C}' = \eof{D_{*}X,D_{*}Y}$
+\end{proof}
+Adjungierte Darstellung
+\begin{gather}
+ \Ad \in \Hom\of{G,\opGL\of{\lie\of{G}}} \\
+ G \owns A \mapsto \Ad_A : x \mapsto \Ad_A \of{x}
+\end{gather}
+Sei $B\of{s}$ Kurve in $G$ mit $B\of{0} = e$ und $\dot{B} = \evLi{\dd{s}}_{s=0} B\of{s} = Y$, dann 
 \begin{equation}
-	D_{*} \in \hom\of{\lie\of{G},\eMo\of{W}}
+	\Ad_A\of{Y} \mDef \evLi{\dd{s}}_{s=0} A B\of{s} A^{-1} = A Y A^{-1}
 \end{equation}
-Das sieht man so: Sei $A\of{s}$ Kurve in $G$ mit $A\of{0} = e$ und $\evLi{\dd{s}}_{s=0} A\of{s} = X$. Dann ist $A'\of{s} = \of{D\circ A}\of{s} = D\of{A\of{s}}$ eine Kurve in $\opGL\of{W}$ mit $A'\of{0} = \evLi{e}_{\opGL\of{W}}$. Wir sehen voraus, dass $D$ differenzierbar ist.
+Achtung: Da $Y \in \eMo\of{V}$ \iall nicht in $\opGL\of{V}$ liegt, ist hier mit \qt{$\cdot$} das Produkt in der assoziativen Algebra $\eMo\of{V}$ gemeint \kla{Komposition}. Ist nun $A = A\of{t}$ selbst eine Kurve mit $A\of{0} = e$ und $\dot{A} = X$, dann folgt mit 
+\begin{equation}
+	\evLi{\dd{t}}_{t=0}A\of{t} = - X
+\end{equation}
+\begin{equation}
+	\begin{split}
+		\evLi{\dd{t}}_{t=0} \Ad_{A\of{t}} \of{Y} & = \Ad_{*} \of{X}\of{Y} \\
+		& = \eof{X,Y} = \ad_X\of{Y}
+	\end{split}
+\end{equation}
+Damit $\Ad_{*} = \ad$
+
+\subsection{Die Exponentialabbildung}
+Sei $\exp : \eMo\of{V} \to \eMo\of{V}$ \defs durch 
+\begin{equation}
+	\exp\of{x} \mDef \sum\limits_{n=0}^\infty \frac{X^n}{n!} \quad X^n = X \circ \dots \circ X
+\end{equation}
+Ist $X \in \eMo\of{V}$ und $A \in \opGL\of{V}$ und sei $\Ad_A : \eMo\of{V} \to \eMo\of{V}$ die \abb 
+\begin{equation}
+	\Ad_A\of{X} = A \circ X \circ A^{-1} \quad \Ad_A\of{X^n} = \eof{\Ad_A\of{X}}^n
+\end{equation}
+Damit erhält man $\Ad_A \circ \exp = \exp \circ \Ad_A$
+\begin{proposition}
+	$\det\circ \exp = \exp \circ \spur$
+\end{proposition}
+\begin{proof}
+ 	einfach über $\bC$ \kla{nötigenfalls Komplexifizierung $V \otimes \bC$}, dann existiert eine Basis $\sDef{\idx{e}{_a}}{a = 1,\dots,n}$ aus Eigenvektoren von $X \in \eMo\of{V^{\bC}}$
+ 	\begin{equation}
+ 		X = \dotMat{\lambda_1}{*}{0}{\lambda_n} \quad \exp\of{X} = \dotMat{\mEx{\lambda_1}}{*}{0}{\mEx{\lambda_1}}
+ 	\end{equation}
+ 	\begin{equation}
+ 		\begin{split}
+ 			\det\of{\exp\of{X}} & = \exp\of{\sum\limits_n \lambda_n} \\
+ 			& = \exp\of{\spur\of{X}}
+ 		\end{split}
+ 	\end{equation}
+\end{proof}
+\begin{korollar}
+	\begin{equation}
+		\exp\of{\eMo\of{V}} \subseteq \opGL^{+}\of{V} = \sDef{x \in \opGL\of{V}}{\det\of{X} > 0}
+	\end{equation}
+\end{korollar}
+\begin{proof}
+	Ist $\fDef{X}{\of{-\epsilon,\epsilon}}{\eMo\of{V}}$ mit $X\of{0} = 0$ und $\dot{X} = \evLi{\dd{s}}_{s=0} X\of{s}$, dann $A\of{s} \mDef \exp\of{X\of{s}}$ mit $A\of{0} = e$
+	\begin{equation}
+		\dot{A} = \evLi{\dd{t}}_{t=0}\exp\of{X\of{t}} = \exp_{*} \of{\dot{X}} = \dot{X} \fuerall X
+	\end{equation}
+	Nach dem Satz über Umkehrfunktionen bildet $\exp$ eine offene Umgebung $U$ von $O \in \eMo\of{V}$ in eine offene Umgebung $U'$ von $e \in \opGL\of{V}$ ab, und zwar bijektiv und in beide Richtungen \difb. $\exp$ ist also lokal ein Diffeomorphismus. Global kann dagegen sowohl die Injektivität, als auch die Surjektivität nicht erfüllt sein.
+\end{proof}
+\begin{beispiel} 
+	Exponentialabbildungen
+	\begin{enumerate}
+		\item $G = \opU\of{1} = \sDef{\mEx{\mIm\lambda}}{\lambda \in \bR}$ und $\lie\of{G} = \sDef{\mIm\lambda}{\lambda\in\bR}$. Kurven in $G$ sind \exmpl $A\of{s} = \mEx{\mIm\lambda\of{s}}$ mit $\lambda\of{0} = 0$, $\dot{A}\of{0} = \mIm\dot{\lambda} \in \mIm \bR$ aber $\exp\of{\mIm\lambda} = \exp\of{\mIm\lambda'} \eqval \lambda - \lambda' = 2 \pi n$, also ist $\exp$ surjektiv, aber nicht injektiv.
+		\item $G = \opSO\of{3} = \opSO\of{\bR^3} = \sDef{A \in \opGL\of{\bR^3}}{A^T = A^{-1}}$ und $\lie\of{G} = \sDef{x \in \eMo\of{\bR^3}}{X + X^T = 0}$. $\exp\text{-Funktion}$ ist auch hier nicht injektiv. Auch hier gilt Surjektivität \kla{Übung}. \\
+		Das sind aber Spezialfälle. \iall nicht surjektiv.
+		\item $\opSL\of{2,\bR}$ Behauptung: Kein Element der Form 
+		\begin{equation}
+			D_n = \twoMat{-n}{0}{0}{-\frac{1}{n}} \quad n \in \bR_+\setminus \cof{1}
+		\end{equation}
+		liegt im Bild von $\exp$
+	\end{enumerate}
+\end{beispiel}
+\begin{proof}
+	Clevere Beobachtung: Ist $A \in G$ in $\img\of{\exp}$, dann \exs $H \in G$ mit $H^2 = A$; $A = \exp{x}$, $H = \exp{\frac{1}{2} x}$. Es reicht also zu zeigen, dass $D_n$ keine Wurzel hat, \dah $D_n \neq H^2 $
+	\begin{equation}
+		H = \twoMat{a}{b}{c}{d} \quad H^2 = \twoMat{a^2 + bc}{b\of{a+d}}{c\of{a+d}}{d^2 + bc} \tbE \twoMat{-n}{0}{0}{-\frac{1}{n}}
+	\end{equation}
+	\begin{gather}
+		b\of{a+d} = c\of{a+d} = 0 \\
+		a^2 + bc = -n \\
+		d^2 + bc = -\frac{1}{n}
+	\end{gather}
+	\begin{enumerate}
+		\item Fall: $\of{a+d} \neq 0$, $b = c = 0$, also $a^2 = -n$
+		\item Fall: $\of{a+d} = 0$, also $n^2 = 1$
+	\end{enumerate}
+\end{proof}
+Beachte, dass $D_n$ in der Komponente der Gruppeneinheit liegt, \dah es gibt eine stetige Kurve $A\of{s}$, die $e$ mit $D_n$ verbindet
+\begin{equation}
+	A\of{s} = \begin{faelle} \twoMat{\cos\of{2\pi s}}{\sin\of{2\pi s}}{-\sin\of{2\pi s}}{\cos\of{2\pi s}} & s \in \eof{0,\frac{1}{2}} \\ \twoMat{\varphi\of{s}}{0}{0}{\frac{1}{\varphi\of{s}}} & s \in \eof{\frac{1}{2},1} \end{faelle}
+\end{equation}
+mit $\varphi\of{s} = 2\of{1-n} s + \of{n-2}$ sodass $\varphi\of{\frac{1}{2}} = -1$ und $\varphi\of{1} = -n$ \\
+Obwohl $\fDef{\exp}{\lie\of{G}}{G}$ \iall nicht surjektiv ist \kla{auch dann nicht, wenn $G$ zusammenhängend ist} wird doch ganz $G$ \kla{zusammenhängend} von $\lie\of{G}$ im folgenden Sinne \qt{erzeugt}:
+\begin{proposition}
+	Ist $G$ zusammenhängende Lie-Gruppe und $A \in G$. Dann \exs endlich viele $X_1, \dots, X_n \in \lie\of{G}$, dass
+	\begin{equation}
+		A = \exp\of{X_1}\cdot \dots \cdot \exp\of{X_n}
+	\end{equation}
+\end{proposition}
+Zum Beweis benötigen wir folgendes 
+\begin{lemma}
+	Sei $G$ zusammenhängende topologische Grupep und $V \subset G$ offene Umgebung der Identität $e \in G$. Sei $A \in G$, dann \exs endlich viele $g_1,\dots, g_n \in V$, $A = g_1 \cdot \dots \cdot g_n$
+\end{lemma}
+\begin{proof}
+	Wir betrachten die Menge aller endlichen Produkte von Elementen aus $V$, also 
+	\begin{equation}
+		G' = \sDef{g\in G}{\exists g_1,\dots,g_n\in V, n < \infty, g = g_1\cdot\dots\cdot g_n}
+	\end{equation}
+	$G'$ ist offen und eine Untergruppe. Es ist $V\subset G'$, also $gV = \sDef{gg'}{g'\in V}$ offene Umgebung von $g$ denn die Linksoperation $\fDef{L_g}{G}{G} \quad h \mapsto gh$ hat stetige Inverse $L_{g}^{-1} = L_{g^{-1}}$, somit offene Abbildungen. In einer topologischen Gruppe ist eine offene Untergruppe auch abgeschlossen, da sie das Komplement der Vereinigung aller von $G'$ verschiedenen Nebenklassen $gG'$ ist, die alle offen sind. $G' \subset G$ ist also offen und abgeschlossen. Da $G'$ nichtleer und $G$ zusammenhängend ist, folgt $G' = G$
+\end{proof}

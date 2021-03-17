@@ -3,6 +3,8 @@
 \newcommand{\bF}{\mathbb{F}}
 \newcommand{\bC}{\mathbb{C}}
 \newcommand{\bS}{\mathbb{S}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bT}{\mathbb{T}}
 
 % Symbole
 \newcommand{\Laplace}{\mathop{}\triangle}
@@ -22,6 +24,8 @@
 \DeclareMathOperator{\eMo}{End}
 \DeclareMathOperator{\der}{Der}
 \DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\spur}{Spur}
 \DeclareMathOperator{\spann}{Span}
 \DeclareMathOperator{\sign}{sign}
@@ -31,6 +35,7 @@
 \DeclareMathOperator{\opGL}{GL}
 \DeclareMathOperator{\opO}{O}
 \DeclareMathOperator{\opSO}{SO}
+\DeclareMathOperator{\opPSO}{PSO}
 \DeclareMathOperator{\opU}{U}
 \DeclareMathOperator{\opSU}{SU}
 
@@ -44,7 +49,6 @@
 % Definitionen
 \newcommand{\fDef}[3]{#1 : #2 \to #3}
 \newcommand{\sDef}[2]{\left\{#1\middle| #2 \right\}}
-\newcommand{\mDef}{\vcentcolon =}
 
 % Einheiten
 
@@ -61,6 +65,8 @@
 
 % Relationen
 \newcommand{\eqval}{\; \Leftrightarrow \;}
+\newcommand{\tbE}{\stackrel{!}{=}}
+\newcommand{\mDef}{\vcentcolon =}
 
 % Quantoren
 \newcommand{\fuerall}{\;\forall\,}
@@ -71,3 +77,7 @@
 
 % Tensoren
 \newcommand{\idx}[2]{#1{}\indices{#2}}
+
+% Matrizen/Vektoren
+\newcommand{\dotMat}[4]{\of{\begin{array}{c c c} #1 & & #2 \\ & \ddots & \\ #3 & & #4\end{array}}}
+\newcommand{\twoMat}[4]{\of{\begin{array}{c c} #1 & #2 \\ #3 & #4\end{array}}}

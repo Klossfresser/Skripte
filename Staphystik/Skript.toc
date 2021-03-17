@@ -1,61 +1,61 @@
 \babel@toc {german}{}
-\contentsline {section}{\numberline {1}Einleitung}{3}%
-\contentsline {section}{\numberline {2}Wahrscheinlichkeitstheorie}{3}%
-\contentsline {subsection}{\numberline {2.1}Frequentismus}{3}%
-\contentsline {subsection}{\numberline {2.2}Bayessche Theorie}{5}%
-\contentsline {subsection}{\numberline {2.3}Binomialverteilung}{6}%
-\contentsline {subsection}{\numberline {2.4}Zentraler Grenzwertsatz}{9}%
-\contentsline {subsection}{\numberline {2.5}Verteilungsfunktionen in der klassischen Mechanik}{10}%
-\contentsline {subsection}{\numberline {2.6}Quantenstatistik}{11}%
-\contentsline {section}{\numberline {3}Entropie}{12}%
-\contentsline {subsection}{\numberline {3.1}Klassische Entropie}{12}%
-\contentsline {subsection}{\numberline {3.2}Prinzip der maximalen Entropie}{13}%
-\contentsline {subsection}{\numberline {3.3}Quantenmechanische Entropie}{13}%
-\contentsline {subsection}{\numberline {3.4}Additivität der Entropie}{15}%
-\contentsline {section}{\numberline {4}Gleichgewichtsensembles}{15}%
-\contentsline {subsection}{\numberline {4.1}Mikrokanonisches Ensemble}{15}%
-\contentsline {subsection}{\numberline {4.2}Temperatur}{16}%
-\contentsline {subsection}{\numberline {4.3}Kanonisches Ensemble}{16}%
-\contentsline {subsection}{\numberline {4.4}Gleichgewicht in der Quantenstatistik}{17}%
-\contentsline {subsection}{\numberline {4.5}Ideales Gas (unterscheidbare Teilchen)}{18}%
-\contentsline {subsubsection}{\numberline {4.5.1}Mikrokanonische Behandlung}{19}%
-\contentsline {subsubsection}{\numberline {4.5.2}Kanonische Behandlung}{20}%
-\contentsline {subsubsection}{\numberline {4.5.3}Gibbsches Paradoxon}{20}%
-\contentsline {subsection}{\numberline {4.6}Äquipartitionstheorem und Virialsatz}{21}%
-\contentsline {subsection}{\numberline {4.7}Großkanonisches Ensemble}{22}%
-\contentsline {section}{\numberline {5}Thermodynamik}{23}%
-\contentsline {subsection}{\numberline {5.1}Zustände}{23}%
-\contentsline {subsection}{\numberline {5.2}Arbeit und Wärme}{23}%
-\contentsline {subsection}{\numberline {5.3}Thermodynamische Prozesse}{24}%
-\contentsline {subsection}{\numberline {5.4}Temperatur}{25}%
-\contentsline {subsection}{\numberline {5.5}Differentiale}{26}%
-\contentsline {subsection}{\numberline {5.6}Entropie und 2. Hauptsatz}{27}%
-\contentsline {subsection}{\numberline {5.7}Kreisprozesse}{32}%
-\contentsline {subsection}{\numberline {5.8}Thermodynamische Potentiale}{34}%
-\contentsline {subsubsection}{\numberline {5.8.1}Legendre-Transformation}{34}%
-\contentsline {subsubsection}{\numberline {5.8.2}Definition der thermodynamischen Potentiale}{35}%
-\contentsline {subsubsection}{\numberline {5.8.3}Maxwellrelationen}{36}%
-\contentsline {subsubsection}{\numberline {5.8.4}Responsegrößen}{36}%
-\contentsline {subsubsection}{\numberline {5.8.5}Konvexität und Gibbs-Duhem-Relation}{39}%
-\contentsline {subsubsection}{\numberline {5.8.6}Gleichgewichtsbedingungen für thermodynamische Potentiale}{40}%
-\contentsline {subsection}{\numberline {5.9}Koexistenz von Phasen}{41}%
-\contentsline {subsection}{\numberline {5.10}Dritter Hauptsatz}{44}%
-\contentsline {subsection}{\numberline {5.11}Thermodynamischer Limes, Zusammenfassung}{45}%
-\contentsline {section}{\numberline {6}Ideale Quantengase}{46}%
-\contentsline {subsection}{\numberline {6.1}Quantenmachanik nicht-wechselwirkender Teilchen}{46}%
-\contentsline {subsection}{\numberline {6.2}Großkanonische Behandlung, Besetzungsstatistik}{48}%
-\contentsline {subsection}{\numberline {6.3}Schwach entartetes Gas}{50}%
-\contentsline {subsection}{\numberline {6.4}Entartetes Gas}{51}%
-\contentsline {subsection}{\numberline {6.5}Entartetes Fermi-Gas}{51}%
-\contentsline {subsection}{\numberline {6.6}Entartetes Bose-Gas}{54}%
-\contentsline {subsection}{\numberline {6.7}Photonengas}{57}%
-\contentsline {section}{\numberline {7}Wechselwirkende Teilchen}{58}%
-\contentsline {subsection}{\numberline {7.1}Mean-Field-Theorie (Molekularfeldnäherung): van der Waals-Gas}{59}%
-\contentsline {subsection}{\numberline {7.2}Van der Waals-Gas am kritischen Punkt}{63}%
-\contentsline {subsection}{\numberline {7.3}Ising-Modell (Ferromagnetismus)}{65}%
-\contentsline {subsection}{\numberline {7.4}Klassifizierung von Phasenübergängen}{67}%
-\contentsline {subsection}{\numberline {7.5}Kritische Exponenten}{68}%
-\contentsline {section}{\numberline {8}Nichtgleichgewichtsthermodynamik}{69}%
-\contentsline {subsection}{\numberline {8.1}Fluktuationen}{69}%
-\contentsline {subsection}{\numberline {8.2}Onsagers Regressionshypothese/ Fluktuations-Dissipationstheorem}{70}%
-\contentsline {subsection}{\numberline {8.3}Mastergleichung und $H$-Theorem}{71}%
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Wahrscheinlichkeitstheorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Frequentismus}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bayessche Theorie}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Binomialverteilung}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Zentraler Grenzwertsatz}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Verteilungsfunktionen in der klassischen Mechanik}{10}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Quantenstatistik}{11}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Entropie}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Klassische Entropie}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Prinzip der maximalen Entropie}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Quantenmechanische Entropie}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Additivität der Entropie}{15}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Gleichgewichtsensembles}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Mikrokanonisches Ensemble}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Temperatur}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Kanonisches Ensemble}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Gleichgewicht in der Quantenstatistik}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Ideales Gas (unterscheidbare Teilchen)}{18}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Mikrokanonische Behandlung}{19}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Kanonische Behandlung}{20}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Gibbsches Paradoxon}{20}{subsubsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.6}Äquipartitionstheorem und Virialsatz}{21}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Großkanonisches Ensemble}{22}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Thermodynamik}{23}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Zustände}{23}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Arbeit und Wärme}{23}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Thermodynamische Prozesse}{24}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Temperatur}{25}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Differentiale}{26}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Entropie und 2. Hauptsatz}{27}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Kreisprozesse}{32}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Thermodynamische Potentiale}{34}{subsection.5.8}%
+\contentsline {subsubsection}{\numberline {5.8.1}Legendre-Transformation}{34}{subsubsection.5.8.1}%
+\contentsline {subsubsection}{\numberline {5.8.2}Definition der thermodynamischen Potentiale}{35}{subsubsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.3}Maxwellrelationen}{36}{subsubsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.4}Responsegrößen}{36}{subsubsection.5.8.4}%
+\contentsline {subsubsection}{\numberline {5.8.5}Konvexität und Gibbs-Duhem-Relation}{39}{subsubsection.5.8.5}%
+\contentsline {subsubsection}{\numberline {5.8.6}Gleichgewichtsbedingungen für thermodynamische Potentiale}{40}{subsubsection.5.8.6}%
+\contentsline {subsection}{\numberline {5.9}Koexistenz von Phasen}{41}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Dritter Hauptsatz}{44}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}Thermodynamischer Limes, Zusammenfassung}{45}{subsection.5.11}%
+\contentsline {section}{\numberline {6}Ideale Quantengase}{46}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Quantenmachanik nicht-wechselwirkender Teilchen}{46}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Großkanonische Behandlung, Besetzungsstatistik}{48}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Schwach entartetes Gas}{50}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Entartetes Gas}{51}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Entartetes Fermi-Gas}{51}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Entartetes Bose-Gas}{54}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Photonengas}{57}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Wechselwirkende Teilchen}{58}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Mean-Field-Theorie (Molekularfeldnäherung): van der Waals-Gas}{59}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Van der Waals-Gas am kritischen Punkt}{63}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Ising-Modell (Ferromagnetismus)}{65}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Klassifizierung von Phasenübergängen}{67}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Kritische Exponenten}{68}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Nichtgleichgewichtsthermodynamik}{69}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Fluktuationen}{69}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Onsagers Regressionshypothese/ Fluktuations-Dissipationstheorem}{70}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Mastergleichung und $H$-Theorem}{71}{subsection.8.3}%

@@ -1,0 +1,108 @@
+\begin{satz}
+	Jedes Element in der Komponente der Einheit einer Lie-Gruppe ist das endliche Produkt von Bildern der Exponentialfunktion.
+\end{satz}
+Sei $G$ Lie-Gruppe \& $X \in \lie\of{G}$. Wir betrachten die Kurve
+\begin{equation}
+	\begin{split}
+		A\of{S} & = \exp\of{s X} \\
+		\dot{A} & = \evLi{\dd{s}}_{s=0} A\of{s} = X
+	\end{split}
+\end{equation}
+Für $A \in \Hom\of{\of{\bR,+},G}$
+\begin{equation}
+	\begin{split}
+		A\of{s_1}A\of{s_2} & = \exp\of{s_1 X}\exp\of{s_2 X} \\
+		& = \exp\of{\of{s_1+s_2}X} \\
+		& = A\of{s_1+s_2}
+	\end{split}
+\end{equation}
+\begin{proposition}
+	Jeder differenzierbare Homomorphismus $A: \of{\bR,+}\to G$ ist von der Form $A\of{s} = A\exp\of{s x}$ für ein $x \in \lie\of{G}$
+\end{proposition}
+\begin{proof}
+	Sei $A$ \difb Homomorphismus mit $\evLi{\dd{s}}_{s=0} = X$
+	\begin{equation}
+		\begin{split}
+			\evLi{\dd{s}}_{s=0} A\of{s + s'} & = \evLi{\dd{s}}_{s=0}A\of{s}A\of{s'} \\
+			\dot{A}\of{s} & = A\of{s}X
+		\end{split}
+	\end{equation}
+	Betrachte Kurve $C\of{s} = A\of{s}\exp\of{-s X}$. Dann ist wegen
+	\begin{equation}
+		\dot{C}\of{s} = A\of{s} x \exp\of{-s x} - A\of{s} x \exp\of{-s x} = 0
+	\end{equation}
+	$C\of{s} = \evLi{\id}_G = e$ konstant, also $A\of{s} = \exp\of{-s x}$
+\end{proof}
+Seien $G$ \& $G'$ Lie-Gruppen und $\fDef{\Phi}{G}{G'}$ eine differenzierbarer Homomorphismus. Dann ist $A \of{s} = \phi\of{\exp\of{sx}} \in \Hom\of{\of{\bR,+},G'}$ mit 
+\begin{equation}
+	\dot{A} = \evLi{\dd{s}}_{s=0}A\of{s} = \dot{\phi}\of{x} = \evLi{\phi_{*}}_e \of{x}
+\end{equation}
+Aus Proposition folgt:
+\begin{equation}
+	\phi\of{\exp\of{t x}} = \exp\of{t \dot{\phi}\of{x}}
+\end{equation}
+\begin{korollar}
+	Sei $\fDef{\phi}{G}{G'}$ \difb Homomorphismus, dann gilt:
+	\begin{equation}
+		\phi\circ\exp = \exp\circ\phi
+	\end{equation}
+	Beachte: $\phi\in \Hom\of{G,G'}$
+	\begin{equation}
+		\dot{\phi} = \Hom\of{\lie\of{G},\lie\of{G'}}
+	\end{equation}
+	Letzteres folgte bereits am \exmpl der Darstellung \kla{gezeigt}: Sind $A\of{s}$, $B\of{s}$ Kurven in $G$ mit $\dot{A} = X$ \& $\dot{B} = Y$, sowie $C\of{s}$ mit $\dot{C} = \eof{X,Y}$. Dann sind $A'\of{s} \mDef \phi\of{A\of{s}}$, $B'\of{s} \mDef \phi\of{B\of{s}}$ und $C'\of{s} = \phi\of{C\of{s}}$ Kurven in $G'$ mit 
+	\begin{equation}
+		\dot{A}' = \dot{\phi}\of{X} \quad \dot{B}' = \dot{\phi}\of{Y} \quad \dot{C}' = \dot{\phi}\of{\eof{X,Y}}
+	\end{equation}
+	Ausder Homomorphie von $\phi$ und der Form von $C$ \kla{Produkt $ABA^{-1}B^{-1}$} folgt $\dot{C}' = \eof{\dot{\phi}\of{X},\dot{\phi}\of{Y}}$. Da $X$, $Y$ beliebig ist $\dot{\phi} \in \Hom\of{\lie\of{G},\lie\of{G'}}$
+\end{korollar}
+Die Frage ist nun, inwieweit auch die Umkehrung gilt, also inwieweit ein Lie-Algebren-Homomorphismus der zugehörigen Lie-Gruppe induziert. Seien also $\lie\of{G}$ \& $\lie\of{G'}$ die Lie-Algebren der Lie-Gruppen $G$ \bzw $G'$ und:
+\begin{equation}
+	\fDef{\varphi}{\lie\of{G}}{\lie\of{G'}}
+\end{equation}
+ein Lie-Algebren-Homomorphismus. Frage: Existiert $\phi\in\Hom\of{G,G'}$ mit $\dot{\phi} = \varphi$ Eindeutigkeit: Seien $\phi_1$ \& $\phi_2$ zwei Homomorphismen $G \to G'$ mit 
+\begin{equation}
+	\dot{\phi}_1 = \dot{\phi}_2 = \varphi
+\end{equation}
+Dann folgt wegen 
+\begin{equation}
+	\phi_{1,2} \circ \exp = \exp \circ \dot{\phi}_{1,2} = \exp \circ \varphi
+\end{equation}
+dass $\phi_1$ und$\phi_2$ auf Elementen der From $\exp\of{x_1}\dots \exp\of{x_n}$ übereinstimmen, \dah auf der Komponente der Einheit. Also: Ist $G$ zusammenhängend dann ist $\phi$ mit $\dot{\phi} = \varphi$ eindeutig bestimmt, sofern es existiert. Beachte: Ob $G'$ zusammenhängend ist, interessiert nicht. Ist $G$ hingegen nicht zusammenhängend, dann kann es mehrere Homomorphismen geben mit $\dot{\phi} = \varphi$
+\begin{beispiel}
+	\begin{equation}
+		\begin{split}
+			G = G' = \opO\of{3} & = \sDef{A\in\opGL\of{\bR^3}}{AA^{T} = \evLi{\id}_{\bR^3}} \\
+			\opO\of{3} & = \opSO\of{3} \cup \opPSO\of{3} \\
+			\opSO\of{3} & = \sDef{A\in\opO\of{3}}{\det\of{A} = +1} \\
+			\opPSO\of{3} & = \sDef{A\in\opO\of{3}}{\det\of{A} = -1} \\
+		\end{split}
+	\end{equation}
+	Sei $\fDef{f}{\lie\of{\opO\of{3}}}{\lie\of{\opO\of{3}}}$ und sei $\fDef{\phi}{\opO\of{3}}{\opO\of{3}}$ Homomorphismus mit $\dot{\phi} = f$, dann ist $\phi' = \det\cdot\phi$
+	\begin{equation}
+		\phi'\of{A} = \det\of{A} \phi\of{A}
+	\end{equation}
+	Dann ist $\phi' \neq \phi$ aber $\dot{\phi}' = \dot{\phi} = f$
+\end{beispiel}
+\begin{proposition}
+	Seien $G \neq G'$ Lie-Gruppen, wobei $G$ zusammenhängend ist. Sei $\fDef{f}{\lie\of{G}}{\lie\of{G'}}$ Lie-Homomorphismus. Dann gibt es höchstens einen differenzierbaren Gruppen-Homomoprhismus $\fDef{\phi}{G}{G'}$ mit $\dot{\phi} = f$. Ein solches $\phi$ existiert genau dann, falls $G$ einfach zusammenhängend ist, \dah $\Pi_1\of{G} = \cof{1}$ die Fundamentalgruppe ist trivial. Beweis: algebraische Topologie
+\end{proposition}
+\begin{bemerkung}
+	Für allgemeine topologische Räume muss $\Pi_1$ nicht unbedingt abelsch sein. Für topologische Gruppen ist $\Pi_1$ aber immer abelsch.
+	\begin{equation}
+		\begin{split}
+			\Pi_1\of{\bS^1} & = \bZ \\
+			\Pi_1\of{\bS^1\times\bS^1} & = \bZ\times\bZ \\
+			\Pi_1\of{8} & = \bZ * \bZ
+		\end{split}
+	\end{equation}
+\end{bemerkung}
+Zu jeder zusammenhängenden Lie-Gruppe existiert eine eindeutige zusammenhängende \hl{und} einfach zusammenhängende Lie-Gruppe $\bar{G}$ mit 
+\begin{equation}
+	\lie\of{G} = \lie\of{\bar{G}}
+\end{equation}
+Es gibt einen natürlichen Projektionshomomorphismus (surjektiv aber nicht injektiv)
+\begin{equation}
+	\fDef{P}{\bar{G}}{G}
+\end{equation}
+mit $\ker\of{P} \cong \Pi_1\of{G}$ abelsch und diskret. Man nennt $\bar{G}$ die universelle Überlagerungsgruppe von $G$. Topologisch ist $\bar{G}$ topologischer Überlagerungsraum von $G$. Dieser hat so viele \qt{Blätter} wie $\Pi_1\of{G}$ Elemente. Homomorphismen $\fDef{\phi}{G}{G'}$ können immer auf $\fDef{\bar{\phi}}{\bar{G}}{G'}$ fortgesetzt werden $\bar{\phi} = \phi \circ P$. Bei Homomorphismen \hl{nach} $G$ muss das nicht so sein. \dah $\fDef{\phi}{G'}{G}$ Homomorphismus, dann muss kein Homomorphismus $\fDef{\bar{\phi}}{G'}{\bar{G}}$ mit $P \circ \bar{\phi} = \phi$ existieren.
